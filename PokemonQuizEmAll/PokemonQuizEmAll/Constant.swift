@@ -18,6 +18,7 @@ let MASTER_TAG_COLOR      = UIColor(netHex: 0x8bc34a)
 let LEARNING_TAG_COLOR    = UIColor(netHex: 0xe74c3c)
 let REVIEW_TAG_COLOR      = UIColor(netHex: 0xfbc02d)
 let NEW_WORD_TAG_COLOR    = UIColor(netHex: 0x607d8b)
+let THEME_COLOR           = UIColor(colorLiteralRed: 160/255, green: 36/255, blue: 65/255, alpha: 1)
 
 //cell type
 let CELL_TYPE_SWITCH_SOUND : Int = 0

@@ -108,7 +108,7 @@ class ListPackViewController: UIViewController,UICollectionViewDelegate,UICollec
         
         let selectedPack : PackCard = packs[indexPath.row]
         cell.backgroundColor = ColorGenarator.getColor(indexPath.row)
-        cell.cellWith(selectedPack)
+      //  cell.cellWith(selectedPack)
         return cell
     }
     

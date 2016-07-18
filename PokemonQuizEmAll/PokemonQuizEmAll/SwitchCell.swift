@@ -22,7 +22,7 @@ class SwitchCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = UITableViewCellSelectionStyle.None
-        self.btnSwitch.onTintColor = .redColor()
+        self.btnSwitch.onTintColor = THEME_COLOR
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -30,34 +30,35 @@ class SwitchCell: UITableViewCell {
     }
     
     func setCellType(cellType: Int){
-        typeCell = cellType
-        if(typeCell == CELL_TYPE_SWITCH_SOUND){
-            lblTitle.text = "Sound On"
-            if(DB.getSoundOn()){
-                self.btnSwitch .setOn(true, animated: false)
-            }
-            else{
-                self.btnSwitch .setOn(false, animated: false)
-            }
-        }
-        else
-            if(typeCell == CELL_TYPE_SWITCH_RANDOM){
-                lblTitle.text = "Random Cards"
-                if(DB.getIsRandom()){
-                    self.btnSwitch .setOn(true, animated: false)
-                }
-                else{
-                    self.btnSwitch .setOn(false, animated: false)
-                }
-        }
+//        typeCell = cellType
+//        if(typeCell == CELL_TYPE_SWITCH_SOUND){
+//            lblTitle.text = "Sound On"
+//            if(DB.getSoundOn()){
+//                self.btnSwitch .setOn(true, animated: false)
+//            }
+//            else{
+//                self.btnSwitch .setOn(false, animated: false)
+//            }
+//        }
+//        else
+//            if(typeCell == CELL_TYPE_SWITCH_RANDOM){
+//                lblTitle.text = "Random Cards"
+//                if(DB.getIsRandom()){
+//                    self.btnSwitch .setOn(true, animated: false)
+//                }
+//                else{
+//                    self.btnSwitch .setOn(false, animated: false)
+//                }
+//        }
     }
     @IBAction func btnSwitch(sender: AnyObject) {
         if(btnSwitch.on == true){
             switch  typeCell{
             case CELL_TYPE_SWITCH_SOUND:
-                turnOnSound()
+               // turnOnSound()
+                break
             case CELL_TYPE_SWITCH_RANDOM:
-                turnOnRandom()
+                //turnOnRandom()
                 break
             default:
                 break
@@ -66,31 +67,31 @@ class SwitchCell: UITableViewCell {
         else{
             switch  typeCell{
             case CELL_TYPE_SWITCH_SOUND:
-                turnOffSound()
+               // turnOffSound()
+                break
             case CELL_TYPE_SWITCH_RANDOM:
-                turnOffRandom()
+                //turnOffRandom()
                 break
             default:
                 break
             }
             
         }
-        print(" sound: \(DB.getSoundOn()) | random \(DB.getIsRandom())")
     }
     
     func turnOffSound(){
-        DB.updateSetting(1, randomCard: -1)
+      //  DB.updateSetting(1, randomCard: -1)
     }
     
     func turnOnSound() {
-        DB.updateSetting(0, randomCard: -1)
+        //DB.updateSetting(0, randomCard: -1)
     }
     
     func turnOnRandom() {
-        DB.updateSetting(-1, randomCard: 1)
+       // DB.updateSetting(-1, randomCard: 1)
     }
     
     func turnOffRandom() {
-        DB.updateSetting(-1, randomCard: 0)
+        //DB.updateSetting(-1, randomCard: 0)
     }
 }
