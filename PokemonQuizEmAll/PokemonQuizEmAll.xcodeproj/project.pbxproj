@@ -35,6 +35,7 @@
 		E8394AA71D3D19810094F4FC /* ColorGenarator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394AA61D3D19810094F4FC /* ColorGenarator.swift */; };
 		E8394AAA1D3D19F00094F4FC /* BackFlashCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8394AA81D3D19F00094F4FC /* BackFlashCardView.xib */; };
 		E8394AAB1D3D19F00094F4FC /* BackFlashCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394AA91D3D19F00094F4FC /* BackFlashCardViewModel.swift */; };
+		E8394AAD1D3D2DA90094F4FC /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394AAC1D3D2DA90094F4FC /* PlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		E8394AA61D3D19810094F4FC /* ColorGenarator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorGenarator.swift; sourceTree = "<group>"; };
 		E8394AA81D3D19F00094F4FC /* BackFlashCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackFlashCardView.xib; sourceTree = "<group>"; };
 		E8394AA91D3D19F00094F4FC /* BackFlashCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackFlashCardViewModel.swift; sourceTree = "<group>"; };
+		E8394AAC1D3D2DA90094F4FC /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		E85027D45EA22F49D462B4A3 /* Pods-PokemonQuizEmAll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				E8394A861D3D16920094F4FC /* SettingsViewController.swift */,
 				E8394A891D3D16920094F4FC /* ListPackViewController.swift */,
 				E8394A8C1D3D16920094F4FC /* FlashCardViewController.swift */,
+				E8394AAC1D3D2DA90094F4FC /* PlayViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				995976CE1D3CC6FE00E98204 /* Pokemon.swift in Sources */,
 				E8394AA21D3D16920094F4FC /* clvPackCell.swift in Sources */,
 				E8394A9A1D3D16920094F4FC /* PackCard.swift in Sources */,
+				E8394AAD1D3D2DA90094F4FC /* PlayViewController.swift in Sources */,
 				E8394AA51D3D16920094F4FC /* ButtonCell.swift in Sources */,
 				E8394A981D3D16920094F4FC /* SettingsViewController.swift in Sources */,
 				E8394AA31D3D16920094F4FC /* Card.swift in Sources */,
