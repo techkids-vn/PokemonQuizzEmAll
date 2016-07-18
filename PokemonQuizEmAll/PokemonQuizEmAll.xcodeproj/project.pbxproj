@@ -31,6 +31,7 @@
 		E8394AA31D3D16920094F4FC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394A911D3D16920094F4FC /* Card.swift */; };
 		E8394AA41D3D16920094F4FC /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8394A921D3D16920094F4FC /* ButtonCell.xib */; };
 		E8394AA51D3D16920094F4FC /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394A931D3D16920094F4FC /* ButtonCell.swift */; };
+		E8394AA71D3D19810094F4FC /* ColorGenarator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394AA61D3D19810094F4FC /* ColorGenarator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		E8394A911D3D16920094F4FC /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E8394A921D3D16920094F4FC /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		E8394A931D3D16920094F4FC /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		E8394AA61D3D19810094F4FC /* ColorGenarator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorGenarator.swift; sourceTree = "<group>"; };
 		E85027D45EA22F49D462B4A3 /* Pods-PokemonQuizEmAll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		995976B41D3CA16800E98204 /* PokemonQuizEmAll */ = {
 			isa = PBXGroup;
 			children = (
+				E8394AA61D3D19810094F4FC /* ColorGenarator.swift */,
 				E8394A821D3D16920094F4FC /* UIColorExtension.swift */,
 				E8394A831D3D16920094F4FC /* text.txt */,
 				E8394A841D3D16920094F4FC /* SwitchCell.xib */,
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				995976B81D3CA16800E98204 /* ViewController.swift in Sources */,
+				E8394AA71D3D19810094F4FC /* ColorGenarator.swift in Sources */,
 				E8394A9F1D3D16920094F4FC /* DB.swift in Sources */,
 				E8394A9B1D3D16920094F4FC /* ListPackViewController.swift in Sources */,
 				E8394A971D3D16920094F4FC /* SwitchCell.swift in Sources */,
