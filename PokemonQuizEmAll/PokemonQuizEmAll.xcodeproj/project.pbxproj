@@ -36,6 +36,8 @@
 		E8394AAA1D3D19F00094F4FC /* BackFlashCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8394AA81D3D19F00094F4FC /* BackFlashCardView.xib */; };
 		E8394AAB1D3D19F00094F4FC /* BackFlashCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394AA91D3D19F00094F4FC /* BackFlashCardViewModel.swift */; };
 		E8394AAD1D3D2DA90094F4FC /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394AAC1D3D2DA90094F4FC /* PlayViewController.swift */; };
+		E8394AB01D3D3B020094F4FC /* PoplarStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = E8394AAE1D3D3A220094F4FC /* PoplarStd.otf */; };
+		E8394AB11D3D3B020094F4FC /* StencilStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = E8394AAF1D3D3A220094F4FC /* StencilStd.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		E8394AA81D3D19F00094F4FC /* BackFlashCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackFlashCardView.xib; sourceTree = "<group>"; };
 		E8394AA91D3D19F00094F4FC /* BackFlashCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackFlashCardViewModel.swift; sourceTree = "<group>"; };
 		E8394AAC1D3D2DA90094F4FC /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		E8394AAE1D3D3A220094F4FC /* PoplarStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoplarStd.otf; sourceTree = "<group>"; };
+		E8394AAF1D3D3A220094F4FC /* StencilStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StencilStd.otf; sourceTree = "<group>"; };
 		E85027D45EA22F49D462B4A3 /* Pods-PokemonQuizEmAll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +122,8 @@
 			children = (
 				995976B51D3CA16800E98204 /* AppDelegate.swift */,
 				E8394A8E1D3D16920094F4FC /* Constant.swift */,
+				E8394AAE1D3D3A220094F4FC /* PoplarStd.otf */,
+				E8394AAF1D3D3A220094F4FC /* StencilStd.otf */,
 				995976CA1D3CB82100E98204 /* Libs */,
 				995976C91D3CB81400E98204 /* Model */,
 				995976C81D3CB80E00E98204 /* View */,
@@ -267,6 +273,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8394AB01D3D3B020094F4FC /* PoplarStd.otf in Resources */,
+				E8394AB11D3D3B020094F4FC /* StencilStd.otf in Resources */,
 				995976C01D3CA16800E98204 /* LaunchScreen.storyboard in Resources */,
 				E8394A9D1D3D16920094F4FC /* FrontFlashCardView.xib in Resources */,
 				E8394AAA1D3D19F00094F4FC /* BackFlashCardView.xib in Resources */,

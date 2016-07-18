@@ -7,6 +7,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="PoplarStd.otf">
+            <string>PoplarStd</string>
+        </mutableArray>
+        <mutableArray key="StencilStd.otf">
+            <string>StencilStd</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Play View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -44,13 +52,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-Qc-iMy">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="84"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                                <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="60"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGHSCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6i-w7-1gX">
                                                 <rect key="frame" x="0.0" y="84" width="600" height="42"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -68,7 +76,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.94645407007902738" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="zo3-8s-rUF" firstAttribute="centerY" secondItem="qKV-jc-41g" secondAttribute="centerY" id="4nX-YO-VK8"/>
                                     <constraint firstItem="zo3-8s-rUF" firstAttribute="centerX" secondItem="qKV-jc-41g" secondAttribute="centerX" id="GWL-vs-mXw"/>
