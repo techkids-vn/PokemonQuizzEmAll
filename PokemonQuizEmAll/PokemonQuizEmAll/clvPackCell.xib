@@ -59,7 +59,7 @@
                 <outlet property="imvGen" destination="NIl-xo-ikV" id="T6T-Lu-ELL"/>
                 <outlet property="lblGen" destination="Rr5-qd-8QS" id="t3m-hq-ept"/>
             </connections>
-            <point key="canvasLocation" x="486.5" y="370.5"/>
+            <point key="canvasLocation" x="577.5" y="375.5"/>
         </collectionViewCell>
     </objects>
     <resources>
