@@ -32,6 +32,8 @@
 		E8394AA41D3D16920094F4FC /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8394A921D3D16920094F4FC /* ButtonCell.xib */; };
 		E8394AA51D3D16920094F4FC /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394A931D3D16920094F4FC /* ButtonCell.swift */; };
 		E8394AA71D3D19810094F4FC /* ColorGenarator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394AA61D3D19810094F4FC /* ColorGenarator.swift */; };
+		E8394AAA1D3D19F00094F4FC /* BackFlashCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8394AA81D3D19F00094F4FC /* BackFlashCardView.xib */; };
+		E8394AAB1D3D19F00094F4FC /* BackFlashCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394AA91D3D19F00094F4FC /* BackFlashCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		E8394A921D3D16920094F4FC /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		E8394A931D3D16920094F4FC /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		E8394AA61D3D19810094F4FC /* ColorGenarator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorGenarator.swift; sourceTree = "<group>"; };
+		E8394AA81D3D19F00094F4FC /* BackFlashCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackFlashCardView.xib; sourceTree = "<group>"; };
+		E8394AA91D3D19F00094F4FC /* BackFlashCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackFlashCardViewModel.swift; sourceTree = "<group>"; };
 		E85027D45EA22F49D462B4A3 /* Pods-PokemonQuizEmAll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,8 @@
 				E8394A891D3D16920094F4FC /* ListPackViewController.swift */,
 				E8394A8A1D3D16920094F4FC /* FrontFlashCardViewModel.swift */,
 				E8394A8B1D3D16920094F4FC /* FrontFlashCardView.xib */,
+				E8394AA81D3D19F00094F4FC /* BackFlashCardView.xib */,
+				E8394AA91D3D19F00094F4FC /* BackFlashCardViewModel.swift */,
 				E8394A8C1D3D16920094F4FC /* FlashCardViewController.swift */,
 				E8394A8D1D3D16920094F4FC /* DB.swift */,
 				E8394A8E1D3D16920094F4FC /* Constant.swift */,
@@ -209,6 +215,7 @@
 			files = (
 				995976C01D3CA16800E98204 /* LaunchScreen.storyboard in Resources */,
 				E8394A9D1D3D16920094F4FC /* FrontFlashCardView.xib in Resources */,
+				E8394AAA1D3D19F00094F4FC /* BackFlashCardView.xib in Resources */,
 				995976BD1D3CA16800E98204 /* Assets.xcassets in Resources */,
 				E8394AA41D3D16920094F4FC /* ButtonCell.xib in Resources */,
 				E8394AA11D3D16920094F4FC /* clvPackCell.xib in Resources */,
@@ -277,6 +284,7 @@
 				E8394AA71D3D19810094F4FC /* ColorGenarator.swift in Sources */,
 				E8394A9F1D3D16920094F4FC /* DB.swift in Sources */,
 				E8394A9B1D3D16920094F4FC /* ListPackViewController.swift in Sources */,
+				E8394AAB1D3D19F00094F4FC /* BackFlashCardViewModel.swift in Sources */,
 				E8394A971D3D16920094F4FC /* SwitchCell.swift in Sources */,
 				E8394A991D3D16920094F4FC /* Setting.swift in Sources */,
 				995976B61D3CA16800E98204 /* AppDelegate.swift in Sources */,
