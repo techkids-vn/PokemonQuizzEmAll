@@ -12,6 +12,17 @@ class DB: Object{
     
     static let realm = try! Realm()
     
+    //MARK: Pokemon
+    static func createPokemon(pokemon : Pokemon) {
+        try! realm.write {
+            realm.add(pokemon)
+        }
+    }
+    static func getPokemonByName(name : String) -> Pokemon! {
+        let predicate = NSPredicate(format: "name = %@", name)
+        return realm.objects(Pokemon).filter(predicate).first
+    }
+    
     //MARK: PACKCARD
     static func createPack(pack : PackCard){
         try! realm.write{
