@@ -15,6 +15,11 @@ import Spring
 
 class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
     
+    @IBOutlet weak var btnAnswer3: UIButton!
+    @IBOutlet weak var btnAnswer4: UIButton!
+    @IBOutlet weak var btnAnswer2: UIButton!
+    @IBOutlet weak var btnAnswer1: UIButton!
+    @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var vFlashCard: UIView!
     @IBOutlet weak var lblTotal: UILabel!
     @IBOutlet weak var lblReview: UILabel!

@@ -112,35 +112,83 @@
 		995976B41D3CA16800E98204 /* PokemonQuizEmAll */ = {
 			isa = PBXGroup;
 			children = (
-				E8394AA61D3D19810094F4FC /* ColorGenarator.swift */,
-				E8394A821D3D16920094F4FC /* UIColorExtension.swift */,
-				E8394A831D3D16920094F4FC /* text.txt */,
-				E8394A841D3D16920094F4FC /* SwitchCell.xib */,
-				E8394A851D3D16920094F4FC /* SwitchCell.swift */,
-				E8394A861D3D16920094F4FC /* SettingsViewController.swift */,
-				E8394A871D3D16920094F4FC /* Setting.swift */,
-				E8394A881D3D16920094F4FC /* PackCard.swift */,
-				E8394A891D3D16920094F4FC /* ListPackViewController.swift */,
-				E8394A8A1D3D16920094F4FC /* FrontFlashCardViewModel.swift */,
-				E8394A8B1D3D16920094F4FC /* FrontFlashCardView.xib */,
-				E8394AA81D3D19F00094F4FC /* BackFlashCardView.xib */,
-				E8394AA91D3D19F00094F4FC /* BackFlashCardViewModel.swift */,
-				E8394A8C1D3D16920094F4FC /* FlashCardViewController.swift */,
-				E8394A8D1D3D16920094F4FC /* DB.swift */,
-				E8394A8E1D3D16920094F4FC /* Constant.swift */,
-				E8394A8F1D3D16920094F4FC /* clvPackCell.xib */,
-				E8394A901D3D16920094F4FC /* clvPackCell.swift */,
-				E8394A911D3D16920094F4FC /* Card.swift */,
-				E8394A921D3D16920094F4FC /* ButtonCell.xib */,
-				E8394A931D3D16920094F4FC /* ButtonCell.swift */,
 				995976B51D3CA16800E98204 /* AppDelegate.swift */,
+				E8394A8E1D3D16920094F4FC /* Constant.swift */,
+				995976CA1D3CB82100E98204 /* Libs */,
+				995976C91D3CB81400E98204 /* Model */,
+				995976C81D3CB80E00E98204 /* View */,
+				995976C71D3CB7F900E98204 /* Controller */,
+				E8394A831D3D16920094F4FC /* text.txt */,
 				995976B71D3CA16800E98204 /* ViewController.swift */,
-				995976B91D3CA16800E98204 /* Main.storyboard */,
-				995976BC1D3CA16800E98204 /* Assets.xcassets */,
-				995976BE1D3CA16800E98204 /* LaunchScreen.storyboard */,
 				995976C11D3CA16800E98204 /* Info.plist */,
 			);
 			path = PokemonQuizEmAll;
+			sourceTree = "<group>";
+		};
+		995976C71D3CB7F900E98204 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8394A861D3D16920094F4FC /* SettingsViewController.swift */,
+				E8394A891D3D16920094F4FC /* ListPackViewController.swift */,
+				E8394A8C1D3D16920094F4FC /* FlashCardViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		995976C81D3CB80E00E98204 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				995976BC1D3CA16800E98204 /* Assets.xcassets */,
+				995976B91D3CA16800E98204 /* Main.storyboard */,
+				995976BE1D3CA16800E98204 /* LaunchScreen.storyboard */,
+				E8394A921D3D16920094F4FC /* ButtonCell.xib */,
+				E8394A931D3D16920094F4FC /* ButtonCell.swift */,
+				E8394A841D3D16920094F4FC /* SwitchCell.xib */,
+				E8394A851D3D16920094F4FC /* SwitchCell.swift */,
+				E8394A8F1D3D16920094F4FC /* clvPackCell.xib */,
+				E8394A901D3D16920094F4FC /* clvPackCell.swift */,
+				E8394AA81D3D19F00094F4FC /* BackFlashCardView.xib */,
+				E8394AA91D3D19F00094F4FC /* BackFlashCardViewModel.swift */,
+				E8394A8A1D3D16920094F4FC /* FrontFlashCardViewModel.swift */,
+				E8394A8B1D3D16920094F4FC /* FrontFlashCardView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		995976C91D3CB81400E98204 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8394A871D3D16920094F4FC /* Setting.swift */,
+				E8394A881D3D16920094F4FC /* PackCard.swift */,
+				E8394A911D3D16920094F4FC /* Card.swift */,
+				E8394A8D1D3D16920094F4FC /* DB.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		995976CA1D3CB82100E98204 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				995976CB1D3CB82900E98204 /* Apple */,
+				995976CC1D3CB83000E98204 /* Vendor */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		995976CB1D3CB82900E98204 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				E8394A821D3D16920094F4FC /* UIColorExtension.swift */,
+			);
+			name = Apple;
+			sourceTree = "<group>";
+		};
+		995976CC1D3CB83000E98204 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				E8394AA61D3D19810094F4FC /* ColorGenarator.swift */,
+			);
+			name = Vendor;
 			sourceTree = "<group>";
 		};
 		C9D50FAE29A6FDEFCC4EABBA /* Frameworks */ = {
