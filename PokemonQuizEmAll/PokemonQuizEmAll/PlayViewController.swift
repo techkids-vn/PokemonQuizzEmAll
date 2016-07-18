@@ -15,7 +15,10 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var lblHighScore: UILabel!
    
     override func viewWillAppear(animated: Bool) {
-        lblHighScore.text = "99999999999"
+        lblHighScore.text = "9999"
+        
+        lblHighScore.numberOfLines = 1;
+        lblHighScore.adjustsFontSizeToFitWidth = true;
         //lblHighScore.numberOfLines = 0//will wrap text in new line
        // lblHighScore.sizeToFit()
         
@@ -39,7 +42,7 @@ class PlayViewController: UIViewController {
     func play(){
         let flashCard : FlashCardViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("FlashCardViewController") as? FlashCardViewController)!
         
-        presentViewController(flashCard, animated: true) {}
+       self.navigationController?.pushViewController(flashCard, animated: true)
     }
 
 }
