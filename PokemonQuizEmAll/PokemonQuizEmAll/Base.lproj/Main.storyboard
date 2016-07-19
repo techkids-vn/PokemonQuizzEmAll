@@ -262,8 +262,23 @@
                             <constraint firstItem="nmH-k8-zSK" firstAttribute="top" secondItem="exN-Qz-ZvK" secondAttribute="bottom" constant="30" id="uU9-et-2bK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YdO-a2-O4C"/>
+                    <navigationItem key="navigationItem" id="YdO-a2-O4C">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="d9G-p4-3c4">
+                            <view key="customView" contentMode="scaleToFill" id="Cus-al-wia" customClass="CircleProgressView" customModule="CircleProgressView">
+                                <rect key="frame" x="550" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.62745098039215685" green="0.14117647058823529" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="CircleProgress" destination="Cus-al-wia" id="2WD-ea-5Dq"/>
                         <outlet property="btnAnswer1" destination="eP2-oH-QZd" id="b4s-Ez-UYM"/>
                         <outlet property="btnAnswer2" destination="otU-Oc-hxw" id="qjF-Bp-xsI"/>
                         <outlet property="btnAnswer3" destination="5vv-sV-yOW" id="RqC-LO-1dY"/>
