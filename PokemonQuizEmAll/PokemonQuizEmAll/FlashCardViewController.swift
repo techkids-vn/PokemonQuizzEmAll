@@ -31,9 +31,9 @@ class FlashCardViewController: UIViewController {
     var currentPokemon = 0
     var totalPokemon = 0
     var pokemonCollection = [Pokemon]()
-    var totalTime = 30.0
+    var totalTime = 100.0
     let minusTime = 0.2
-    var currentTime = 30.0
+    var currentTime = 100.0
   
     var colorVariable : Variable<String> = Variable("")
     var scoreVariable : Variable<Int> = Variable(0)
@@ -179,6 +179,10 @@ class FlashCardViewController: UIViewController {
             self.currentTime -= self.minusTime
             let scaleTime = self.currentTime/self.totalTime
             self.CircleProgress.progress = scaleTime
+        }
+        else {
+            self.navigationController?.popViewControllerAnimated(true)
+            self.resetData()
         }
     }
     
@@ -349,6 +353,15 @@ class FlashCardViewController: UIViewController {
         default:
            print("Random Failed!")
         }
+    }
+    
+    func resetData() {
+        self.pokemonCollection = []
+        self.scoreVariable.value = 0
+        self.trueAnswerIndex = 0
+        self.currentTime = 100.0
+        self.totalTime = 100.0
+        self.currentPokemon = 0
     }
     
     func setTitleForButton(trueBtn : UIButton, failBtn1 : UIButton, failBtn2 : UIButton, failBtn3 : UIButton) {
