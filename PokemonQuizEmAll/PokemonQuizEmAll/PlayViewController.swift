@@ -30,9 +30,9 @@ class PlayViewController: UIViewController {
     }
     func setUpColor(){
         //   UIView.animateWithDuration(0.5) {
-        self.navigationController?.navigationBar.barTintColor = .redColor()
+        self.navigationController?.navigationBar.barTintColor = THEME_COLOR
         
-        self.navigationController?.navigationBar.translucent = false
+      //  self.navigationController?.navigationBar.translucent = false
         // }
     }
     
@@ -69,8 +69,8 @@ class PlayViewController: UIViewController {
     
     @IBAction func btnSettingsDidTap(sender: AnyObject) {
         
-        //        let settingsVC : SettingsViewController! = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsViewController") as? SettingsViewController
-        //        self.navigationController?.pushViewController(settingsVC, animated: true)
+                let settingsVC : SettingsViewController! = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsViewController") as? SettingsViewController
+                self.navigationController?.pushViewController(settingsVC, animated: true)
     }
     
 }
