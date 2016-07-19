@@ -138,6 +138,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         self.btnAnswer2.userInteractionEnabled = block
         self.btnAnswer3.userInteractionEnabled = block
         self.btnAnswer4.userInteractionEnabled = block
+        self.navigationItem.hidesBackButton = !block
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
