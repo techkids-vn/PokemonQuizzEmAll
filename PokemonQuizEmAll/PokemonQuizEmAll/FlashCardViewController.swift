@@ -180,16 +180,6 @@ class FlashCardViewController: UIViewController {
             let scaleTime = self.currentTime/self.totalTime
             self.CircleProgress.progress = scaleTime
         }
-        else {
-            
-//            let delay = 1.0 * Double(NSEC_PER_SEC)
-//            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-//            dispatch_after(time, dispatch_get_main_queue()) {
-//              self.navigationController?.popViewControllerAnimated(true)
-//            }
-
-        }
-        
     }
     
     func clickOnButton() {
@@ -252,7 +242,7 @@ class FlashCardViewController: UIViewController {
     }
     
     func trueAnsert(trueBtn : UIButton) {
-        trueBtn.backgroundColor = UIColor.greenColor()
+        trueBtn.backgroundColor = self.hexStringToUIColor("#50B745")
         let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
@@ -267,10 +257,10 @@ class FlashCardViewController: UIViewController {
     }
     
     func falseAnswer(trueBtn : UIButton, failButton1 : UIButton, failButton2 : UIButton, failButton3 : UIButton) {
-        trueBtn.backgroundColor = UIColor.greenColor()
-        failButton1.backgroundColor = UIColor.redColor()
-        failButton2.backgroundColor = UIColor.redColor()
-        failButton3.backgroundColor = UIColor.redColor()
+        trueBtn.backgroundColor = self.hexStringToUIColor("#50B745")
+        failButton1.backgroundColor = self.hexStringToUIColor("#A02441")
+        failButton2.backgroundColor = self.hexStringToUIColor("#A02441")
+        failButton3.backgroundColor = self.hexStringToUIColor("#A02441")
         
         let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
