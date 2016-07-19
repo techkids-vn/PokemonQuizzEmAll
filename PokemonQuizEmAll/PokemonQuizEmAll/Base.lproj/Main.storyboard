@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bY1-jX-pFz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bY1-jX-pFz">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -179,8 +179,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WR-Cg-gT0">
-                                <rect key="frame" x="28" y="72" width="544" height="60"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                <rect key="frame" x="28" y="72" width="544" height="72"/>
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -241,7 +241,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exN-Qz-ZvK">
-                                <rect key="frame" x="28" y="162" width="544" height="198"/>
+                                <rect key="frame" x="28" y="174" width="544" height="186"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -250,7 +250,7 @@
                             <constraint firstItem="9WR-Cg-gT0" firstAttribute="leading" secondItem="zKA-4d-mjj" secondAttribute="leadingMargin" constant="8" id="5fw-rw-Q7n"/>
                             <constraint firstItem="nmH-k8-zSK" firstAttribute="leading" secondItem="zKA-4d-mjj" secondAttribute="leading" id="DYW-d8-AWi"/>
                             <constraint firstItem="9WR-Cg-gT0" firstAttribute="top" secondItem="6hi-me-81Z" secondAttribute="bottom" constant="8" id="FCV-61-BBv"/>
-                            <constraint firstItem="9WR-Cg-gT0" firstAttribute="height" secondItem="zKA-4d-mjj" secondAttribute="height" multiplier="0.1" id="Mir-Ah-ijr"/>
+                            <constraint firstItem="9WR-Cg-gT0" firstAttribute="height" secondItem="zKA-4d-mjj" secondAttribute="height" multiplier="0.12" id="Mir-Ah-ijr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="exN-Qz-ZvK" secondAttribute="trailing" constant="8" id="Siw-nm-wac"/>
                             <constraint firstItem="nmH-k8-zSK" firstAttribute="height" secondItem="zKA-4d-mjj" secondAttribute="height" multiplier="0.3" id="d3n-xK-zRb"/>
                             <constraint firstAttribute="trailing" secondItem="nmH-k8-zSK" secondAttribute="trailing" id="dHA-EV-I6s"/>

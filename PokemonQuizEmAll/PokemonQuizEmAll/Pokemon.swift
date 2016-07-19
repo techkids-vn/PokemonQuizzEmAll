@@ -9,12 +9,12 @@
 import RealmSwift
 class Pokemon: Object {
     dynamic var color : String = ""
-    dynamic var gen   : String = ""
+    dynamic var gen   : Int = 0
     dynamic var id    : String = ""
     dynamic var img   : String = ""
     dynamic var name  : String = ""
     
-    static func create(name: String, id: String, gen: String, img: String, color : String) -> Pokemon {
+    static func create(name: String, id: String, gen: Int, img: String, color : String) -> Pokemon {
         let pokemon = Pokemon()
         pokemon.name = name
         pokemon.id = id

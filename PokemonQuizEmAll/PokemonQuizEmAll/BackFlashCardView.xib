@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,6 +16,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAL-MU-xrP" userLabel="vContent">
                     <rect key="frame" x="0.0" y="0.0" width="423" height="267"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FHs-zB-rnm">
+                            <rect key="frame" x="91" y="13" width="241" height="241"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="FHs-zB-rnm" secondAttribute="height" multiplier="1:1" id="die-nE-oA5"/>
+                            </constraints>
+                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#025 Pikachu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cec-kx-Iwv">
                             <rect key="frame" x="8" y="8" width="407" height="25"/>
                             <constraints>
@@ -23,19 +31,15 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FHs-zB-rnm">
-                            <rect key="frame" x="0.0" y="0.0" width="423" height="267"/>
-                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="Cec-kx-Iwv" firstAttribute="top" secondItem="zAL-MU-xrP" secondAttribute="top" constant="8" id="3WH-mc-IaJ"/>
-                        <constraint firstAttribute="trailing" secondItem="FHs-zB-rnm" secondAttribute="trailing" id="5f2-bz-w5R"/>
-                        <constraint firstItem="FHs-zB-rnm" firstAttribute="leading" secondItem="zAL-MU-xrP" secondAttribute="leading" id="Q2a-O1-ZEo"/>
-                        <constraint firstItem="FHs-zB-rnm" firstAttribute="top" secondItem="zAL-MU-xrP" secondAttribute="top" id="hxC-zG-Z7L"/>
+                        <constraint firstItem="FHs-zB-rnm" firstAttribute="centerX" secondItem="zAL-MU-xrP" secondAttribute="centerX" id="PJ9-Ts-AbK"/>
+                        <constraint firstItem="FHs-zB-rnm" firstAttribute="height" secondItem="zAL-MU-xrP" secondAttribute="height" multiplier="0.9" id="YvF-hG-57n"/>
                         <constraint firstItem="Cec-kx-Iwv" firstAttribute="leading" secondItem="zAL-MU-xrP" secondAttribute="leading" constant="8" id="ktR-qQ-VQF"/>
                         <constraint firstAttribute="trailing" secondItem="Cec-kx-Iwv" secondAttribute="trailing" constant="8" id="mVE-Ky-z6w"/>
-                        <constraint firstAttribute="bottom" secondItem="FHs-zB-rnm" secondAttribute="bottom" id="xZc-Oa-NMg"/>
+                        <constraint firstItem="FHs-zB-rnm" firstAttribute="centerY" secondItem="zAL-MU-xrP" secondAttribute="centerY" id="yad-Ed-O3K"/>
                     </constraints>
                 </view>
             </subviews>

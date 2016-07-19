@@ -24,32 +24,25 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
 
     var frontFlashCard : FrontFlashCardViewModel!
     var backFlashCard  : BackFlashCardViewModel!
+    var trueAnswerIndex: Int!
     var isFlip = false
-    var currentCard = 0
-    var cardCollection = [Card]()
-    var currentPack : PackCard!
-    var packIndex : Int!
+    var currentPokemon = 0
+    var totalPokemon = 0
+    var pokemonCollection = [Pokemon]()
+  
+    var colorVariable : Variable<String> = Variable("")
+    var scoreVariable : Variable<Int> = Variable(0)
 
     override func viewWillAppear(animated: Bool) {
-       // configColor()
+       self.changeBackgroundColor()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configLayout()
         self.dumpData()
-        
-//        self.frontFlashCard.card = self.cardCollection[self.currentCard]
-//        self.backFlashCard.card  = self.cardCollection[self.currentCard]
-        
-
-        vFlashCard.userInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer.init()
-        _ = tapGesture.rx_event.subscribeNext {
-            gestureReconizer in
-            self.flipFlashCard()
-        }
-        self.vFlashCard.addGestureRecognizer(tapGesture)
+        self.clickOnButton()
+        self.caculateScore()
     }
     
     //MARK: Animation
@@ -57,14 +50,20 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         let frame = CGRectMake(0, 0, self.vFlashCard.layer.frame.size.width,
                                self.vFlashCard.layer.frame.size.height)
         self.backFlashCard.frame = frame
-        updateLayout()
-        if !self.isFlip {
-            UIView.transitionFromView(frontFlashCard, toView: backFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
-            self.isFlip = true
-        }
-        else {
-            UIView.transitionFromView(backFlashCard, toView: frontFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
-            self.isFlip = false
+
+        UIView.transitionFromView(self.frontFlashCard, toView: self.backFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
+        
+        let delay = 1 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            
+//            self.currentPokemon += 1
+//            if self.currentPokemon == self.totalPokemon {
+//                self.currentPokemon = 0
+//            }
+            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon-1)
+            UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
+            self.bindingData()
         }
     }
     
@@ -87,24 +86,6 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
     }
     
     //MARK: Config UI
-//    func configColor(){
-//        //set backgorund View
-//        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
-//        UIView .animateWithDuration(0.2) {
-//        }
-//        
-//    }
-    
-    func updateLayout(){
-        self.vFlashCard.layoutIfNeeded()
-        self.vFlashCard.setNeedsLayout()
-        self.backFlashCard.setNeedsLayout()
-        self.backFlashCard.layoutIfNeeded()
-        let frameFrontCard = CGRectMake(0, 0, self.vFlashCard.layer.frame.size.width,
-                                        self.vFlashCard.layer.frame.size.height)
-        self.frontFlashCard.frame = frameFrontCard
-    }
-    
     func configLayout() {
         // Load FrontFlashCardView
         let frame = CGRectMake(0, 0, self.vFlashCard.layer.frame.size.width,
@@ -123,96 +104,248 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         self.btnAnswer2.layer.cornerRadius = self.btnAnswer2.frame.height/2
         self.btnAnswer3.layer.cornerRadius = self.btnAnswer3.frame.height/2
         self.btnAnswer4.layer.cornerRadius = self.btnAnswer4.frame.height/2
+        
+        //Color
+        self.changeBackgroundColor()
     }
     
-    //MARK: Dump data
+    func changeBackgroundColor() {
+        _ = self.colorVariable.asObservable().subscribeNext {
+            color in
+            if color != "" {
+                self.view.backgroundColor = self.hexStringToUIColor(color)
+                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+                self.navigationController?.navigationBar.translucent = false
+                self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(color)
+                self.navigationController!.navigationBar.tintColor = .whiteColor();
+            }
+        }
+    }
+    
+    func buttonUserInteration(block : Bool) {
+        self.btnAnswer1.userInteractionEnabled = block
+        self.btnAnswer2.userInteractionEnabled = block
+        self.btnAnswer3.userInteractionEnabled = block
+        self.btnAnswer4.userInteractionEnabled = block
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rgbValue:UInt32 = 0
+        NSScanner(string: cString).scanHexInt(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
+    
+    //MARK: Chose Answer
+    func delayThenFlipCard(time : Double) {
+        NSTimer.scheduledTimerWithTimeInterval(time, target: self, selector: #selector(self.flipFlashCard),    userInfo: nil, repeats: false)
+    }
+    
+    func clickOnButton() {
+        _ = self.btnAnswer1.rx_tap.subscribeNext {
+            self.buttonUserInteration(false)
+            self.showAnswer()
+            if self.checkAnswer(self.pokemonCollection[self.currentPokemon].name, btnAnswer: self.btnAnswer1) {
+                self.trueAnsert(self.btnAnswer1)
+            }
+            else {
+                self.findTrueAnswer()
+            }
+        }
+        
+        _ = self.btnAnswer2.rx_tap.subscribeNext {
+            self.buttonUserInteration(false)
+            self.showAnswer()
+            if self.checkAnswer(self.pokemonCollection[self.currentPokemon].name, btnAnswer: self.btnAnswer2) {
+                self.trueAnsert(self.btnAnswer2)
+            }
+            else {
+                self.findTrueAnswer()
+            }
+        }
+        
+        _ = self.btnAnswer3.rx_tap.subscribeNext {
+            self.buttonUserInteration(false)
+            self.showAnswer()
+            if self.checkAnswer(self.pokemonCollection[self.currentPokemon].name, btnAnswer: self.btnAnswer3) {
+                self.trueAnsert(self.btnAnswer3)
+            }
+            else {
+                self.findTrueAnswer()
+            }
+        }
+        
+        _ = self.btnAnswer4.rx_tap.subscribeNext {
+            self.buttonUserInteration(false)
+            self.showAnswer()
+            if self.checkAnswer(self.pokemonCollection[self.currentPokemon].name, btnAnswer: self.btnAnswer4) {
+                self.trueAnsert(self.btnAnswer4)
+            }
+            else {
+                self.findTrueAnswer()
+            }
+        }
+    }
+    
+    func showAnswer() {
+        self.delayThenFlipCard(0.5)
+    }
+    
+    func checkAnswer(answer : String, btnAnswer : UIButton) -> Bool {
+        if btnAnswer.titleLabel?.text == answer {
+            self.scoreVariable.value += 1
+            return true
+        }
+        return false
+    }
+    
+    func trueAnsert(trueBtn : UIButton) {
+        trueBtn.backgroundColor = UIColor.greenColor()
+        let delay = 1 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            trueBtn.backgroundColor = UIColor.whiteColor()
+            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            dispatch_after(time, dispatch_get_main_queue()) {
+                self.buttonUserInteration(true)
+            }
+
+        }
+
+    }
+    
+    func falseAnswer(trueBtn : UIButton, failButton1 : UIButton, failButton2 : UIButton, failButton3 : UIButton) {
+        trueBtn.backgroundColor = UIColor.greenColor()
+        failButton1.backgroundColor = UIColor.redColor()
+        failButton2.backgroundColor = UIColor.redColor()
+        failButton3.backgroundColor = UIColor.redColor()
+        
+        let delay = 1 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            trueBtn.backgroundColor = UIColor.whiteColor()
+            failButton1.backgroundColor = UIColor.whiteColor()
+            failButton2.backgroundColor = UIColor.whiteColor()
+            failButton3.backgroundColor = UIColor.whiteColor()
+            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            dispatch_after(time, dispatch_get_main_queue()) {
+                self.buttonUserInteration(true)
+            }
+        }
+    }
+    
+    //MARK : Score
+    func caculateScore() {
+        _ = self.scoreVariable.asObservable().subscribeNext {
+            score in
+            self.lblScore.text = "\(score)"
+        }
+    }
+    
+    func findTrueAnswer() {
+        switch self.trueAnswerIndex {
+        case 0:
+            self.falseAnswer(btnAnswer1, failButton1: btnAnswer2, failButton2: btnAnswer3, failButton3: btnAnswer4)
+        case 1:
+            self.falseAnswer(btnAnswer2, failButton1: btnAnswer1, failButton2: btnAnswer3, failButton3: btnAnswer4)
+        case 2:
+            self.falseAnswer(btnAnswer3, failButton1: btnAnswer2, failButton2: btnAnswer3, failButton3: btnAnswer4)
+        case 3:
+            self.falseAnswer(btnAnswer4, failButton1: btnAnswer2, failButton2: btnAnswer3, failButton3: btnAnswer1)
+        default:
+            print("Answer Failed!")
+        }
+    }
+    
+    //MARK: Load data
     func dumpData() {
         
-//        for index in 0..<self.currentPack.cards.count {
-//            let jsonCard = self.currentPack.cards[index]
-//            let word     = jsonCard.word
-//            let type     = jsonCard.type
-//            let script   = jsonCard.script
-//            let tag      = jsonCard.tag
-//            
-//            if DB.getCardByWord(word) == nil {
-//                let card = Card.create(word, type: type, script: script, tag: tag)
-//                self.cardCollection.append(card)
-//            }
-//            else {
-//                self.cardCollection.append(DB.getCardInPack(self.currentPack, word: word))
-//            }
-//        }
-//        self.bindingData()
+        if let file = NSBundle(forClass:AppDelegate.self).pathForResource("gen1", ofType: "json") {
+            let data = NSData(contentsOfFile: file)!
+            let json = JSON(data:data)
+            self.totalPokemon = json.count
+            for index in 0..<json.count{
+                let name  = json[index]["name"].string!
+                let id    = json[index]["id"].string!
+                let img   = json[index]["img"].string!
+                let gen   = json[index]["gen"].int!
+                let color = json[index]["color"].string!
+                if DB.getPokemonByName(name) == nil {
+                    let pokemon = Pokemon.create(name, id: id, gen: gen, img: img, color: color)
+                    self.pokemonCollection.append(pokemon)
+                }
+                else {
+                    let pokemon = DB.getPokemonByName(name)
+                    self.pokemonCollection.append(pokemon)
+                }
+            }
+            self.bindingData()
+        } else {
+            print("file not exists")
+        }
+    }
+    
+    func matchingData() {
+        self.frontFlashCard.pokemon = self.pokemonCollection[self.currentPokemon]
+        self.backFlashCard.pokemon = self.pokemonCollection[self.currentPokemon]
+        self.colorVariable.value = self.pokemonCollection[self.currentPokemon].color
     }
     
     func bindingData() {
-//        
-//        _ = self.btnNotKnew.rx_tap.subscribeNext {
-//            UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
-//            self.setButtuonEnable(false)
-//            self.isFlip = false
-//            self.nextCard(self.frontFlashCard)
-//            self.synthesizer.stopSpeakingAtBoundary(.Word)
-//            self.isFlip = false
-//            let card = self.cardCollection[self.currentCard]
-//            if card.tag == MASTER_TAG {
-//                DB.updateTag(self.currentPack, word: card.word, tag: LEARNING_TAG)
-//                self.numberOfMaster.value -= 1
-//                self.numberOfLearning.value += 1
-//            }
-//            else if card.tag == REVIEW_TAG {
-//                DB.updateTag(self.currentPack, word: card.word, tag: LEARNING_TAG)
-//                self.numberOfReviewing.value -= 1
-//                self.numberOfLearning.value += 1
-//            }
-//            else if card.tag == NEW_WORD_TAG {
-//                DB.updateTag(self.currentPack, word: card.word, tag: LEARNING_TAG)
-//                self.numberOfLearning.value += 1
-//            }
-//            
-//            self.currentCard += 1
-//            if self.currentCard == self.cardCollection.count {
-//                self.currentCard = 0
-//            }
-//            self.frontFlashCard.card = self.cardCollection[self.currentCard]
-//            self.backFlashCard.card  = self.cardCollection[self.currentCard]
-//        }
-//        
-//        _ = self.btnKnew.rx_tap.subscribeNext {
-//            UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
-//            self.isFlip = false
-//            self.setButtuonEnable(false)
-//            self.nextCard(self.frontFlashCard)
-//            self.synthesizer.stopSpeakingAtBoundary(.Word)
-//            self.isFlip = false
-//            let card = self.cardCollection[self.currentCard]
-//            if card.tag == NEW_WORD_TAG {
-//                DB.updateTag(self.currentPack, word: card.word, tag: MASTER_TAG)
-//                self.numberOfMaster.value += 1
-//            }
-//            else if card.tag == REVIEW_TAG {
-//                DB.updateTag(self.currentPack, word: card.word, tag: MASTER_TAG)
-//                self.numberOfMaster.value += 1
-//                self.numberOfReviewing.value -= 1
-//            }
-//            else if card.tag == MASTER_TAG {
-//                
-//            }
-//            else if card.tag == LEARNING_TAG {
-//                DB.updateTag(self.currentPack, word: card.word, tag: REVIEW_TAG)
-//                self.numberOfReviewing.value += 1
-//                self.numberOfLearning.value  -= 1
-//            }
-//            
-//            self.currentCard += 1
-//            if self.currentCard == self.cardCollection.count {
-//                self.currentCard = 0
-//            }
-//            self.frontFlashCard.card = self.cardCollection[self.currentCard]
-//            self.backFlashCard.card  = self.cardCollection[self.currentCard]
-//        }
-        
+        self.matchingData()
+        let trueAnswerIndex = self.unsafeRandomIntFrom(0, to: 3)
+        self.trueAnswerIndex = trueAnswerIndex
+        switch trueAnswerIndex {
+        case 0:
+            self.setTitleForButton(btnAnswer1, failBtn1: btnAnswer2, failBtn2: btnAnswer3, failBtn3: btnAnswer4)
+        case 1:
+            self.setTitleForButton(btnAnswer2, failBtn1: btnAnswer1, failBtn2: btnAnswer3, failBtn3: btnAnswer4)
+        case 2:
+            self.setTitleForButton(btnAnswer3, failBtn1: btnAnswer2, failBtn2: btnAnswer1, failBtn3: btnAnswer4)
+        case 3:
+            self.setTitleForButton(btnAnswer4, failBtn1: btnAnswer2, failBtn2: btnAnswer3, failBtn3: btnAnswer1)
+        default:
+           print("Random Failed!")
+        }
     }
     
+    func setTitleForButton(trueBtn : UIButton, failBtn1 : UIButton, failBtn2 : UIButton, failBtn3 : UIButton) {
+        let pokemon = self.pokemonCollection[self.currentPokemon]
+        let pokemon1 = self.pokemonCollection[self.randomFailAnswer(self.currentPokemon)]
+        let pokemon2 = self.pokemonCollection[self.randomFailAnswer(self.currentPokemon)]
+        let pokemon3 = self.pokemonCollection[self.randomFailAnswer(self.currentPokemon)]
+        
+        trueBtn.setTitle(pokemon.name, forState: .Normal)
+        failBtn1.setTitle(pokemon1.name, forState: .Normal)
+        failBtn2.setTitle(pokemon2.name, forState: .Normal)
+        failBtn3.setTitle(pokemon3.name, forState: .Normal)
     }
+    
+    func randomFailAnswer(currentIndex : Int) -> Int {
+        var rand = 0
+        repeat {
+            rand = unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
+        } while rand == currentIndex
+        return rand
+    }
+    
+    func unsafeRandomIntFrom(start: Int, to end: Int) -> Int {
+        return Int(arc4random_uniform(UInt32(end - start + 1))) + start
+    }
+}

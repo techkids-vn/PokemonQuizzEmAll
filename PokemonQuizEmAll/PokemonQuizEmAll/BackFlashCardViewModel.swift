@@ -37,6 +37,7 @@ class BackFlashCardViewModel: SpringView {
     }
     
     func layout() {
-       
+       self.lblPoId.text = pokemon.id
+        self.imvPokemon.image = UIImage(named: pokemon.img)
     }
 }
