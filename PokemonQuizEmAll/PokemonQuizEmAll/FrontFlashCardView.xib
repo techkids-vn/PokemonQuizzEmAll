@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,15 +17,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="388" height="240"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="SZV-fc-559">
-                            <rect key="frame" x="0.0" y="0.0" width="388" height="240"/>
+                            <rect key="frame" x="86" y="12" width="216" height="216"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="SZV-fc-559" secondAttribute="height" multiplier="1:1" id="9Zy-eZ-1Hd"/>
+                            </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="SZV-fc-559" firstAttribute="leading" secondItem="MG6-Q9-Obl" secondAttribute="leading" id="9La-Fx-Ymt"/>
-                        <constraint firstAttribute="trailing" secondItem="SZV-fc-559" secondAttribute="trailing" id="GUR-Ez-adO"/>
-                        <constraint firstAttribute="bottom" secondItem="SZV-fc-559" secondAttribute="bottom" id="aXa-fy-c8g"/>
-                        <constraint firstItem="SZV-fc-559" firstAttribute="top" secondItem="MG6-Q9-Obl" secondAttribute="top" id="zLf-BA-PZC"/>
+                        <constraint firstItem="SZV-fc-559" firstAttribute="centerX" secondItem="MG6-Q9-Obl" secondAttribute="centerX" id="e7a-5h-tXX"/>
+                        <constraint firstItem="SZV-fc-559" firstAttribute="height" secondItem="MG6-Q9-Obl" secondAttribute="height" multiplier="0.9" id="i2v-uh-PKi"/>
+                        <constraint firstItem="SZV-fc-559" firstAttribute="centerY" secondItem="MG6-Q9-Obl" secondAttribute="centerY" id="xF0-wO-5zR"/>
                     </constraints>
                 </view>
             </subviews>
@@ -38,7 +41,7 @@
             <connections>
                 <outlet property="imvPokemon" destination="SZV-fc-559" id="B3r-01-cyP"/>
             </connections>
-            <point key="canvasLocation" x="246" y="371"/>
+            <point key="canvasLocation" x="247" y="367"/>
         </view>
     </objects>
     <resources>

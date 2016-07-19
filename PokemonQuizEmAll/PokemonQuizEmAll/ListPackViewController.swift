@@ -27,7 +27,6 @@ class ListPackViewController: UIViewController,UICollectionViewDelegate,UICollec
         UIView.animateWithDuration(0.2) {
             self.navigationController!.navigationBar.barTintColor = .whiteColor();
         }
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: true)
         packs = DB.getAllPacks()
          clvPack.reloadData()
     }
@@ -133,8 +132,8 @@ class ListPackViewController: UIViewController,UICollectionViewDelegate,UICollec
     //MARK: CollectionView Delegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let flashCard : FlashCardViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("FlashCardViewController") as? FlashCardViewController)!
-        flashCard.currentPack = packs[indexPath.row]
-        flashCard.packIndex = indexPath.row
+//        flashCard.currentPack = packs[indexPath.row]
+//        flashCard.packIndex = indexPath.row
         self.navigationController?.pushViewController(flashCard, animated: true)
     }
     
