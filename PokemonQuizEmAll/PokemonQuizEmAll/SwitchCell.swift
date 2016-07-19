@@ -14,7 +14,7 @@ class SwitchCell: UITableViewCell {
     @IBOutlet weak var btnSwitch: UISwitch!
     
     let CELL_TYPE_SWITCH_SOUND : Int = 0
-    let CELL_TYPE_SWITCH_RANDOM : Int = 1
+    let CELL_TYPE_SWITCH_MUSIC : Int = 1
     
     
     var typeCell: Int = 0
@@ -30,35 +30,35 @@ class SwitchCell: UITableViewCell {
     }
     
     func setCellType(cellType: Int){
-//        typeCell = cellType
-//        if(typeCell == CELL_TYPE_SWITCH_SOUND){
-//            lblTitle.text = "Sound On"
-//            if(DB.getSoundOn()){
-//                self.btnSwitch .setOn(true, animated: false)
-//            }
-//            else{
-//                self.btnSwitch .setOn(false, animated: false)
-//            }
-//        }
-//        else
-//            if(typeCell == CELL_TYPE_SWITCH_RANDOM){
-//                lblTitle.text = "Random Cards"
-//                if(DB.getIsRandom()){
-//                    self.btnSwitch .setOn(true, animated: false)
-//                }
-//                else{
-//                    self.btnSwitch .setOn(false, animated: false)
-//                }
-//        }
+        typeCell = cellType
+        if(typeCell == CELL_TYPE_SWITCH_SOUND){
+            lblTitle.text = "Sound Effects"
+            if(DB.getSoundOn()){
+                self.btnSwitch .setOn(true, animated: false)
+            }
+            else{
+                self.btnSwitch .setOn(false, animated: false)
+            }
+        }
+        else
+            if(typeCell == CELL_TYPE_SWITCH_MUSIC){
+                lblTitle.text = "Music"
+                if(DB.getMusicOn()){
+                    self.btnSwitch .setOn(true, animated: false)
+                }
+                else{
+                    self.btnSwitch .setOn(false, animated: false)
+                }
+        }
     }
     @IBAction func btnSwitch(sender: AnyObject) {
         if(btnSwitch.on == true){
             switch  typeCell{
             case CELL_TYPE_SWITCH_SOUND:
-               // turnOnSound()
+                turnOnSound()
                 break
-            case CELL_TYPE_SWITCH_RANDOM:
-                //turnOnRandom()
+            case CELL_TYPE_SWITCH_MUSIC:
+                turnOnMusic()
                 break
             default:
                 break
@@ -67,31 +67,30 @@ class SwitchCell: UITableViewCell {
         else{
             switch  typeCell{
             case CELL_TYPE_SWITCH_SOUND:
-               // turnOffSound()
+                turnOffSound()
                 break
-            case CELL_TYPE_SWITCH_RANDOM:
-                //turnOffRandom()
+            case CELL_TYPE_SWITCH_MUSIC:
+                turnOffMusic()
                 break
             default:
                 break
             }
-            
         }
     }
     
     func turnOffSound(){
-      //  DB.updateSetting(1, randomCard: -1)
+        DB.updateSetting(1, turnOffMusic : -1)
     }
     
     func turnOnSound() {
-        //DB.updateSetting(0, randomCard: -1)
+        DB.updateSetting(0, turnOffMusic: -1)
     }
     
-    func turnOnRandom() {
-       // DB.updateSetting(-1, randomCard: 1)
+    func turnOnMusic() {
+        DB.updateSetting(-1, turnOffMusic: 0)
     }
     
-    func turnOffRandom() {
-        //DB.updateSetting(-1, randomCard: 0)
+    func turnOffMusic() {
+        DB.updateSetting(-1, turnOffMusic: 1)
     }
 }
