@@ -108,20 +108,20 @@ class DB: Object{
             realm.add(setting)
         }
     }
-    static func updateSetting(turnOffSound: Int, randomCard: Int){
+    static func updateSetting(turnOffSound: Int, turnOffMusic: Int){
         let setting = realm.objects(Setting).first
         if(setting != nil){
             try! realm.write {
                 if(turnOffSound==0 || turnOffSound == 1){
                     setting?.turnOffSound = turnOffSound
                 }
-                if(randomCard == 0 || randomCard == 1){
-                    setting?.isRandom = randomCard
+                if(turnOffMusic == 0 || turnOffMusic == 1){
+                    setting?.turnOffMusic = turnOffMusic
                 }
             }
         }else{
             Setting.create()
-            DB.updateSetting(turnOffSound, randomCard: randomCard)
+            DB.updateSetting(turnOffSound, turnOffMusic: turnOffMusic)
         }
     }
     
@@ -135,14 +135,14 @@ class DB: Object{
         return true
     }
     
-    static func getIsRandom()->Bool{
+    static func getMusicOn()->Bool{
         let setting = realm.objects(Setting).first
         if(setting != nil){
-            if(setting?.isRandom == 1){
-                return true
+            if(setting?.turnOffMusic == 1){
+                return false
             }
         }
-        return false
+        return true
     }
     
 }

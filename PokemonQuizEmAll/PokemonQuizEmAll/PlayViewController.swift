@@ -68,7 +68,6 @@ class PlayViewController: UIViewController {
     //MARK: Button Settings
     
     @IBAction func btnSettingsDidTap(sender: AnyObject) {
-        
                 let settingsVC : SettingsViewController! = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsViewController") as? SettingsViewController
                 self.navigationController?.pushViewController(settingsVC, animated: true)
     }

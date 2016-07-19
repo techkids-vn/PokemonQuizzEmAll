@@ -137,7 +137,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="nBS-uf-pGE"/>
+                    <navigationItem key="navigationItem" id="nBS-uf-pGE">
+                        <barButtonItem key="backBarButtonItem" title=" " id="JTA-QO-UOS"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnPlay" destination="chZ-BI-R2C" id="R6D-Ln-xrm"/>
                         <outlet property="lblHighScore" destination="nFt-Qc-iMy" id="ehd-P1-90f"/>
