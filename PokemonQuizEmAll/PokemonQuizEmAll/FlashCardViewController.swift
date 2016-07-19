@@ -31,9 +31,9 @@ class FlashCardViewController: UIViewController {
     var currentPokemon = 0
     var totalPokemon = 0
     var pokemonCollection = [Pokemon]()
-    var totalTime = 100.0
+    var totalTime = 20.0
     let minusTime = 0.2
-    var currentTime = 100.0
+    var currentTime = 20.0
   
     var colorVariable : Variable<String> = Variable("")
     var scoreVariable : Variable<Int> = Variable(0)
@@ -68,9 +68,12 @@ class FlashCardViewController: UIViewController {
 //            if self.currentPokemon == self.totalPokemon {
 //                self.currentPokemon = 0
 //            }
-            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon-1)
+            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
             UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
             self.bindingData()
+            if self.navigationItem.hidesBackButton && self.currentTime <= 0 {
+                self.navigationController?.popViewControllerAnimated(true)
+            }
         }
     }
     
@@ -180,10 +183,9 @@ class FlashCardViewController: UIViewController {
             let scaleTime = self.currentTime/self.totalTime
             self.CircleProgress.progress = scaleTime
         }
-        else {
-            self.navigationController?.popViewControllerAnimated(true)
-            self.resetData()
-        }
+//        else {
+//            self.navigationController?.popViewControllerAnimated(true)
+//        }
     }
     
     func clickOnButton() {
@@ -246,6 +248,9 @@ class FlashCardViewController: UIViewController {
     }
     
     func trueAnsert(trueBtn : UIButton) {
+//        if self.currentTime < self.totalTime {
+//            self.currentTime += 1
+//        }
         trueBtn.backgroundColor = self.hexStringToUIColor("#50B745")
         let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
@@ -325,6 +330,7 @@ class FlashCardViewController: UIViewController {
                     self.pokemonCollection.append(pokemon)
                 }
             }
+            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
             self.bindingData()
         } else {
             print("file not exists")
@@ -353,15 +359,6 @@ class FlashCardViewController: UIViewController {
         default:
            print("Random Failed!")
         }
-    }
-    
-    func resetData() {
-        self.pokemonCollection = []
-        self.scoreVariable.value = 0
-        self.trueAnswerIndex = 0
-        self.currentTime = 100.0
-        self.totalTime = 100.0
-        self.currentPokemon = 0
     }
     
     func setTitleForButton(trueBtn : UIButton, failBtn1 : UIButton, failBtn2 : UIButton, failBtn3 : UIButton) {
