@@ -640,8 +640,8 @@
 				E8394A881D3D16920094F4FC /* PackCard.swift */,
 				E8394A911D3D16920094F4FC /* Card.swift */,
 				995976CD1D3CC6FE00E98204 /* Pokemon.swift */,
-				E8394A8D1D3D16920094F4FC /* DB.swift */,
 				E805D0021D3E500D00F5C69B /* HighScore.swift */,
+				E8394A8D1D3D16920094F4FC /* DB.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";

@@ -117,9 +117,13 @@ class DB: Object{
                 }
             }
         }else{
-            HighScore.create()
+            HighScore.create(score)
             DB.updateHighScore(score)
         }
+    }
+    
+    static func getHighScore() -> HighScore! {
+        return (realm.objects(HighScore).first)
     }
     
     //MARK: Setting

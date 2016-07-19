@@ -31,9 +31,9 @@ class FlashCardViewController: UIViewController {
     var currentPokemon = 0
     var totalPokemon = 0
     var pokemonCollection = [Pokemon]()
-    var totalTime = 30.0
+    var totalTime = 20.0
     let minusTime = 0.2
-    var currentTime = 30.0
+    var currentTime = 20.0
   
     var colorVariable : Variable<String> = Variable("")
     var scoreVariable : Variable<Int> = Variable(0)
@@ -59,7 +59,7 @@ class FlashCardViewController: UIViewController {
         self.backFlashCard.frame = frame
 
         UIView.transitionFromView(self.frontFlashCard, toView: self.backFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
-        
+        self.isFlip = true
         let delay = 1 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
@@ -68,9 +68,14 @@ class FlashCardViewController: UIViewController {
 //            if self.currentPokemon == self.totalPokemon {
 //                self.currentPokemon = 0
 //            }
-            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon-1)
+            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
             UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
+            self.isFlip = false
             self.bindingData()
+            if self.navigationItem.hidesBackButton && self.currentTime <= 0 {
+                self.caculateHightScore()
+                self.navigationController?.popViewControllerAnimated(true)
+            }
         }
     }
     
@@ -121,8 +126,8 @@ class FlashCardViewController: UIViewController {
                 self.view.backgroundColor = self.hexStringToUIColor(color)
                 self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
                 self.navigationController?.navigationBar.translucent = false
-             //   self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(color)
-              //  self.navigationController!.navigationBar.tintColor = .whiteColor();
+                self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(color)
+                self.navigationController!.navigationBar.tintColor = .whiteColor();
             }
             else {
                 let col = self.pokemonCollection[0].color
@@ -179,6 +184,11 @@ class FlashCardViewController: UIViewController {
             self.currentTime -= self.minusTime
             let scaleTime = self.currentTime/self.totalTime
             self.CircleProgress.progress = scaleTime
+        }
+        else {
+            if !isFlip {
+                self.navigationController?.popViewControllerAnimated(true)
+            }
         }
     }
     
@@ -242,6 +252,9 @@ class FlashCardViewController: UIViewController {
     }
     
     func trueAnsert(trueBtn : UIButton) {
+//        if self.currentTime < self.totalTime {
+//            self.currentTime += 1
+//        }
         trueBtn.backgroundColor = self.hexStringToUIColor("#50B745")
         let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
@@ -276,14 +289,6 @@ class FlashCardViewController: UIViewController {
         }
     }
     
-    //MARK : Score
-    func caculateScore() {
-        _ = self.scoreVariable.asObservable().subscribeNext {
-            score in
-            self.lblScore.text = "\(score)"
-        }
-    }
-    
     func findTrueAnswer() {
         switch self.trueAnswerIndex {
         case 0:
@@ -296,6 +301,26 @@ class FlashCardViewController: UIViewController {
             self.falseAnswer(btnAnswer4, failButton1: btnAnswer2, failButton2: btnAnswer3, failButton3: btnAnswer1)
         default:
             print("Answer Failed!")
+        }
+    }
+
+    //MARK : Score
+    func caculateScore() {
+        _ = self.scoreVariable.asObservable().subscribeNext {
+            score in
+            self.lblScore.text = "\(score)"
+        }
+    }
+    
+    func caculateHightScore() {
+        if DB.getHighScore() == nil {
+            HighScore.create(self.scoreVariable.value)
+        }
+        else {
+            print("xxx")
+        }
+        if self.scoreVariable.value > DB.getHighScore().score {
+            DB.updateHighScore(self.scoreVariable.value)
         }
     }
     
@@ -321,6 +346,7 @@ class FlashCardViewController: UIViewController {
                     self.pokemonCollection.append(pokemon)
                 }
             }
+            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
             self.bindingData()
         } else {
             print("file not exists")
