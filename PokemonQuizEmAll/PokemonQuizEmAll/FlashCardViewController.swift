@@ -57,10 +57,11 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
             
-            self.currentPokemon += 1
-            if self.currentPokemon == self.totalPokemon {
-                self.currentPokemon = 0
-            }
+//            self.currentPokemon += 1
+//            if self.currentPokemon == self.totalPokemon {
+//                self.currentPokemon = 0
+//            }
+            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon-1)
             UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
             self.bindingData()
         }
