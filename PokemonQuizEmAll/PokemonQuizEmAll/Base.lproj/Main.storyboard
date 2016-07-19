@@ -99,7 +99,7 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chZ-BI-R2C">
-                                <rect key="frame" x="262" y="346" width="75" height="75"/>
+                                <rect key="frame" x="180" y="263" width="240" height="240"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="G6Y-YV-Zml"/>
@@ -123,9 +123,9 @@
                             <constraint firstItem="qKV-jc-41g" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dz8-c9-98Z"/>
                             <constraint firstItem="qKV-jc-41g" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="FCw-KF-i6y"/>
                             <constraint firstItem="chZ-BI-R2C" firstAttribute="centerX" secondItem="2yV-Sn-8UB" secondAttribute="centerX" id="Z6h-iX-rez"/>
-                            <constraint firstItem="chZ-BI-R2C" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:8" id="fL3-Mh-TPq"/>
                             <constraint firstItem="LST-3j-L4Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hCg-gT-0cb"/>
                             <constraint firstItem="chZ-BI-R2C" firstAttribute="centerY" secondItem="2yV-Sn-8UB" secondAttribute="centerY" id="lc0-R9-Zt4"/>
+                            <constraint firstItem="chZ-BI-R2C" firstAttribute="width" secondItem="qKV-jc-41g" secondAttribute="width" multiplier="0.4" id="oqF-Na-fU9"/>
                             <constraint firstItem="LST-3j-L4Y" firstAttribute="top" secondItem="2yV-Sn-8UB" secondAttribute="bottom" id="rcO-zY-jFf"/>
                             <constraint firstItem="2yV-Sn-8UB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="tTQ-O6-4H9"/>
                             <constraint firstItem="qKV-jc-41g" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="63:100" id="wFZ-aZ-lZs"/>
@@ -262,8 +262,26 @@
                             <constraint firstItem="nmH-k8-zSK" firstAttribute="top" secondItem="exN-Qz-ZvK" secondAttribute="bottom" constant="30" id="uU9-et-2bK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YdO-a2-O4C"/>
+                    <navigationItem key="navigationItem" id="YdO-a2-O4C">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="d9G-p4-3c4">
+                            <view key="customView" contentMode="scaleToFill" id="Cus-al-wia" customClass="CircleProgressView" customModule="CircleProgressView">
+                                <rect key="frame" x="550" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.62745098039215685" green="0.14117647058823529" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                        <color key="value" red="0.62745098040000002" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="CircleProgress" destination="Cus-al-wia" id="2WD-ea-5Dq"/>
                         <outlet property="btnAnswer1" destination="eP2-oH-QZd" id="b4s-Ez-UYM"/>
                         <outlet property="btnAnswer2" destination="otU-Oc-hxw" id="qjF-Bp-xsI"/>
                         <outlet property="btnAnswer3" destination="5vv-sV-yOW" id="RqC-LO-1dY"/>

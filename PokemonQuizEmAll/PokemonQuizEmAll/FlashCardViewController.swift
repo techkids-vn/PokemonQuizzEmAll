@@ -12,9 +12,11 @@ import RxCocoa
 import SwiftyJSON
 import AVFoundation
 import Spring
+import CircleProgressView
 
-class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
+class FlashCardViewController: UIViewController {
     
+    @IBOutlet weak var CircleProgress: CircleProgressView!
     @IBOutlet weak var btnAnswer3: UIButton!
     @IBOutlet weak var btnAnswer4: UIButton!
     @IBOutlet weak var btnAnswer2: UIButton!
@@ -29,12 +31,15 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
     var currentPokemon = 0
     var totalPokemon = 0
     var pokemonCollection = [Pokemon]()
+    var totalTime = 30.0
+    let minusTime = 0.2
+    var currentTime = 30.0
   
     var colorVariable : Variable<String> = Variable("")
     var scoreVariable : Variable<Int> = Variable(0)
 
     override func viewWillAppear(animated: Bool) {
-       self.changeBackgroundColor()
+
     }
     
     override func viewDidLoad() {
@@ -43,6 +48,8 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         self.dumpData()
         self.clickOnButton()
         self.caculateScore()
+        self.changeBackgroundColor()
+        self.countTime(0.2)
     }
     
     //MARK: Animation
@@ -104,9 +111,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         self.btnAnswer2.layer.cornerRadius = self.btnAnswer2.frame.height/2
         self.btnAnswer3.layer.cornerRadius = self.btnAnswer3.frame.height/2
         self.btnAnswer4.layer.cornerRadius = self.btnAnswer4.frame.height/2
-        
-        //Color
-        self.changeBackgroundColor()
+
     }
     
     func changeBackgroundColor() {
@@ -119,6 +124,13 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
              //   self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(color)
               //  self.navigationController!.navigationBar.tintColor = .whiteColor();
             }
+            else {
+                let col = self.pokemonCollection[0].color
+                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+                self.navigationController?.navigationBar.translucent = false
+                self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(col)
+                self.navigationController!.navigationBar.tintColor = .whiteColor();
+            }
         }
     }
     
@@ -127,6 +139,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         self.btnAnswer2.userInteractionEnabled = block
         self.btnAnswer3.userInteractionEnabled = block
         self.btnAnswer4.userInteractionEnabled = block
+        self.navigationItem.hidesBackButton = !block
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -154,7 +167,19 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
     
     //MARK: Chose Answer
     func delayThenFlipCard(time : Double) {
-        NSTimer.scheduledTimerWithTimeInterval(time, target: self, selector: #selector(self.flipFlashCard),    userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(time, target: self, selector: #selector(self.flipFlashCard), userInfo: nil, repeats: false)
+    }
+    
+    func countTime(time : Double) {
+        NSTimer.scheduledTimerWithTimeInterval(time, target: self, selector: #selector(self.reduceTime), userInfo: nil, repeats: true)
+    }
+    
+    func reduceTime() {
+        if self.currentTime > 0 {
+            self.currentTime -= self.minusTime
+            let scaleTime = self.currentTime/self.totalTime
+            self.CircleProgress.progress = scaleTime
+        }
     }
     
     func clickOnButton() {
@@ -204,6 +229,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
     }
     
     func showAnswer() {
+      // self.changeBackgroundColor()
         self.delayThenFlipCard(0.5)
     }
     
@@ -216,8 +242,8 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
     }
     
     func trueAnsert(trueBtn : UIButton) {
-        trueBtn.backgroundColor = UIColor.greenColor()
-        let delay = 1 * Double(NSEC_PER_SEC)
+        trueBtn.backgroundColor = self.hexStringToUIColor("#50B745")
+        let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
             trueBtn.backgroundColor = UIColor.whiteColor()
@@ -231,12 +257,12 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
     }
     
     func falseAnswer(trueBtn : UIButton, failButton1 : UIButton, failButton2 : UIButton, failButton3 : UIButton) {
-        trueBtn.backgroundColor = UIColor.greenColor()
-        failButton1.backgroundColor = UIColor.redColor()
-        failButton2.backgroundColor = UIColor.redColor()
-        failButton3.backgroundColor = UIColor.redColor()
+        trueBtn.backgroundColor = self.hexStringToUIColor("#50B745")
+        failButton1.backgroundColor = self.hexStringToUIColor("#A02441")
+        failButton2.backgroundColor = self.hexStringToUIColor("#A02441")
+        failButton3.backgroundColor = self.hexStringToUIColor("#A02441")
         
-        let delay = 1 * Double(NSEC_PER_SEC)
+        let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
             trueBtn.backgroundColor = UIColor.whiteColor()
@@ -265,7 +291,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         case 1:
             self.falseAnswer(btnAnswer2, failButton1: btnAnswer1, failButton2: btnAnswer3, failButton3: btnAnswer4)
         case 2:
-            self.falseAnswer(btnAnswer3, failButton1: btnAnswer2, failButton2: btnAnswer3, failButton3: btnAnswer4)
+            self.falseAnswer(btnAnswer3, failButton1: btnAnswer2, failButton2: btnAnswer1, failButton3: btnAnswer4)
         case 3:
             self.falseAnswer(btnAnswer4, failButton1: btnAnswer2, failButton2: btnAnswer3, failButton3: btnAnswer1)
         default:
@@ -335,6 +361,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         failBtn1.setTitle(pokemon1.name, forState: .Normal)
         failBtn2.setTitle(pokemon2.name, forState: .Normal)
         failBtn3.setTitle(pokemon3.name, forState: .Normal)
+        self.changeBackgroundColor()
     }
     
     func randomFailAnswer(currentIndex : Int) -> Int {
