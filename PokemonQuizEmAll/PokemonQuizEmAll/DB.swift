@@ -128,6 +128,7 @@ class DB: Object{
             realm.add(setting)
         }
     }
+    
     static func updateSetting(turnOffSound: Int, turnOffMusic: Int){
         let setting = realm.objects(Setting).first
         if(setting != nil){
@@ -142,6 +143,33 @@ class DB: Object{
         }else{
             Setting.create()
             DB.updateSetting(turnOffSound, turnOffMusic: turnOffMusic)
+        }
+    }
+    
+    static func updateSettings(turnOffSound: Int, turnOffMusic: Int, listGens: [Int]){
+        let setting = realm.objects(Setting).first
+        if(setting != nil){
+            try! realm.write {
+                if(turnOffSound==0 || turnOffSound == 1){
+                    setting?.turnOffSound = turnOffSound
+                }
+                if(turnOffMusic == 0 || turnOffMusic == 1){
+                    setting?.turnOffMusic = turnOffMusic
+                }
+                if(listGens.count <= 0){
+                    // setting?.pickedGens.append(IntObject.create(0))
+                }
+                else{
+                    setting?.pickedGens.removeAll()
+                    for indexGen: Int in listGens{
+                        let newIntObject = IntObject.create(indexGen)
+                        setting?.pickedGens.append(newIntObject)
+                    }
+                }
+            }
+        }else{
+            Setting.create()
+            DB.updateSettings(turnOffSound, turnOffMusic: turnOffMusic,listGens: listGens)
         }
     }
     
@@ -163,6 +191,23 @@ class DB: Object{
             }
         }
         return true
+    }
+    static func getPickedGen()->[Int]{
+        let setting = realm.objects(Setting).first
+        var pickedGen = [Int]()
+        if(setting != nil){
+            for genIndex:IntObject in (setting?.pickedGens)! {
+                pickedGen.append(genIndex.value)
+            }
+        }
+        else{
+            pickedGen.append(0)
+            DB.updateSettings(-1, turnOffMusic: -1, listGens: pickedGen)
+        }
+        return pickedGen
+    }
+    static func checkSettingsStatus(){
+        print("sound: \(DB.getSoundOn()) - music: \(DB.getMusicOn()) - genCount : \(DB.getPickedGen().count)")
     }
     
 }

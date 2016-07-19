@@ -26,7 +26,7 @@ class PlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBtn()
-        
+        DB.checkSettingsStatus()
     }
     func setUpColor(){
         //   UIView.animateWithDuration(0.5) {
