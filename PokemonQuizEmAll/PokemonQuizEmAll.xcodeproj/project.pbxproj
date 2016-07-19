@@ -14,6 +14,7 @@
 		995976BD1D3CA16800E98204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995976BC1D3CA16800E98204 /* Assets.xcassets */; };
 		995976C01D3CA16800E98204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995976BE1D3CA16800E98204 /* LaunchScreen.storyboard */; };
 		995976CE1D3CC6FE00E98204 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995976CD1D3CC6FE00E98204 /* Pokemon.swift */; };
+		E805D0031D3E500D00F5C69B /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805D0021D3E500D00F5C69B /* HighScore.swift */; };
 		E8394A941D3D16920094F4FC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394A821D3D16920094F4FC /* UIColorExtension.swift */; };
 		E8394A951D3D16920094F4FC /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = E8394A831D3D16920094F4FC /* text.txt */; };
 		E8394A961D3D16920094F4FC /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8394A841D3D16920094F4FC /* SwitchCell.xib */; };
@@ -51,6 +52,7 @@
 		995976BF1D3CA16800E98204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		995976C11D3CA16800E98204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		995976CD1D3CC6FE00E98204 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		E805D0021D3E500D00F5C69B /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
 		E8394A821D3D16920094F4FC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E8394A831D3D16920094F4FC /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
 		E8394A841D3D16920094F4FC /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				E8394A911D3D16920094F4FC /* Card.swift */,
 				995976CD1D3CC6FE00E98204 /* Pokemon.swift */,
 				E8394A8D1D3D16920094F4FC /* DB.swift */,
+				E805D0021D3E500D00F5C69B /* HighScore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				E8394AAD1D3D2DA90094F4FC /* PlayViewController.swift in Sources */,
 				E8394AA51D3D16920094F4FC /* ButtonCell.swift in Sources */,
 				E8394A981D3D16920094F4FC /* SettingsViewController.swift in Sources */,
+				E805D0031D3E500D00F5C69B /* HighScore.swift in Sources */,
 				E8394AA31D3D16920094F4FC /* Card.swift in Sources */,
 				E8394A941D3D16920094F4FC /* UIColorExtension.swift in Sources */,
 				E8394A9C1D3D16920094F4FC /* FrontFlashCardViewModel.swift in Sources */,
