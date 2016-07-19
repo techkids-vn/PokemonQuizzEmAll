@@ -34,7 +34,10 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
     var scoreVariable : Variable<Int> = Variable(0)
 
     override func viewWillAppear(animated: Bool) {
-       self.changeBackgroundColor()
+      // self.changeBackgroundColor()
+//        let color = self.pokemonCollection[self.currentPokemon].color
+//        self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(color)
+//        self.navigationController!.navigationBar.tintColor = .whiteColor();
     }
     
     override func viewDidLoad() {
@@ -43,6 +46,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         self.dumpData()
         self.clickOnButton()
         self.caculateScore()
+        self.changeBackgroundColor()
     }
     
     //MARK: Animation
@@ -106,7 +110,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         self.btnAnswer4.layer.cornerRadius = self.btnAnswer4.frame.height/2
         
         //Color
-        self.changeBackgroundColor()
+//        self.changeBackgroundColor()
     }
     
     func changeBackgroundColor() {
@@ -117,6 +121,13 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
                 self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
                 self.navigationController?.navigationBar.translucent = false
                 self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(color)
+                self.navigationController!.navigationBar.tintColor = .whiteColor();
+            }
+            else {
+                let col = self.pokemonCollection[0].color
+                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+                self.navigationController?.navigationBar.translucent = false
+                self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(col)
                 self.navigationController!.navigationBar.tintColor = .whiteColor();
             }
         }
@@ -204,6 +215,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
     }
     
     func showAnswer() {
+      // self.changeBackgroundColor()
         self.delayThenFlipCard(0.5)
     }
     
@@ -335,6 +347,7 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
         failBtn1.setTitle(pokemon1.name, forState: .Normal)
         failBtn2.setTitle(pokemon2.name, forState: .Normal)
         failBtn3.setTitle(pokemon3.name, forState: .Normal)
+        self.changeBackgroundColor()
     }
     
     func randomFailAnswer(currentIndex : Int) -> Int {

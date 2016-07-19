@@ -710,7 +710,7 @@
 				TargetAttributes = {
 					995976B11D3CA16800E98204 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = YCJNEHP2D6;
+						DevelopmentTeam = 56YJ3N6KSG;
 					};
 				};
 			};
@@ -1097,7 +1097,7 @@
 				INFOPLIST_FILE = PokemonQuizEmAll/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vu.PokemonQuizEmAll;
+				PRODUCT_BUNDLE_IDENTIFIER = vuu.PokemonQuizEmAll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1113,7 +1113,7 @@
 				INFOPLIST_FILE = PokemonQuizEmAll/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vu.PokemonQuizEmAll;
+				PRODUCT_BUNDLE_IDENTIFIER = vuu.PokemonQuizEmAll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
