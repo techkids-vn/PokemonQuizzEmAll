@@ -102,6 +102,26 @@ class DB: Object{
         }
     }
     
+    //MARK: HighScore
+    static func createHighScore(highScore: HighScore){
+        try! realm.write{
+            realm.add(highScore)
+        }
+    }
+    static func updateHighScore(score : Int){
+        let highScore = realm.objects(HighScore).first
+        if(highScore != nil){
+            try! realm.write{
+                if(highScore?.score < score){
+                    highScore?.score = score
+                }
+            }
+        }else{
+            HighScore.create()
+            DB.updateHighScore(score)
+        }
+    }
+    
     //MARK: Setting
     static func createSetting(setting : Setting){
         try! realm.write{
