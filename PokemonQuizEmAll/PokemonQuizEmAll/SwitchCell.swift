@@ -14,6 +14,8 @@ class SwitchCell: UITableViewCell {
     
     @IBOutlet weak var btnSwitch: UISwitch!
     
+    let ad = AppDelegate()
+    
     let CELL_TYPE_SWITCH_SOUND : Int = 0
     let CELL_TYPE_SWITCH_MUSIC : Int = 1
     

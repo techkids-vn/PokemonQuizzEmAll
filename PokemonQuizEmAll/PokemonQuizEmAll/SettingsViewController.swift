@@ -14,6 +14,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tbvButton: UITableView!
     @IBOutlet weak var clvGeneration: UICollectionView!
+    let ad = AppDelegate()
     
     var pickGens = [Int]()
     

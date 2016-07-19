@@ -161,11 +161,11 @@
 		991EB8301D3D361400E9FBE6 /* Zubat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7991D3D361400E9FBE6 /* Zubat.jpg */; };
 		991EB8321D3D363600E9FBE6 /* gen1.json in Resources */ = {isa = PBXBuildFile; fileRef = 991EB8311D3D363600E9FBE6 /* gen1.json */; };
 		995976B61D3CA16800E98204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995976B51D3CA16800E98204 /* AppDelegate.swift */; };
-		995976B81D3CA16800E98204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995976B71D3CA16800E98204 /* ViewController.swift */; };
 		995976BB1D3CA16800E98204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995976B91D3CA16800E98204 /* Main.storyboard */; };
 		995976BD1D3CA16800E98204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995976BC1D3CA16800E98204 /* Assets.xcassets */; };
 		995976C01D3CA16800E98204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995976BE1D3CA16800E98204 /* LaunchScreen.storyboard */; };
 		995976CE1D3CC6FE00E98204 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995976CD1D3CC6FE00E98204 /* Pokemon.swift */; };
+		E801A8891D3E9F1B0060A684 /* Pokemon theme song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E801A8881D3E9E610060A684 /* Pokemon theme song.mp3 */; };
 		E805D0031D3E500D00F5C69B /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805D0021D3E500D00F5C69B /* HighScore.swift */; };
 		E8394A941D3D16920094F4FC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394A821D3D16920094F4FC /* UIColorExtension.swift */; };
 		E8394A951D3D16920094F4FC /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = E8394A831D3D16920094F4FC /* text.txt */; };
@@ -350,12 +350,13 @@
 		991EB8311D3D363600E9FBE6 /* gen1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gen1.json; sourceTree = "<group>"; };
 		995976B21D3CA16800E98204 /* PokemonQuizEmAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonQuizEmAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995976B51D3CA16800E98204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		995976B71D3CA16800E98204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		995976BA1D3CA16800E98204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		995976BC1D3CA16800E98204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		995976BF1D3CA16800E98204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		995976C11D3CA16800E98204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		995976CD1D3CC6FE00E98204 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		E801A8861D3E9C370060A684 /* CircleProgressView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CircleProgressView.framework; path = "../../Library/Developer/Xcode/DerivedData/PokemonQuizEmAll-cbxwlcjhqwpwoqbwfbtbbxagfpwx/Build/Products/Debug-iphonesimulator/CircleProgressView/CircleProgressView.framework"; sourceTree = "<group>"; };
+		E801A8881D3E9E610060A684 /* Pokemon theme song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Pokemon theme song.mp3"; path = "PokemonQuizEmAll/Pokemon theme song.mp3"; sourceTree = "<group>"; };
 		E805D0021D3E500D00F5C69B /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
 		E8394A821D3D16920094F4FC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E8394A831D3D16920094F4FC /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
@@ -566,6 +567,7 @@
 		995976A91D3CA16800E98204 = {
 			isa = PBXGroup;
 			children = (
+				E801A8881D3E9E610060A684 /* Pokemon theme song.mp3 */,
 				995976B41D3CA16800E98204 /* PokemonQuizEmAll */,
 				995976B31D3CA16800E98204 /* Products */,
 				82E17EF3852C7A920A56690F /* Pods */,
@@ -595,7 +597,6 @@
 				995976C71D3CB7F900E98204 /* Controller */,
 				E8394A831D3D16920094F4FC /* text.txt */,
 				991EB8311D3D363600E9FBE6 /* gen1.json */,
-				995976B71D3CA16800E98204 /* ViewController.swift */,
 				995976C11D3CA16800E98204 /* Info.plist */,
 			);
 			path = PokemonQuizEmAll;
@@ -673,6 +674,7 @@
 		C9D50FAE29A6FDEFCC4EABBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E801A8861D3E9C370060A684 /* CircleProgressView.framework */,
 				4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */,
 			);
 			name = Frameworks;
@@ -713,7 +715,7 @@
 				TargetAttributes = {
 					995976B11D3CA16800E98204 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 56YJ3N6KSG;
+						DevelopmentTeam = YCJNEHP2D6;
 					};
 				};
 			};
@@ -740,6 +742,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E801A8891D3E9F1B0060A684 /* Pokemon theme song.mp3 in Resources */,
 				991EB7C91D3D361400E9FBE6 /* Graveler.jpg in Resources */,
 				E8394AB01D3D3B020094F4FC /* PoplarStd.otf in Resources */,
 				991EB79F1D3D361400E9FBE6 /* Articuno.jpg in Resources */,
@@ -961,7 +964,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				995976B81D3CA16800E98204 /* ViewController.swift in Sources */,
 				E8394AA71D3D19810094F4FC /* ColorGenarator.swift in Sources */,
 				E8394A9F1D3D16920094F4FC /* DB.swift in Sources */,
 				E8394A9B1D3D16920094F4FC /* ListPackViewController.swift in Sources */,
@@ -1044,6 +1046,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1084,6 +1087,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1101,7 +1105,7 @@
 				INFOPLIST_FILE = PokemonQuizEmAll/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vuu.PokemonQuizEmAll;
+				PRODUCT_BUNDLE_IDENTIFIER = vuu.PokemonQuizzEmAll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1117,7 +1121,7 @@
 				INFOPLIST_FILE = PokemonQuizEmAll/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vuu.PokemonQuizEmAll;
+				PRODUCT_BUNDLE_IDENTIFIER = vuu.PokemonQuizzEmAll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -7,12 +7,15 @@
 //
 
 import UIKit
+//import AVFoundation
 
 class PlayViewController: UIViewController {
     
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var lblHighScoreTitle: UILabel!
     @IBOutlet weak var lblHighScore: UILabel!
+    let ad = AppDelegate()
+
     
     override func viewWillAppear(animated: Bool) {
         setUpColor()
@@ -20,13 +23,15 @@ class PlayViewController: UIViewController {
         lblHighScore.text = "9999"
         lblHighScore.numberOfLines = 1;
         lblHighScore.adjustsFontSizeToFitWidth = true;
-        
+        //playMusic()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBtn()
         DB.checkSettingsStatus()
+        
+        
     }
     func setUpColor(){
         //   UIView.animateWithDuration(0.5) {
