@@ -72,6 +72,7 @@ class FlashCardViewController: UIViewController {
             UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
             self.bindingData()
             if self.navigationItem.hidesBackButton && self.currentTime <= 0 {
+                self.caculateHightScore()
                 self.navigationController?.popViewControllerAnimated(true)
             }
         }
@@ -285,14 +286,6 @@ class FlashCardViewController: UIViewController {
         }
     }
     
-    //MARK : Score
-    func caculateScore() {
-        _ = self.scoreVariable.asObservable().subscribeNext {
-            score in
-            self.lblScore.text = "\(score)"
-        }
-    }
-    
     func findTrueAnswer() {
         switch self.trueAnswerIndex {
         case 0:
@@ -305,6 +298,26 @@ class FlashCardViewController: UIViewController {
             self.falseAnswer(btnAnswer4, failButton1: btnAnswer2, failButton2: btnAnswer3, failButton3: btnAnswer1)
         default:
             print("Answer Failed!")
+        }
+    }
+
+    //MARK : Score
+    func caculateScore() {
+        _ = self.scoreVariable.asObservable().subscribeNext {
+            score in
+            self.lblScore.text = "\(score)"
+        }
+    }
+    
+    func caculateHightScore() {
+        if DB.getHighScore() == nil {
+            HighScore.create(self.scoreVariable.value)
+        }
+        else {
+            print("xxx")
+        }
+        if self.scoreVariable.value > DB.getHighScore().score {
+            DB.updateHighScore(self.scoreVariable.value)
         }
     }
     

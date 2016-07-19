@@ -16,8 +16,13 @@ class PlayViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         setUpColor()
+        if DB.getHighScore() != nil {
+            lblHighScore.text = "\(DB.getHighScore().score)"
+        }
+        else {
+            lblHighScore.text = "0"
+        }
         
-        lblHighScore.text = "9999"
         lblHighScore.numberOfLines = 1;
         lblHighScore.adjustsFontSizeToFitWidth = true;
         
