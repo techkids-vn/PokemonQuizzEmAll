@@ -116,8 +116,8 @@ class FlashCardViewController: UIViewController, AVSpeechSynthesizerDelegate {
                 self.view.backgroundColor = self.hexStringToUIColor(color)
                 self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
                 self.navigationController?.navigationBar.translucent = false
-                self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(color)
-                self.navigationController!.navigationBar.tintColor = .whiteColor();
+             //   self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(color)
+              //  self.navigationController!.navigationBar.tintColor = .whiteColor();
             }
         }
     }

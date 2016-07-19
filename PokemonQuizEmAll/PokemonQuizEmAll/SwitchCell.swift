@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SwitchCell: UITableViewCell {
     @IBOutlet weak var lblTitle: UILabel!
@@ -79,18 +80,18 @@ class SwitchCell: UITableViewCell {
     }
     
     func turnOffSound(){
-        DB.updateSetting(1, turnOffMusic : -1)
+        DB.updateSettings(1, turnOffMusic : -1, listGens: [Int]())
     }
     
     func turnOnSound() {
-        DB.updateSetting(0, turnOffMusic: -1)
+        DB.updateSettings(0, turnOffMusic: -1, listGens: [Int]())
     }
     
     func turnOnMusic() {
-        DB.updateSetting(-1, turnOffMusic: 0)
+        DB.updateSettings(-1, turnOffMusic: 0, listGens: [Int]())
     }
     
     func turnOffMusic() {
-        DB.updateSetting(-1, turnOffMusic: 1)
+        DB.updateSettings(-1, turnOffMusic: 1, listGens: [Int]())
     }
 }
