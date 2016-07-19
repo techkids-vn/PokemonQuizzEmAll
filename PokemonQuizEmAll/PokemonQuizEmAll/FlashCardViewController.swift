@@ -59,7 +59,7 @@ class FlashCardViewController: UIViewController {
         self.backFlashCard.frame = frame
 
         UIView.transitionFromView(self.frontFlashCard, toView: self.backFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
-        
+        self.isFlip = true
         let delay = 1 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
@@ -70,6 +70,7 @@ class FlashCardViewController: UIViewController {
 //            }
             self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
             UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
+            self.isFlip = false
             self.bindingData()
             if self.navigationItem.hidesBackButton && self.currentTime <= 0 {
                 self.caculateHightScore()
@@ -184,9 +185,11 @@ class FlashCardViewController: UIViewController {
             let scaleTime = self.currentTime/self.totalTime
             self.CircleProgress.progress = scaleTime
         }
-//        else {
-//            self.navigationController?.popViewControllerAnimated(true)
-//        }
+        else {
+            if !isFlip {
+                self.navigationController?.popViewControllerAnimated(true)
+            }
+        }
     }
     
     func clickOnButton() {
