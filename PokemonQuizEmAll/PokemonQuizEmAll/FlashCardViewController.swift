@@ -31,9 +31,9 @@ class FlashCardViewController: UIViewController {
     var currentPokemon = 0
     var totalPokemon = 0
     var pokemonCollection = [Pokemon]()
-    var totalTime = 20.0
+    var totalTime = TOTAL_TIME
     let minusTime = 0.2
-    var currentTime = 20.0
+    var currentTime = TOTAL_TIME
   
     var colorVariable : Variable<String> = Variable("")
     var scoreVariable : Variable<Int> = Variable(0)
@@ -187,6 +187,7 @@ class FlashCardViewController: UIViewController {
         }
         else {
             if !isFlip {
+                self.caculateHightScore()
                 self.navigationController?.popViewControllerAnimated(true)
             }
         }
@@ -255,7 +256,7 @@ class FlashCardViewController: UIViewController {
 //        if self.currentTime < self.totalTime {
 //            self.currentTime += 1
 //        }
-        trueBtn.backgroundColor = self.hexStringToUIColor("#50B745")
+        trueBtn.backgroundColor = self.hexStringToUIColor("#5ad427")
         let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
@@ -270,10 +271,10 @@ class FlashCardViewController: UIViewController {
     }
     
     func falseAnswer(trueBtn : UIButton, failButton1 : UIButton, failButton2 : UIButton, failButton3 : UIButton) {
-        trueBtn.backgroundColor = self.hexStringToUIColor("#50B745")
-        failButton1.backgroundColor = self.hexStringToUIColor("#A02441")
-        failButton2.backgroundColor = self.hexStringToUIColor("#A02441")
-        failButton3.backgroundColor = self.hexStringToUIColor("#A02441")
+        trueBtn.backgroundColor = self.hexStringToUIColor("#5ad427")
+        failButton1.backgroundColor = self.hexStringToUIColor("#FF3A2D")
+        failButton2.backgroundColor = self.hexStringToUIColor("#FF3A2D")
+        failButton3.backgroundColor = self.hexStringToUIColor("#FF3A2D")
         
         let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
