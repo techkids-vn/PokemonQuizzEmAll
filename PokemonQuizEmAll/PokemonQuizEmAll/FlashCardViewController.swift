@@ -31,16 +31,13 @@ class FlashCardViewController: UIViewController {
     var currentPokemon = 0
     var totalPokemon = 0
     var pokemonCollection = [Pokemon]()
-    var totalTime = TOTAL_TIME
     let minusTime = 0.2
     var currentTime = TOTAL_TIME
   
     var colorVariable : Variable<String> = Variable("")
     var scoreVariable : Variable<Int> = Variable(0)
-
-    override func viewWillAppear(animated: Bool) {
-
-    }
+    
+    let maskLayer: CAShapeLayer = CircleMask.circleMaskLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,52 +46,74 @@ class FlashCardViewController: UIViewController {
         self.clickOnButton()
         self.caculateScore()
         self.changeBackgroundColor()
-        self.countTime(0.2)
+        self.countTime(minusTime)
+        
+        maskLayer.position = CGPoint(x: view.layer.bounds.size.width/2, y: view.layer.bounds.size.height*0.63)
+        view.layer.mask = maskLayer
+        
+        self.navigationController!.navigationBar.barTintColor = .clearColor()
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        self.navigationController!.navigationBar.backgroundColor = .clearColor()
+        self.navigationController!.view.backgroundColor = .clearColor()
+        self.navigationController?.navigationBar.tintColor = .whiteColor()
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: true)
     }
     
     //MARK: Animation
     func flipFlashCard() {
+        self.isFlip = true
         let frame = CGRectMake(0, 0, self.vFlashCard.layer.frame.size.width,
                                self.vFlashCard.layer.frame.size.height)
         self.backFlashCard.frame = frame
 
-        UIView.transitionFromView(self.frontFlashCard, toView: self.backFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
-        self.isFlip = true
-        let delay = 1 * Double(NSEC_PER_SEC)
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        dispatch_after(time, dispatch_get_main_queue()) {
+        UIView.transitionFromView(self.frontFlashCard, toView: self.backFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: { _ in
             
-//            self.currentPokemon += 1
-//            if self.currentPokemon == self.totalPokemon {
-//                self.currentPokemon = 0
-//            }
-            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
-            UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0.3, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
-            self.isFlip = false
-            self.bindingData()
-            if self.navigationItem.hidesBackButton && self.currentTime <= 0 {
-                self.caculateHightScore()
-                self.navigationController?.popViewControllerAnimated(true)
+            let delay = 1 * Double(NSEC_PER_SEC)
+            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            dispatch_after(time, dispatch_get_main_queue()) {
+                self.nextCard();
             }
-        }
+        })
     }
     
-    func nextCard(view : SpringView) {
-        view.delay = 0.1
-        view.velocity = 0.5
-        view.animateNext {
-            view.animation = "slideRight"
-            view.animateTo()
-            view.x = self.view.bounds.width + self.vFlashCard.bounds.width
-            view.animateToNext {
-                view.animate()
-            }
-            view.x = 0
-            view.animateToNext {
-                view.animateTo()
-            //    self.setButtuonEnable(true)
-            }
-        }
+    func nextCard(){
+        self.btnAnswer1.alpha = 0
+        self.btnAnswer2.alpha = 0
+        self.btnAnswer3.alpha = 0
+        self.btnAnswer4.alpha = 0
+        UIView.animateWithDuration(0.15, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.backFlashCard.center.x -= self.view.bounds.width
+            }, completion: { _ in
+                
+                self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
+                UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0, options: UIViewAnimationOptions.TransitionNone, completion: nil)
+                self.isFlip = false
+                self.bindingData()
+                
+                if self.navigationItem.hidesBackButton && self.currentTime <= 0 {
+                    self.caculateHightScore()
+                    self.navigationController?.popViewControllerAnimated(true)
+                }
+                
+                self.frontFlashCard.center.x += self.view.bounds.width
+                
+                UIView.animateWithDuration(0.16, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                        self.frontFlashCard.center.x -= self.view.bounds.width
+                    }, completion: { _ in
+                        self.btnAnswer1.alpha = 1
+                        self.btnAnswer2.alpha = 1
+                        self.btnAnswer3.alpha = 1
+                        self.btnAnswer4.alpha = 1
+                })
+        })
     }
     
     //MARK: Config UI
@@ -123,18 +142,16 @@ class FlashCardViewController: UIViewController {
         _ = self.colorVariable.asObservable().subscribeNext {
             color in
             if color != "" {
-                self.view.backgroundColor = self.hexStringToUIColor(color)
-                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-                self.navigationController?.navigationBar.translucent = false
-                self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(color)
-                self.navigationController!.navigationBar.tintColor = .whiteColor();
+                UIView.animateWithDuration(0.3, animations: {
+                    self.view.backgroundColor = UIColor.init(hex: color)
+                })
             }
             else {
                 let col = self.pokemonCollection[0].color
-                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-                self.navigationController?.navigationBar.translucent = false
-                self.navigationController!.navigationBar.barTintColor = self.hexStringToUIColor(col)
-                self.navigationController!.navigationBar.tintColor = .whiteColor();
+                
+                UIView.animateWithDuration(0.3, animations: {
+                    self.view.backgroundColor = UIColor.init(hex: col)
+                })
             }
         }
     }
@@ -145,28 +162,6 @@ class FlashCardViewController: UIViewController {
         self.btnAnswer3.userInteractionEnabled = block
         self.btnAnswer4.userInteractionEnabled = block
         self.navigationItem.hidesBackButton = !block
-    }
-    
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
-        
-        if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
-        }
-        
-        if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
-        }
-        
-        var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
-        
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
     }
     
     
@@ -180,16 +175,16 @@ class FlashCardViewController: UIViewController {
     }
     
     func reduceTime() {
+        if isFlip {return}
+        
         if self.currentTime > 0 {
             self.currentTime -= self.minusTime
-            let scaleTime = self.currentTime/self.totalTime
+            let scaleTime = self.currentTime/TOTAL_TIME
             self.CircleProgress.progress = scaleTime
         }
         else {
-            if !isFlip {
-                self.caculateHightScore()
-                self.navigationController?.popViewControllerAnimated(true)
-            }
+            self.caculateHightScore()
+            self.navigationController?.popViewControllerAnimated(true)
         }
     }
     
@@ -241,7 +236,7 @@ class FlashCardViewController: UIViewController {
     
     func showAnswer() {
       // self.changeBackgroundColor()
-        self.delayThenFlipCard(0.5)
+        self.delayThenFlipCard(0)
     }
     
     func checkAnswer(answer : String, btnAnswer : UIButton) -> Bool {
@@ -253,10 +248,7 @@ class FlashCardViewController: UIViewController {
     }
     
     func trueAnsert(trueBtn : UIButton) {
-//        if self.currentTime < self.totalTime {
-//            self.currentTime += 1
-//        }
-        trueBtn.backgroundColor = self.hexStringToUIColor("#5ad427")
+        trueBtn.backgroundColor = UIColor.init(hex: "#5ad427")
         let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
@@ -271,10 +263,10 @@ class FlashCardViewController: UIViewController {
     }
     
     func falseAnswer(trueBtn : UIButton, failButton1 : UIButton, failButton2 : UIButton, failButton3 : UIButton) {
-        trueBtn.backgroundColor = self.hexStringToUIColor("#5ad427")
-        failButton1.backgroundColor = self.hexStringToUIColor("#FF3A2D")
-        failButton2.backgroundColor = self.hexStringToUIColor("#FF3A2D")
-        failButton3.backgroundColor = self.hexStringToUIColor("#FF3A2D")
+        trueBtn.backgroundColor = UIColor.init(hex: "#5ad427")
+        failButton1.backgroundColor = UIColor.init(hex: "#FF3A2D")
+        failButton2.backgroundColor = UIColor.init(hex: "#FF3A2D")
+        failButton3.backgroundColor = UIColor.init(hex: "#FF3A2D")
         
         let delay = 1.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
@@ -317,10 +309,7 @@ class FlashCardViewController: UIViewController {
         if DB.getHighScore() == nil {
             HighScore.create(self.scoreVariable.value)
         }
-        else {
-            print("xxx")
-        }
-        if self.scoreVariable.value > DB.getHighScore().score {
+        else if self.scoreVariable.value > DB.getHighScore().score {
             DB.updateHighScore(self.scoreVariable.value)
         }
     }
@@ -392,10 +381,12 @@ class FlashCardViewController: UIViewController {
     }
     
     func randomFailAnswer(currentIndex : Int) -> Int {
-        var rand = 0
-        repeat {
-            rand = unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
-        } while rand == currentIndex
+        var rand = unsafeRandomIntFrom(0, to: self.totalPokemon - 2)
+        
+        if(rand >= currentIndex) {
+            rand += 1
+        }
+        
         return rand
     }
     

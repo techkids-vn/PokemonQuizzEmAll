@@ -23,7 +23,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             self.navigationController!.navigationBar.barTintColor = .whiteColor();
             self.navigationController!.navigationBar.tintColor = .blackColor();
         }
-        // UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: true)
         pickGens = DB.getPickedGen()
     }
     override func viewWillDisappear(animated: Bool) {
@@ -34,6 +33,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         tbvButton.tableFooterView = UIView()
         clvGeneration.registerNib(UINib.init(nibName: "clvPackCell", bundle: nil), forCellWithReuseIdentifier: "clvPackCell")
+        
     }
     
     //MARK : TableView
@@ -43,22 +43,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
-    //    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    //        return 20
-    //
-    //    }
-    
-    //    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    //
-    //        let headerView = UIView(frame: CGRectMake(0,0,self.view.bounds.width,40))
-    //        let border = UIView(frame: CGRectMake(0,headerView.frame.size.height - 1,self.view.bounds.width,0.5))
-    //        border.backgroundColor = tableView.separatorColor
-    //        headerView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
-    //        headerView.addSubview(border)
-    //        return headerView
-    //
-    //    }
-    
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1
     }
@@ -72,6 +56,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 tableView.registerNib(UINib(nibName: "SwitchCell", bundle: nil), forCellReuseIdentifier: "SwitchCell")
                 cell = tableView.dequeueReusableCellWithIdentifier("SwitchCell") as? SwitchCell
             }
+            
             cell.setCellType(CELL_TYPE_SWITCH_SOUND)
             return cell
             

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1943A2161D5526080085D624 /* FlashCardViewRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */; };
+		1943A2181D5528BE0085D624 /* CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943A2171D5528BE0085D624 /* CircleMask.swift */; };
 		26E226CDF4979808A44DEBE2 /* Pods_PokemonQuizEmAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */; };
 		991EB79A1D3D361400E9FBE6 /* Abra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7031D3D361400E9FBE6 /* Abra.jpg */; };
 		991EB79B1D3D361400E9FBE6 /* Aerodactyl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7041D3D361400E9FBE6 /* Aerodactyl.jpg */; };
@@ -194,6 +196,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardViewRevealAnimator.swift; sourceTree = "<group>"; };
+		1943A2171D5528BE0085D624 /* CircleMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMask.swift; sourceTree = "<group>"; };
 		4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonQuizEmAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3054CE1283D06739E14123 /* Pods-PokemonQuizEmAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.release.xcconfig"; sourceTree = "<group>"; };
 		991EB7031D3D361400E9FBE6 /* Abra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Abra.jpg; sourceTree = "<group>"; };
@@ -598,6 +602,8 @@
 				E8394A831D3D16920094F4FC /* text.txt */,
 				991EB8311D3D363600E9FBE6 /* gen1.json */,
 				995976C11D3CA16800E98204 /* Info.plist */,
+				1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */,
+				1943A2171D5528BE0085D624 /* CircleMask.swift */,
 			);
 			path = PokemonQuizEmAll;
 			sourceTree = "<group>";
@@ -715,7 +721,7 @@
 				TargetAttributes = {
 					995976B11D3CA16800E98204 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = YCJNEHP2D6;
+						DevelopmentTeam = SSLZNUJ85E;
 					};
 				};
 			};
@@ -967,6 +973,7 @@
 				E8394AA71D3D19810094F4FC /* ColorGenarator.swift in Sources */,
 				E8394A9F1D3D16920094F4FC /* DB.swift in Sources */,
 				E8394A9B1D3D16920094F4FC /* ListPackViewController.swift in Sources */,
+				1943A2181D5528BE0085D624 /* CircleMask.swift in Sources */,
 				E8394AAB1D3D19F00094F4FC /* BackFlashCardViewModel.swift in Sources */,
 				E8394A971D3D16920094F4FC /* SwitchCell.swift in Sources */,
 				E8394A991D3D16920094F4FC /* Setting.swift in Sources */,
@@ -983,6 +990,7 @@
 				E8394A9C1D3D16920094F4FC /* FrontFlashCardViewModel.swift in Sources */,
 				E8394A9E1D3D16920094F4FC /* FlashCardViewController.swift in Sources */,
 				E8394AA01D3D16920094F4FC /* Constant.swift in Sources */,
+				1943A2161D5526080085D624 /* FlashCardViewRevealAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

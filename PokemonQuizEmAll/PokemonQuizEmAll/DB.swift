@@ -23,6 +23,11 @@ class DB: Object{
         return realm.objects(Pokemon).filter(predicate).first
     }
     
+    static func getPokemonById(id : String) -> Pokemon! {
+        let predicate = NSPredicate(format: "id = %@", id)
+        return realm.objects(Pokemon).filter(predicate).first
+    }
+    
     //MARK: PACKCARD
     static func createPack(pack : PackCard){
         try! realm.write{

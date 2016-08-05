@@ -24,6 +24,6 @@ let THEME_COLOR           = UIColor(colorLiteralRed: 160/255, green: 36/255, blu
 let CELL_TYPE_SWITCH_SOUND : Int = 0
 let CELL_TYPE_SWITCH_RANDOM : Int = 1
 
-let TOTAL_TIME = 60.0
+let TOTAL_TIME = 30.0
 
 

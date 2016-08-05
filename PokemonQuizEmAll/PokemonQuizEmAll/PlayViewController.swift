@@ -14,8 +14,9 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var lblHighScoreTitle: UILabel!
     @IBOutlet weak var lblHighScore: UILabel!
+    
     let ad = AppDelegate()
-
+    let transition = FlashCardViewRevealAnimator()
     
     override func viewWillAppear(animated: Bool) {
         setUpColor()
@@ -35,15 +36,16 @@ class PlayViewController: UIViewController {
         super.viewDidLoad()
         setUpBtn()
         DB.checkSettingsStatus()
-        
-        
+        navigationController?.delegate = self
     }
+    
     func setUpColor(){
-        //   UIView.animateWithDuration(0.5) {
-        self.navigationController?.navigationBar.barTintColor = THEME_COLOR
-        
-      //  self.navigationController?.navigationBar.translucent = false
-        // }
+        self.navigationController!.navigationBar.barTintColor = .clearColor()
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        self.navigationController!.navigationBar.backgroundColor = .clearColor()
+        self.navigationController!.view.backgroundColor = .clearColor()
     }
     
     func setUpBtn()
@@ -58,13 +60,15 @@ class PlayViewController: UIViewController {
     
     func addBarButton(){
         
-        let title = UILabel.init(frame: CGRectMake(0, 0, 320, 40))
+        let title = UILabel.init(frame: CGRectMake(0, 0, self.view.bounds.width, 40))
         title.textAlignment = .Left
         title.text = "Quiz 'Em All"
+        title.textColor = UIColor.init(hex: "212121")
         self.navigationItem.titleView = title
         
         let btnSettings : UIButton = UIButton.init(frame: CGRectMake(0, 0, 30, 30))
         btnSettings.setImage(UIImage.init(named: "img-settings"), forState: .Normal)
+        btnSettings.tintColor = .whiteColor()
         btnSettings.addTarget(self, action: #selector(btnSettingsDidTap), forControlEvents: .TouchUpInside)
         let btnBarSettings : UIBarButtonItem = UIBarButtonItem.init(customView: btnSettings)
         self.navigationItem.setRightBarButtonItem(btnBarSettings, animated: true)
@@ -82,4 +86,25 @@ class PlayViewController: UIViewController {
                 self.navigationController?.pushViewController(settingsVC, animated: true)
     }
     
+}
+
+extension PlayViewController: UINavigationControllerDelegate {
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        let fromMirror = Mirror(reflecting: fromVC)
+        let toMirror = Mirror(reflecting: toVC)
+        
+        if toMirror.subjectType == FlashCardViewController.self {
+            transition.operation = operation
+            return transition
+        }
+            
+        if fromMirror.subjectType == FlashCardViewController.self && toMirror.subjectType == PlayViewController.self{
+            
+            transition.operation = operation
+            return transition
+        }
+        
+        return nil
+    }
 }
