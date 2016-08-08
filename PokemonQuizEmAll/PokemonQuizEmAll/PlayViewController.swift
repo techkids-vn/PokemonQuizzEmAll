@@ -68,12 +68,9 @@ class PlayViewController: UIViewController {
         
         let btnSettings : UIButton = UIButton.init(frame: CGRectMake(0, 0, 30, 30))
         btnSettings.setImage(UIImage.init(named: "Icon_Settings"), forState: .Normal)
-        btnSettings.imageView?.tintColor = .redColor();
-        btnSettings.tintColor = UIColor.init(hex: "212121")
         btnSettings.addTarget(self, action: #selector(btnSettingsDidTap), forControlEvents: .TouchUpInside)
         let btnBarSettings : UIBarButtonItem = UIBarButtonItem.init(customView: btnSettings)
         self.navigationItem.setRightBarButtonItem(btnBarSettings, animated: true)
-        self.navigationController?.navigationBar.tintColor = UIColor.init(hex: "212121")
     }
     
     func play(){
