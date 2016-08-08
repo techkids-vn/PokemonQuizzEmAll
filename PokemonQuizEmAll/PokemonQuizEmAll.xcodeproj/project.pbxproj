@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1943A2161D5526080085D624 /* FlashCardViewRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */; };
-		1943A2181D5528BE0085D624 /* CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943A2171D5528BE0085D624 /* CircleMask.swift */; };
+		1981B8531D586F1700DE6686 /* CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1981B8521D586F1700DE6686 /* CircleMask.swift */; };
 		26E226CDF4979808A44DEBE2 /* Pods_PokemonQuizEmAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */; };
 		991EB79A1D3D361400E9FBE6 /* Abra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7031D3D361400E9FBE6 /* Abra.jpg */; };
 		991EB79B1D3D361400E9FBE6 /* Aerodactyl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7041D3D361400E9FBE6 /* Aerodactyl.jpg */; };
@@ -197,7 +197,7 @@
 
 /* Begin PBXFileReference section */
 		1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardViewRevealAnimator.swift; sourceTree = "<group>"; };
-		1943A2171D5528BE0085D624 /* CircleMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMask.swift; sourceTree = "<group>"; };
+		1981B8521D586F1700DE6686 /* CircleMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleMask.swift; path = PokemonQuizEmAll/CircleMask.swift; sourceTree = "<group>"; };
 		4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonQuizEmAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3054CE1283D06739E14123 /* Pods-PokemonQuizEmAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.release.xcconfig"; sourceTree = "<group>"; };
 		991EB7031D3D361400E9FBE6 /* Abra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Abra.jpg; sourceTree = "<group>"; };
@@ -401,6 +401,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1981B8541D586F2300DE6686 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */,
+			);
+			name = Animator;
+			sourceTree = "<group>";
+		};
 		82E17EF3852C7A920A56690F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,6 +581,7 @@
 			children = (
 				E801A8881D3E9E610060A684 /* Pokemon theme song.mp3 */,
 				995976B41D3CA16800E98204 /* PokemonQuizEmAll */,
+				1981B8521D586F1700DE6686 /* CircleMask.swift */,
 				995976B31D3CA16800E98204 /* Products */,
 				82E17EF3852C7A920A56690F /* Pods */,
 				C9D50FAE29A6FDEFCC4EABBA /* Frameworks */,
@@ -590,6 +599,7 @@
 		995976B41D3CA16800E98204 /* PokemonQuizEmAll */ = {
 			isa = PBXGroup;
 			children = (
+				1981B8541D586F2300DE6686 /* Animator */,
 				995976B51D3CA16800E98204 /* AppDelegate.swift */,
 				E8394A8E1D3D16920094F4FC /* Constant.swift */,
 				E8394AAE1D3D3A220094F4FC /* PoplarStd.otf */,
@@ -602,8 +612,6 @@
 				E8394A831D3D16920094F4FC /* text.txt */,
 				991EB8311D3D363600E9FBE6 /* gen1.json */,
 				995976C11D3CA16800E98204 /* Info.plist */,
-				1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */,
-				1943A2171D5528BE0085D624 /* CircleMask.swift */,
 			);
 			path = PokemonQuizEmAll;
 			sourceTree = "<group>";
@@ -973,7 +981,7 @@
 				E8394AA71D3D19810094F4FC /* ColorGenarator.swift in Sources */,
 				E8394A9F1D3D16920094F4FC /* DB.swift in Sources */,
 				E8394A9B1D3D16920094F4FC /* ListPackViewController.swift in Sources */,
-				1943A2181D5528BE0085D624 /* CircleMask.swift in Sources */,
+				1981B8531D586F1700DE6686 /* CircleMask.swift in Sources */,
 				E8394AAB1D3D19F00094F4FC /* BackFlashCardViewModel.swift in Sources */,
 				E8394A971D3D16920094F4FC /* SwitchCell.swift in Sources */,
 				E8394A991D3D16920094F4FC /* Setting.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 
 class FlashCardViewRevealAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-    let animationDuration = 0.3
+    let animationDuration = 0.4
     var operation: UINavigationControllerOperation = .Push
     
     weak var storedContext: UIViewControllerContextTransitioning?
@@ -34,7 +34,7 @@ class FlashCardViewRevealAnimator: NSObject, UIViewControllerAnimatedTransitioni
             
             transitionContext.containerView()?.addSubview(toVC.view)
             
-            animation.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
+            animation.fromValue = NSValue(CATransform3D: CATransform3DMakeScale(0.1, 0.1, 1.0))
             animation.toValue = NSValue(CATransform3D: CATransform3DMakeScale(scale, scale, 1.0))
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
             
@@ -50,7 +50,7 @@ class FlashCardViewRevealAnimator: NSObject, UIViewControllerAnimatedTransitioni
             transitionContext.containerView()?.addSubview(fromVC.view)
             
             animation.fromValue = NSValue(CATransform3D: CATransform3DMakeScale(scale, scale, 1.0))
-            animation.toValue = NSValue(CATransform3D: CATransform3DIdentity)
+            animation.toValue = NSValue(CATransform3D: CATransform3DMakeScale(0.1, 0.1, 1.0))
             animation.timingFunction = CAMediaTimingFunction(name:
                 kCAMediaTimingFunctionEaseOut)
             

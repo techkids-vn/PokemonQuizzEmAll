@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -31,10 +32,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LST-3j-L4Y" userLabel="ViewBottom">
-                                <rect key="frame" x="0.0" y="388" width="600" height="212"/>
+                                <rect key="frame" x="0.0" y="378" width="600" height="222"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © TechKids 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPm-pt-qtu">
-                                        <rect key="frame" x="194" y="183" width="212" height="21"/>
+                                        <rect key="frame" x="194" y="193" width="212" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -87,7 +88,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-Sn-8UB" userLabel="ViewCenter">
-                                <rect key="frame" x="0.0" y="378" width="600" height="10"/>
+                                <rect key="frame" x="0.0" y="373" width="600" height="10"/>
                                 <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -95,7 +96,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chZ-BI-R2C">
-                                <rect key="frame" x="224" y="307" width="153" height="153"/>
+                                <rect key="frame" x="224" y="302" width="153" height="153"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="chZ-BI-R2C" secondAttribute="height" id="Zed-pE-2si"/>
                                     <constraint firstAttribute="width" constant="153" id="yap-gB-Ryv"/>
@@ -108,7 +109,7 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LST-3j-L4Y" secondAttribute="bottom" id="14f-sk-FrX"/>
                             <constraint firstItem="2yV-Sn-8UB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7do-zz-Vcu"/>
-                            <constraint firstItem="2yV-Sn-8UB" firstAttribute="top" secondItem="qKV-jc-41g" secondAttribute="bottom" id="8be-gb-b5Q"/>
+                            <constraint firstItem="2yV-Sn-8UB" firstAttribute="centerY" secondItem="qKV-jc-41g" secondAttribute="bottom" id="8be-gb-b5Q"/>
                             <constraint firstItem="qKV-jc-41g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ar3-Tf-Fmc"/>
                             <constraint firstItem="LST-3j-L4Y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Dsc-34-Xp5"/>
                             <constraint firstItem="qKV-jc-41g" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dz8-c9-98Z"/>
@@ -116,7 +117,7 @@
                             <constraint firstItem="chZ-BI-R2C" firstAttribute="centerX" secondItem="2yV-Sn-8UB" secondAttribute="centerX" id="Z6h-iX-rez"/>
                             <constraint firstItem="LST-3j-L4Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hCg-gT-0cb"/>
                             <constraint firstItem="chZ-BI-R2C" firstAttribute="centerY" secondItem="2yV-Sn-8UB" secondAttribute="centerY" id="lc0-R9-Zt4"/>
-                            <constraint firstItem="LST-3j-L4Y" firstAttribute="top" secondItem="2yV-Sn-8UB" secondAttribute="bottom" id="rcO-zY-jFf"/>
+                            <constraint firstItem="LST-3j-L4Y" firstAttribute="top" secondItem="2yV-Sn-8UB" secondAttribute="centerY" id="rcO-zY-jFf"/>
                             <constraint firstItem="2yV-Sn-8UB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="tTQ-O6-4H9"/>
                             <constraint firstItem="qKV-jc-41g" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="63:100" id="wFZ-aZ-lZs"/>
                             <constraint firstItem="qKV-jc-41g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="zX1-7y-sap"/>
@@ -234,8 +235,15 @@
                                 <rect key="frame" x="28" y="174" width="544" height="186"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask_Play" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-Kf-tc7">
+                                <rect key="frame" x="265" y="343" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WEf-Kf-tc7" secondAttribute="height" multiplier="1:1" id="0kC-vj-7a5"/>
+                                    <constraint firstAttribute="width" constant="70" id="nxd-MP-CSB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93333333333333335" green="0.7686274509803922" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.62745098040000002" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9WR-Cg-gT0" firstAttribute="leading" secondItem="zKA-4d-mjj" secondAttribute="leadingMargin" constant="8" id="5fw-rw-Q7n"/>
                             <constraint firstItem="nmH-k8-zSK" firstAttribute="leading" secondItem="zKA-4d-mjj" secondAttribute="leading" id="DYW-d8-AWi"/>
@@ -245,21 +253,23 @@
                             <constraint firstItem="nmH-k8-zSK" firstAttribute="height" secondItem="zKA-4d-mjj" secondAttribute="height" multiplier="0.3" id="d3n-xK-zRb"/>
                             <constraint firstAttribute="trailing" secondItem="nmH-k8-zSK" secondAttribute="trailing" id="dHA-EV-I6s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9WR-Cg-gT0" secondAttribute="trailing" constant="8" id="faw-tJ-ZMW"/>
+                            <constraint firstItem="WEf-Kf-tc7" firstAttribute="centerY" secondItem="zKA-4d-mjj" secondAttribute="bottom" multiplier="63:100" id="gbY-9q-900"/>
                             <constraint firstItem="exN-Qz-ZvK" firstAttribute="top" secondItem="9WR-Cg-gT0" secondAttribute="bottom" constant="30" id="hRl-ci-obq"/>
                             <constraint firstItem="exN-Qz-ZvK" firstAttribute="leading" secondItem="zKA-4d-mjj" secondAttribute="leadingMargin" constant="8" id="kqY-wm-O7H"/>
                             <constraint firstItem="iDA-vK-yFI" firstAttribute="top" secondItem="nmH-k8-zSK" secondAttribute="bottom" constant="30" id="uPR-q4-wOg"/>
                             <constraint firstItem="nmH-k8-zSK" firstAttribute="top" secondItem="exN-Qz-ZvK" secondAttribute="bottom" constant="30" id="uU9-et-2bK"/>
+                            <constraint firstItem="WEf-Kf-tc7" firstAttribute="centerX" secondItem="zKA-4d-mjj" secondAttribute="centerX" id="vqT-q7-olf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YdO-a2-O4C">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="d9G-p4-3c4">
                             <view key="customView" contentMode="scaleToFill" id="Cus-al-wia" customClass="CircleProgressView" customModule="CircleProgressView">
-                                <rect key="frame" x="550" y="7" width="30" height="30"/>
+                                <rect key="frame" x="552" y="8" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
-                                        <real key="value" value="30"/>
+                                        <real key="value" value="26"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
                                         <color key="value" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -268,7 +278,7 @@
                                         <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
-                                        <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -281,6 +291,7 @@
                         <outlet property="btnAnswer3" destination="5vv-sV-yOW" id="RqC-LO-1dY"/>
                         <outlet property="btnAnswer4" destination="kbA-ox-jkH" id="uPn-LW-7iU"/>
                         <outlet property="lblScore" destination="9WR-Cg-gT0" id="Kdn-6f-OXT"/>
+                        <outlet property="maskImage" destination="WEf-Kf-tc7" id="zLB-sW-dFs"/>
                         <outlet property="vFlashCard" destination="exN-Qz-ZvK" id="jbC-vj-rF7"/>
                     </connections>
                 </viewController>
@@ -412,5 +423,6 @@
     </scenes>
     <resources>
         <image name="Button_Play" width="153" height="152"/>
+        <image name="Mask_Play" width="950" height="950"/>
     </resources>
 </document>

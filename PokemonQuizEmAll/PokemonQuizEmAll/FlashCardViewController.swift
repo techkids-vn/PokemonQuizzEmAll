@@ -33,11 +33,14 @@ class FlashCardViewController: UIViewController {
     var pokemonCollection = [Pokemon]()
     let minusTime = 0.2
     var currentTime = TOTAL_TIME
-  
+    var maskLayer: CALayer = CALayer()
+    
     var colorVariable : Variable<String> = Variable("")
     var scoreVariable : Variable<Int> = Variable(0)
     
-    let maskLayer: CAShapeLayer = CircleMask.circleMaskLayer()
+    @IBOutlet weak var maskImage: UIImageView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +51,7 @@ class FlashCardViewController: UIViewController {
         self.changeBackgroundColor()
         self.countTime(minusTime)
         
-        maskLayer.position = CGPoint(x: view.layer.bounds.size.width/2, y: view.layer.bounds.size.height*0.63)
+        maskLayer = maskImage.layer
         view.layer.mask = maskLayer
         
         self.navigationController!.navigationBar.barTintColor = .clearColor()
@@ -178,7 +181,7 @@ class FlashCardViewController: UIViewController {
         if isFlip {return}
         
         if self.currentTime > 0 {
-            self.currentTime -= self.minusTime
+            self.currentTime = max(0, self.currentTime - self.minusTime)
             let scaleTime = self.currentTime/TOTAL_TIME
             self.CircleProgress.progress = scaleTime
         }
