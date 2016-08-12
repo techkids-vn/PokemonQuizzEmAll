@@ -1,0 +1,989 @@
+[
+    {
+        "id": "#252",
+        "color": "#A7DB8D",
+        "img": "Treecko.png",
+        "name": "Treecko",
+        "gen": 3
+    },
+    {
+        "id": "#253",
+        "color": "#A7DB8D",
+        "img": "Grovyle.png",
+        "name": "Grovyle",
+        "gen": 3
+    },
+    {
+        "id": "#254",
+        "color": "#A7DB8D",
+        "img": "Sceptile.png",
+        "name": "Sceptile",
+        "gen": 3
+    },
+    {
+        "id": "#255",
+        "color": "#F5AC78",
+        "img": "Torchic.png",
+        "name": "Torchic",
+        "gen": 3
+    },
+    {
+        "id": "#256",
+        "color": "#F5AC78",
+        "img": "Combusken.png",
+        "name": "Combusken",
+        "gen": 3
+    },
+    {
+        "id": "#257",
+        "color": "#F5AC78",
+        "img": "Blaziken.png",
+        "name": "Blaziken",
+        "gen": 3
+    },
+    {
+        "id": "#258",
+        "color": "#9DB7F5",
+        "img": "Mudkip.png",
+        "name": "Mudkip",
+        "gen": 3
+    },
+    {
+        "id": "#259",
+        "color": "#9DB7F5",
+        "img": "Marshtomp.png",
+        "name": "Marshtomp",
+        "gen": 3
+    },
+    {
+        "id": "#260",
+        "color": "#9DB7F5",
+        "img": "Swampert.png",
+        "name": "Swampert",
+        "gen": 3
+    },
+    {
+        "id": "#261",
+        "color": "#A29288",
+        "img": "Poochyena.png",
+        "name": "Poochyena",
+        "gen": 3
+    },
+    {
+        "id": "#262",
+        "color": "#A29288",
+        "img": "Mightyena.png",
+        "name": "Mightyena",
+        "gen": 3
+    },
+    {
+        "id": "#263",
+        "color": "#C6C6A7",
+        "img": "Zigzagoon.png",
+        "name": "Zigzagoon",
+        "gen": 3
+    },
+    {
+        "id": "#264",
+        "color": "#C6C6A7",
+        "img": "Linoone.png",
+        "name": "Linoone",
+        "gen": 3
+    },
+    {
+        "id": "#265",
+        "color": "#C6D16E",
+        "img": "Wurmple.png",
+        "name": "Wurmple",
+        "gen": 3
+    },
+    {
+        "id": "#266",
+        "color": "#C6D16E",
+        "img": "Silcoon.png",
+        "name": "Silcoon",
+        "gen": 3
+    },
+    {
+        "id": "#267",
+        "color": "#C6D16E",
+        "img": "Beautifly.png",
+        "name": "Beautifly",
+        "gen": 3
+    },
+    {
+        "id": "#268",
+        "color": "#C6D16E",
+        "img": "Cascoon.png",
+        "name": "Cascoon",
+        "gen": 3
+    },
+    {
+        "id": "#269",
+        "color": "#C6D16E",
+        "img": "Dustox.png",
+        "name": "Dustox",
+        "gen": 3
+    },
+    {
+        "id": "#270",
+        "color": "#9DB7F5",
+        "img": "Lotad.png",
+        "name": "Lotad",
+        "gen": 3
+    },
+    {
+        "id": "#271",
+        "color": "#9DB7F5",
+        "img": "Lombre.png",
+        "name": "Lombre",
+        "gen": 3
+    },
+    {
+        "id": "#272",
+        "color": "#9DB7F5",
+        "img": "Ludicolo.png",
+        "name": "Ludicolo",
+        "gen": 3
+    },
+    {
+        "id": "#273",
+        "color": "#A7DB8D",
+        "img": "Seedot.png",
+        "name": "Seedot",
+        "gen": 3
+    },
+    {
+        "id": "#274",
+        "color": "#A7DB8D",
+        "img": "Nuzleaf.png",
+        "name": "Nuzleaf",
+        "gen": 3
+    },
+    {
+        "id": "#275",
+        "color": "#A7DB8D",
+        "img": "Shiftry.png",
+        "name": "Shiftry",
+        "gen": 3
+    },
+    {
+        "id": "#276",
+        "color": "#C6C6A7",
+        "img": "Taillow.png",
+        "name": "Taillow",
+        "gen": 3
+    },
+    {
+        "id": "#277",
+        "color": "#C6C6A7",
+        "img": "Swellow.png",
+        "name": "Swellow",
+        "gen": 3
+    },
+    {
+        "id": "#278",
+        "color": "#9DB7F5",
+        "img": "Wingull.png",
+        "name": "Wingull",
+        "gen": 3
+    },
+    {
+        "id": "#279",
+        "color": "#9DB7F5",
+        "img": "Pelipper.png",
+        "name": "Pelipper",
+        "gen": 3
+    },
+    {
+        "id": "#280",
+        "color": "#FA92B2",
+        "img": "Ralts.png",
+        "name": "Ralts",
+        "gen": 3
+    },
+    {
+        "id": "#281",
+        "color": "#FA92B2",
+        "img": "Kirlia.png",
+        "name": "Kirlia",
+        "gen": 3
+    },
+    {
+        "id": "#282",
+        "color": "#FA92B2",
+        "img": "Gardevoir.png",
+        "name": "Gardevoir",
+        "gen": 3
+    },
+    {
+        "id": "#283",
+        "color": "#C6D16E",
+        "img": "Surskit.png",
+        "name": "Surskit",
+        "gen": 3
+    },
+    {
+        "id": "#284",
+        "color": "#C6D16E",
+        "img": "Masquerain.png",
+        "name": "Masquerain",
+        "gen": 3
+    },
+    {
+        "id": "#285",
+        "color": "#A7DB8D",
+        "img": "Shroomish.png",
+        "name": "Shroomish",
+        "gen": 3
+    },
+    {
+        "id": "#286",
+        "color": "#A7DB8D",
+        "img": "Breloom.png",
+        "name": "Breloom",
+        "gen": 3
+    },
+    {
+        "id": "#287",
+        "color": "#C6C6A7",
+        "img": "Slakoth.png",
+        "name": "Slakoth",
+        "gen": 3
+    },
+    {
+        "id": "#288",
+        "color": "#C6C6A7",
+        "img": "Vigoroth.png",
+        "name": "Vigoroth",
+        "gen": 3
+    },
+    {
+        "id": "#289",
+        "color": "#C6C6A7",
+        "img": "Slaking.png",
+        "name": "Slaking",
+        "gen": 3
+    },
+    {
+        "id": "#290",
+        "color": "#C6D16E",
+        "img": "Nincada.png",
+        "name": "Nincada",
+        "gen": 3
+    },
+    {
+        "id": "#291",
+        "color": "#C6D16E",
+        "img": "Ninjask.png",
+        "name": "Ninjask",
+        "gen": 3
+    },
+    {
+        "id": "#292",
+        "color": "#C6D16E",
+        "img": "Shedinja.png",
+        "name": "Shedinja",
+        "gen": 3
+    },
+    {
+        "id": "#293",
+        "color": "#C6C6A7",
+        "img": "Whismur.png",
+        "name": "Whismur",
+        "gen": 3
+    },
+    {
+        "id": "#294",
+        "color": "#C6C6A7",
+        "img": "Loudred.png",
+        "name": "Loudred",
+        "gen": 3
+    },
+    {
+        "id": "#295",
+        "color": "#C6C6A7",
+        "img": "Exploud.png",
+        "name": "Exploud",
+        "gen": 3
+    },
+    {
+        "id": "#296",
+        "color": "#D67873",
+        "img": "Makuhita.png",
+        "name": "Makuhita",
+        "gen": 3
+    },
+    {
+        "id": "#297",
+        "color": "#D67873",
+        "img": "Hariyama.png",
+        "name": "Hariyama",
+        "gen": 3
+    },
+    {
+        "id": "#298",
+        "color": "#C6C6A7",
+        "img": "Azurill.png",
+        "name": "Azurill",
+        "gen": 3
+    },
+    {
+        "id": "#299",
+        "color": "#D1C17D",
+        "img": "Nosepass.png",
+        "name": "Nosepass",
+        "gen": 3
+    },
+    {
+        "id": "#300",
+        "color": "#C6C6A7",
+        "img": "Skitty.png",
+        "name": "Skitty",
+        "gen": 3
+    },
+    {
+        "id": "#301",
+        "color": "#C6C6A7",
+        "img": "Delcatty.png",
+        "name": "Delcatty",
+        "gen": 3
+    },
+    {
+        "id": "#302",
+        "color": "#A29288",
+        "img": "Sableye.png",
+        "name": "Sableye",
+        "gen": 3
+    },
+    {
+        "id": "#303",
+        "color": "#D1D1E0",
+        "img": "Mawile.png",
+        "name": "Mawile",
+        "gen": 3
+    },
+    {
+        "id": "#304",
+        "color": "#D1D1E0",
+        "img": "Aron.png",
+        "name": "Aron",
+        "gen": 3
+    },
+    {
+        "id": "#305",
+        "color": "#D1D1E0",
+        "img": "Lairon.png",
+        "name": "Lairon",
+        "gen": 3
+    },
+    {
+        "id": "#306",
+        "color": "#D1D1E0",
+        "img": "Aggron.png",
+        "name": "Aggron",
+        "gen": 3
+    },
+    {
+        "id": "#307",
+        "color": "#D67873",
+        "img": "Meditite.png",
+        "name": "Meditite",
+        "gen": 3
+    },
+    {
+        "id": "#308",
+        "color": "#D67873",
+        "img": "Medicham.png",
+        "name": "Medicham",
+        "gen": 3
+    },
+    {
+        "id": "#309",
+        "color": "#FAE078",
+        "img": "Electrike.png",
+        "name": "Electrike",
+        "gen": 3
+    },
+    {
+        "id": "#310",
+        "color": "#FAE078",
+        "img": "Manectric.png",
+        "name": "Manectric",
+        "gen": 3
+    },
+    {
+        "id": "#311",
+        "color": "#FAE078",
+        "img": "Plusle.png",
+        "name": "Plusle",
+        "gen": 3
+    },
+    {
+        "id": "#312",
+        "color": "#FAE078",
+        "img": "Minun.png",
+        "name": "Minun",
+        "gen": 3
+    },
+    {
+        "id": "#313",
+        "color": "#C6D16E",
+        "img": "Volbeat.png",
+        "name": "Volbeat",
+        "gen": 3
+    },
+    {
+        "id": "#314",
+        "color": "#C6D16E",
+        "img": "Illumise.png",
+        "name": "Illumise",
+        "gen": 3
+    },
+    {
+        "id": "#315",
+        "color": "#A7DB8D",
+        "img": "Roselia.png",
+        "name": "Roselia",
+        "gen": 3
+    },
+    {
+        "id": "#316",
+        "color": "#C183C1",
+        "img": "Gulpin.png",
+        "name": "Gulpin",
+        "gen": 3
+    },
+    {
+        "id": "#317",
+        "color": "#C183C1",
+        "img": "Swalot.png",
+        "name": "Swalot",
+        "gen": 3
+    },
+    {
+        "id": "#318",
+        "color": "#9DB7F5",
+        "img": "Carvanha.png",
+        "name": "Carvanha",
+        "gen": 3
+    },
+    {
+        "id": "#319",
+        "color": "#9DB7F5",
+        "img": "Sharpedo.png",
+        "name": "Sharpedo",
+        "gen": 3
+    },
+    {
+        "id": "#320",
+        "color": "#9DB7F5",
+        "img": "Wailmer.png",
+        "name": "Wailmer",
+        "gen": 3
+    },
+    {
+        "id": "#321",
+        "color": "#9DB7F5",
+        "img": "Wailord.png",
+        "name": "Wailord",
+        "gen": 3
+    },
+    {
+        "id": "#322",
+        "color": "#F5AC78",
+        "img": "Numel.png",
+        "name": "Numel",
+        "gen": 3
+    },
+    {
+        "id": "#323",
+        "color": "#F5AC78",
+        "img": "Camerupt.png",
+        "name": "Camerupt",
+        "gen": 3
+    },
+    {
+        "id": "#324",
+        "color": "#F5AC78",
+        "img": "Torkoal.png",
+        "name": "Torkoal",
+        "gen": 3
+    },
+    {
+        "id": "#325",
+        "color": "#FA92B2",
+        "img": "Spoink.png",
+        "name": "Spoink",
+        "gen": 3
+    },
+    {
+        "id": "#326",
+        "color": "#FA92B2",
+        "img": "Grumpig.png",
+        "name": "Grumpig",
+        "gen": 3
+    },
+    {
+        "id": "#327",
+        "color": "#C6C6A7",
+        "img": "Spinda.png",
+        "name": "Spinda",
+        "gen": 3
+    },
+    {
+        "id": "#328",
+        "color": "#EBD69D",
+        "img": "Trapinch.png",
+        "name": "Trapinch",
+        "gen": 3
+    },
+    {
+        "id": "#329",
+        "color": "#EBD69D",
+        "img": "Vibrava.png",
+        "name": "Vibrava",
+        "gen": 3
+    },
+    {
+        "id": "#330",
+        "color": "#EBD69D",
+        "img": "Flygon.png",
+        "name": "Flygon",
+        "gen": 3
+    },
+    {
+        "id": "#331",
+        "color": "#A7DB8D",
+        "img": "Cacnea.png",
+        "name": "Cacnea",
+        "gen": 3
+    },
+    {
+        "id": "#332",
+        "color": "#A7DB8D",
+        "img": "Cacturne.png",
+        "name": "Cacturne",
+        "gen": 3
+    },
+    {
+        "id": "#333",
+        "color": "#C6C6A7",
+        "img": "Swablu.png",
+        "name": "Swablu",
+        "gen": 3
+    },
+    {
+        "id": "#334",
+        "color": "#A27DFA",
+        "img": "Altaria.png",
+        "name": "Altaria",
+        "gen": 3
+    },
+    {
+        "id": "#335",
+        "color": "#C6C6A7",
+        "img": "Zangoose.png",
+        "name": "Zangoose",
+        "gen": 3
+    },
+    {
+        "id": "#336",
+        "color": "#C183C1",
+        "img": "Seviper.png",
+        "name": "Seviper",
+        "gen": 3
+    },
+    {
+        "id": "#337",
+        "color": "#D1C17D",
+        "img": "Lunatone.png",
+        "name": "Lunatone",
+        "gen": 3
+    },
+    {
+        "id": "#338",
+        "color": "#D1C17D",
+        "img": "Solrock.png",
+        "name": "Solrock",
+        "gen": 3
+    },
+    {
+        "id": "#339",
+        "color": "#9DB7F5",
+        "img": "Barboach.png",
+        "name": "Barboach",
+        "gen": 3
+    },
+    {
+        "id": "#340",
+        "color": "#9DB7F5",
+        "img": "Whiscash.png",
+        "name": "Whiscash",
+        "gen": 3
+    },
+    {
+        "id": "#341",
+        "color": "#9DB7F5",
+        "img": "Corphish.png",
+        "name": "Corphish",
+        "gen": 3
+    },
+    {
+        "id": "#342",
+        "color": "#9DB7F5",
+        "img": "Crawdaunt.png",
+        "name": "Crawdaunt",
+        "gen": 3
+    },
+    {
+        "id": "#343",
+        "color": "#EBD69D",
+        "img": "Baltoy.png",
+        "name": "Baltoy",
+        "gen": 3
+    },
+    {
+        "id": "#344",
+        "color": "#EBD69D",
+        "img": "Claydol.png",
+        "name": "Claydol",
+        "gen": 3
+    },
+    {
+        "id": "#345",
+        "color": "#D1C17D",
+        "img": "Lileep.png",
+        "name": "Lileep",
+        "gen": 3
+    },
+    {
+        "id": "#346",
+        "color": "#D1C17D",
+        "img": "Cradily.png",
+        "name": "Cradily",
+        "gen": 3
+    },
+    {
+        "id": "#347",
+        "color": "#D1C17D",
+        "img": "Anorith.png",
+        "name": "Anorith",
+        "gen": 3
+    },
+    {
+        "id": "#348",
+        "color": "#D1C17D",
+        "img": "Armaldo.png",
+        "name": "Armaldo",
+        "gen": 3
+    },
+    {
+        "id": "#349",
+        "color": "#9DB7F5",
+        "img": "Feebas.png",
+        "name": "Feebas",
+        "gen": 3
+    },
+    {
+        "id": "#350",
+        "color": "#9DB7F5",
+        "img": "Milotic.png",
+        "name": "Milotic",
+        "gen": 3
+    },
+    {
+        "id": "#351",
+        "color": "#C6C6A7",
+        "img": "Castform.png",
+        "name": "Castform",
+        "gen": 3
+    },
+    {
+        "id": "#351",
+        "color": "#C6C6A7",
+        "img": "Castform.png",
+        "name": "Castform",
+        "gen": 3
+    },
+    {
+        "id": "#351",
+        "color": "#C6C6A7",
+        "img": "Castform.png",
+        "name": "Castform",
+        "gen": 3
+    },
+    {
+        "id": "#351",
+        "color": "#C6C6A7",
+        "img": "Castform.png",
+        "name": "Castform",
+        "gen": 3
+    },
+    {
+        "id": "#352",
+        "color": "#C6C6A7",
+        "img": "Kecleon.png",
+        "name": "Kecleon",
+        "gen": 3
+    },
+    {
+        "id": "#353",
+        "color": "#A292BC",
+        "img": "Shuppet.png",
+        "name": "Shuppet",
+        "gen": 3
+    },
+    {
+        "id": "#354",
+        "color": "#A292BC",
+        "img": "Banette.png",
+        "name": "Banette",
+        "gen": 3
+    },
+    {
+        "id": "#355",
+        "color": "#A292BC",
+        "img": "Duskull.png",
+        "name": "Duskull",
+        "gen": 3
+    },
+    {
+        "id": "#356",
+        "color": "#A292BC",
+        "img": "Dusclops.png",
+        "name": "Dusclops",
+        "gen": 3
+    },
+    {
+        "id": "#357",
+        "color": "#A7DB8D",
+        "img": "Tropius.png",
+        "name": "Tropius",
+        "gen": 3
+    },
+    {
+        "id": "#358",
+        "color": "#FA92B2",
+        "img": "Chimecho.png",
+        "name": "Chimecho",
+        "gen": 3
+    },
+    {
+        "id": "#359",
+        "color": "#A29288",
+        "img": "Absol.png",
+        "name": "Absol",
+        "gen": 3
+    },
+    {
+        "id": "#360",
+        "color": "#FA92B2",
+        "img": "Wynaut.png",
+        "name": "Wynaut",
+        "gen": 3
+    },
+    {
+        "id": "#361",
+        "color": "#BCE6E6",
+        "img": "Snorunt.png",
+        "name": "Snorunt",
+        "gen": 3
+    },
+    {
+        "id": "#362",
+        "color": "#BCE6E6",
+        "img": "Glalie.png",
+        "name": "Glalie",
+        "gen": 3
+    },
+    {
+        "id": "#363",
+        "color": "#BCE6E6",
+        "img": "Spheal.png",
+        "name": "Spheal",
+        "gen": 3
+    },
+    {
+        "id": "#364",
+        "color": "#BCE6E6",
+        "img": "Sealeo.png",
+        "name": "Sealeo",
+        "gen": 3
+    },
+    {
+        "id": "#365",
+        "color": "#BCE6E6",
+        "img": "Walrein.png",
+        "name": "Walrein",
+        "gen": 3
+    },
+    {
+        "id": "#366",
+        "color": "#9DB7F5",
+        "img": "Clamperl.png",
+        "name": "Clamperl",
+        "gen": 3
+    },
+    {
+        "id": "#367",
+        "color": "#9DB7F5",
+        "img": "Huntail.png",
+        "name": "Huntail",
+        "gen": 3
+    },
+    {
+        "id": "#368",
+        "color": "#9DB7F5",
+        "img": "Gorebyss.png",
+        "name": "Gorebyss",
+        "gen": 3
+    },
+    {
+        "id": "#369",
+        "color": "#9DB7F5",
+        "img": "Relicanth.png",
+        "name": "Relicanth",
+        "gen": 3
+    },
+    {
+        "id": "#370",
+        "color": "#9DB7F5",
+        "img": "Luvdisc.png",
+        "name": "Luvdisc",
+        "gen": 3
+    },
+    {
+        "id": "#371",
+        "color": "#A27DFA",
+        "img": "Bagon.png",
+        "name": "Bagon",
+        "gen": 3
+    },
+    {
+        "id": "#372",
+        "color": "#A27DFA",
+        "img": "Shelgon.png",
+        "name": "Shelgon",
+        "gen": 3
+    },
+    {
+        "id": "#373",
+        "color": "#A27DFA",
+        "img": "Salamence.png",
+        "name": "Salamence",
+        "gen": 3
+    },
+    {
+        "id": "#374",
+        "color": "#D1D1E0",
+        "img": "Beldum.png",
+        "name": "Beldum",
+        "gen": 3
+    },
+    {
+        "id": "#375",
+        "color": "#D1D1E0",
+        "img": "Metang.png",
+        "name": "Metang",
+        "gen": 3
+    },
+    {
+        "id": "#376",
+        "color": "#D1D1E0",
+        "img": "Metagross.png",
+        "name": "Metagross",
+        "gen": 3
+    },
+    {
+        "id": "#377",
+        "color": "#D1C17D",
+        "img": "Regirock.png",
+        "name": "Regirock",
+        "gen": 3
+    },
+    {
+        "id": "#378",
+        "color": "#BCE6E6",
+        "img": "Regice.png",
+        "name": "Regice",
+        "gen": 3
+    },
+    {
+        "id": "#379",
+        "color": "#D1D1E0",
+        "img": "Registeel.png",
+        "name": "Registeel",
+        "gen": 3
+    },
+    {
+        "id": "#380",
+        "color": "#A27DFA",
+        "img": "Latias.png",
+        "name": "Latias",
+        "gen": 3
+    },
+    {
+        "id": "#381",
+        "color": "#A27DFA",
+        "img": "Latios.png",
+        "name": "Latios",
+        "gen": 3
+    },
+    {
+        "id": "#382",
+        "color": "#9DB7F5",
+        "img": "Kyogre.png",
+        "name": "Kyogre",
+        "gen": 3
+    },
+    {
+        "id": "#383",
+        "color": "#EBD69D",
+        "img": "Groudon.png",
+        "name": "Groudon",
+        "gen": 3
+    },
+    {
+        "id": "#384",
+        "color": "#A27DFA",
+        "img": "Rayquaza.png",
+        "name": "Rayquaza",
+        "gen": 3
+    },
+    {
+        "id": "#385",
+        "color": "#D1D1E0",
+        "img": "Jirachi.png",
+        "name": "Jirachi",
+        "gen": 3
+    },
+    {
+        "id": "#386",
+        "color": "#FA92B2",
+        "img": "Deoxys.png",
+        "name": "Deoxys",
+        "gen": 3
+    },
+    {
+        "id": "#386",
+        "color": "#FA92B2",
+        "img": "Deoxys.png",
+        "name": "Deoxys",
+        "gen": 3
+    },
+    {
+        "id": "#386",
+        "color": "#FA92B2",
+        "img": "Deoxys.png",
+        "name": "Deoxys",
+        "gen": 3
+    },
+    {
+        "id": "#386",
+        "color": "#FA92B2",
+        "img": "Deoxys.png",
+        "name": "Deoxys",
+        "gen": 3
+    }
+]

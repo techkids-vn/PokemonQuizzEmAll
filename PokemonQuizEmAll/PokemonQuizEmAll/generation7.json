@@ -1,0 +1,149 @@
+[
+    {
+        "img": "Rowlet.png",
+        "id": "#???",
+        "color": "#A7DB8D",
+        "gen": 7,
+        "name": "Rowlet"
+    },
+    {
+        "img": "Litten.png",
+        "id": "#???",
+        "color": "#F5AC78",
+        "gen": 7,
+        "name": "Litten"
+    },
+    {
+        "img": "Popplio.png",
+        "id": "#???",
+        "color": "#9DB7F5",
+        "gen": 7,
+        "name": "Popplio"
+    },
+    {
+        "img": "Pikipek.png",
+        "id": "#???",
+        "color": "#C6C6A7",
+        "gen": 7,
+        "name": "Pikipek"
+    },
+    {
+        "img": "Yungoos.png",
+        "id": "#???",
+        "color": "#C6C6A7",
+        "gen": 7,
+        "name": "Yungoos"
+    },
+    {
+        "img": "Grubbin.png",
+        "id": "#???",
+        "color": "#C6D16E",
+        "gen": 7,
+        "name": "Grubbin"
+    },
+    {
+        "img": "Charjabug.png",
+        "id": "#???",
+        "color": "#C6D16E",
+        "gen": 7,
+        "name": "Charjabug"
+    },
+    {
+        "img": "Vikavolt.png",
+        "id": "#???",
+        "color": "#C6D16E",
+        "gen": 7,
+        "name": "Vikavolt"
+    },
+    {
+        "img": "Rockruff.png",
+        "id": "#???",
+        "color": "#D1C17D",
+        "gen": 7,
+        "name": "Rockruff"
+    },
+    {
+        "img": "Komala.png",
+        "id": "#???",
+        "color": "#C6C6A7",
+        "gen": 7,
+        "name": "Komala"
+    },
+    {
+        "img": "Tapu Koko.png",
+        "id": "#???",
+        "color": "#FAE078",
+        "gen": 7,
+        "name": "Tapu Koko"
+    },
+    {
+        "img": "Drampa.png",
+        "id": "#???",
+        "color": "#C6C6A7",
+        "gen": 7,
+        "name": "Drampa"
+    },
+    {
+        "img": "Bruxish.png",
+        "id": "#???",
+        "color": "#9DB7F5",
+        "gen": 7,
+        "name": "Bruxish"
+    },
+    {
+        "img": "Cutiefly.png",
+        "id": "#???",
+        "color": "#C6D16E",
+        "gen": 7,
+        "name": "Cutiefly"
+    },
+    {
+        "img": "Togedemaru.png",
+        "id": "#???",
+        "color": "#FAE078",
+        "gen": 7,
+        "name": "Togedemaru"
+    },
+    {
+        "img": "Salandit.png",
+        "id": "#???",
+        "color": "#C183C1",
+        "gen": 7,
+        "name": "Salandit"
+    },
+    {
+        "img": "Mimikkyu.png",
+        "id": "#???",
+        "color": "#A292BC",
+        "gen": 7,
+        "name": "Mimikkyu"
+    },
+    {
+        "img": "Kiteruguma.png",
+        "id": "#???",
+        "color": "#C6C6A7",
+        "gen": 7,
+        "name": "Kiteruguma"
+    },
+    {
+        "img": "Solgaleo.png",
+        "id": "#???",
+        "color": "#FA92B2",
+        "gen": 7,
+        "name": "Solgaleo"
+    },
+    {
+        "img": "Lunala.png",
+        "id": "#???",
+        "color": "#FA92B2",
+        "gen": 7,
+        "name": "Lunala"
+    },
+    {
+        "img": "Magearna.png",
+        "id": "#???",
+        "color": "#D1D1E0",
+        "gen": 7,
+        "name": "Magearna"
+    }
+]

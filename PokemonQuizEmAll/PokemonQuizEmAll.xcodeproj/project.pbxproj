@@ -10,6 +10,13 @@
 		1943A2161D5526080085D624 /* FlashCardViewRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */; };
 		1981B8531D586F1700DE6686 /* CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1981B8521D586F1700DE6686 /* CircleMask.swift */; };
 		26E226CDF4979808A44DEBE2 /* Pods_PokemonQuizEmAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */; };
+		848E683C1D5DD05F00BBE298 /* JSONToDBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E683B1D5DD05F00BBE298 /* JSONToDBLoader.swift */; };
+		848E68431D5DDC2F00BBE298 /* generation2.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683D1D5DDC2E00BBE298 /* generation2.json */; };
+		848E68441D5DDC2F00BBE298 /* generation3.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683E1D5DDC2E00BBE298 /* generation3.json */; };
+		848E68451D5DDC2F00BBE298 /* generation4.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683F1D5DDC2E00BBE298 /* generation4.json */; };
+		848E68461D5DDC2F00BBE298 /* generation5.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E68401D5DDC2E00BBE298 /* generation5.json */; };
+		848E68471D5DDC2F00BBE298 /* generation6.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E68411D5DDC2E00BBE298 /* generation6.json */; };
+		848E68481D5DDC2F00BBE298 /* generation7.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E68421D5DDC2E00BBE298 /* generation7.json */; };
 		991EB79A1D3D361400E9FBE6 /* Abra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7031D3D361400E9FBE6 /* Abra.jpg */; };
 		991EB79B1D3D361400E9FBE6 /* Aerodactyl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7041D3D361400E9FBE6 /* Aerodactyl.jpg */; };
 		991EB79C1D3D361400E9FBE6 /* Alakazam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7051D3D361400E9FBE6 /* Alakazam.jpg */; };
@@ -161,7 +168,7 @@
 		991EB82E1D3D361400E9FBE6 /* Wigglytuff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7971D3D361400E9FBE6 /* Wigglytuff.jpg */; };
 		991EB82F1D3D361400E9FBE6 /* Zapdos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7981D3D361400E9FBE6 /* Zapdos.jpg */; };
 		991EB8301D3D361400E9FBE6 /* Zubat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7991D3D361400E9FBE6 /* Zubat.jpg */; };
-		991EB8321D3D363600E9FBE6 /* gen1.json in Resources */ = {isa = PBXBuildFile; fileRef = 991EB8311D3D363600E9FBE6 /* gen1.json */; };
+		991EB8321D3D363600E9FBE6 /* generation1.json in Resources */ = {isa = PBXBuildFile; fileRef = 991EB8311D3D363600E9FBE6 /* generation1.json */; };
 		995976B61D3CA16800E98204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995976B51D3CA16800E98204 /* AppDelegate.swift */; };
 		995976BB1D3CA16800E98204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995976B91D3CA16800E98204 /* Main.storyboard */; };
 		995976BD1D3CA16800E98204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995976BC1D3CA16800E98204 /* Assets.xcassets */; };
@@ -200,6 +207,13 @@
 		1981B8521D586F1700DE6686 /* CircleMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleMask.swift; path = PokemonQuizEmAll/CircleMask.swift; sourceTree = "<group>"; };
 		4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonQuizEmAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3054CE1283D06739E14123 /* Pods-PokemonQuizEmAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.release.xcconfig"; sourceTree = "<group>"; };
+		848E683B1D5DD05F00BBE298 /* JSONToDBLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONToDBLoader.swift; sourceTree = "<group>"; };
+		848E683D1D5DDC2E00BBE298 /* generation2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation2.json; sourceTree = "<group>"; };
+		848E683E1D5DDC2E00BBE298 /* generation3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation3.json; sourceTree = "<group>"; };
+		848E683F1D5DDC2E00BBE298 /* generation4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation4.json; sourceTree = "<group>"; };
+		848E68401D5DDC2E00BBE298 /* generation5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation5.json; sourceTree = "<group>"; };
+		848E68411D5DDC2E00BBE298 /* generation6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation6.json; sourceTree = "<group>"; };
+		848E68421D5DDC2E00BBE298 /* generation7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation7.json; sourceTree = "<group>"; };
 		991EB7031D3D361400E9FBE6 /* Abra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Abra.jpg; sourceTree = "<group>"; };
 		991EB7041D3D361400E9FBE6 /* Aerodactyl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerodactyl.jpg; sourceTree = "<group>"; };
 		991EB7051D3D361400E9FBE6 /* Alakazam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alakazam.jpg; sourceTree = "<group>"; };
@@ -351,7 +365,7 @@
 		991EB7971D3D361400E9FBE6 /* Wigglytuff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wigglytuff.jpg; sourceTree = "<group>"; };
 		991EB7981D3D361400E9FBE6 /* Zapdos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Zapdos.jpg; sourceTree = "<group>"; };
 		991EB7991D3D361400E9FBE6 /* Zubat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Zubat.jpg; sourceTree = "<group>"; };
-		991EB8311D3D363600E9FBE6 /* gen1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gen1.json; sourceTree = "<group>"; };
+		991EB8311D3D363600E9FBE6 /* generation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation1.json; sourceTree = "<group>"; };
 		995976B21D3CA16800E98204 /* PokemonQuizEmAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonQuizEmAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995976B51D3CA16800E98204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		995976BA1D3CA16800E98204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -610,7 +624,13 @@
 				995976C81D3CB80E00E98204 /* View */,
 				995976C71D3CB7F900E98204 /* Controller */,
 				E8394A831D3D16920094F4FC /* text.txt */,
-				991EB8311D3D363600E9FBE6 /* gen1.json */,
+				991EB8311D3D363600E9FBE6 /* generation1.json */,
+				848E683D1D5DDC2E00BBE298 /* generation2.json */,
+				848E683E1D5DDC2E00BBE298 /* generation3.json */,
+				848E683F1D5DDC2E00BBE298 /* generation4.json */,
+				848E68401D5DDC2E00BBE298 /* generation5.json */,
+				848E68411D5DDC2E00BBE298 /* generation6.json */,
+				848E68421D5DDC2E00BBE298 /* generation7.json */,
 				995976C11D3CA16800E98204 /* Info.plist */,
 			);
 			path = PokemonQuizEmAll;
@@ -656,6 +676,7 @@
 				995976CD1D3CC6FE00E98204 /* Pokemon.swift */,
 				E805D0021D3E500D00F5C69B /* HighScore.swift */,
 				E8394A8D1D3D16920094F4FC /* DB.swift */,
+				848E683B1D5DD05F00BBE298 /* JSONToDBLoader.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -701,12 +722,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 995976C41D3CA16800E98204 /* Build configuration list for PBXNativeTarget "PokemonQuizEmAll" */;
 			buildPhases = (
+				43E815F18788FA8FF1974219 /* 📦 Check Pods Manifest.lock */,
 				B02AC8C49395995EAE4B6E54 /* [CP] Check Pods Manifest.lock */,
 				995976AE1D3CA16800E98204 /* Sources */,
 				995976AF1D3CA16800E98204 /* Frameworks */,
 				995976B01D3CA16800E98204 /* Resources */,
 				DA49C06341B595D887C81636 /* [CP] Embed Pods Frameworks */,
 				1BF29A45DB07FD1647B2148B /* [CP] Copy Pods Resources */,
+				0327FF47F1A93D9F7B614868 /* 📦 Embed Pods Frameworks */,
+				EDE3C79F7B6219A0D386F592 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -729,7 +753,7 @@
 				TargetAttributes = {
 					995976B11D3CA16800E98204 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = SSLZNUJ85E;
+						DevelopmentTeam = 3CJF6M3857;
 					};
 				};
 			};
@@ -791,12 +815,14 @@
 				991EB7BD1D3D361400E9FBE6 /* Exeggutor.jpg in Resources */,
 				991EB8081D3D361400E9FBE6 /* Primeape.jpg in Resources */,
 				991EB7CF1D3D361400E9FBE6 /* Hitmonlee.jpg in Resources */,
+				848E68441D5DDC2F00BBE298 /* generation3.json in Resources */,
 				991EB8101D3D361400E9FBE6 /* Sandshrew.jpg in Resources */,
 				991EB7AE1D3D361400E9FBE6 /* Dewgong.jpg in Resources */,
 				991EB7A61D3D361400E9FBE6 /* Chansey.jpg in Resources */,
 				991EB7F61D3D361400E9FBE6 /* Ninetales.jpg in Resources */,
 				991EB7B11D3D361400E9FBE6 /* Dodrio.jpg in Resources */,
 				991EB7BE1D3D361400E9FBE6 /* Farfetch'd.jpg in Resources */,
+				848E68471D5DDC2F00BBE298 /* generation6.json in Resources */,
 				991EB7C71D3D361400E9FBE6 /* Golduck.jpg in Resources */,
 				991EB7A81D3D361400E9FBE6 /* Charmander.jpg in Resources */,
 				991EB79B1D3D361400E9FBE6 /* Aerodactyl.jpg in Resources */,
@@ -834,7 +860,7 @@
 				991EB7A91D3D361400E9FBE6 /* Charmeleon.jpg in Resources */,
 				991EB7A71D3D361400E9FBE6 /* Charizard.jpg in Resources */,
 				991EB81D1D3D361400E9FBE6 /* Staryu.jpg in Resources */,
-				991EB8321D3D363600E9FBE6 /* gen1.json in Resources */,
+				991EB8321D3D363600E9FBE6 /* generation1.json in Resources */,
 				E8394AAA1D3D19F00094F4FC /* BackFlashCardView.xib in Resources */,
 				991EB82A1D3D361400E9FBE6 /* Wartortle.jpg in Resources */,
 				991EB81B1D3D361400E9FBE6 /* Squirtle.jpg in Resources */,
@@ -891,6 +917,7 @@
 				991EB7B51D3D361400E9FBE6 /* Dratini.jpg in Resources */,
 				991EB81E1D3D361400E9FBE6 /* Tangela.jpg in Resources */,
 				991EB7F01D3D361400E9FBE6 /* Nidoking.jpg in Resources */,
+				848E68431D5DDC2F00BBE298 /* generation2.json in Resources */,
 				991EB7D61D3D361400E9FBE6 /* Kabuto.jpg in Resources */,
 				991EB7BB1D3D361400E9FBE6 /* Electrode.jpg in Resources */,
 				991EB82E1D3D361400E9FBE6 /* Wigglytuff.jpg in Resources */,
@@ -898,7 +925,9 @@
 				991EB82B1D3D361400E9FBE6 /* Weedle.jpg in Resources */,
 				995976BB1D3CA16800E98204 /* Main.storyboard in Resources */,
 				991EB79E1D3D361400E9FBE6 /* Arcanine.jpg in Resources */,
+				848E68481D5DDC2F00BBE298 /* generation7.json in Resources */,
 				991EB80E1D3D361400E9FBE6 /* Rhydon.jpg in Resources */,
+				848E68451D5DDC2F00BBE298 /* generation4.json in Resources */,
 				991EB7C81D3D361400E9FBE6 /* Golem.jpg in Resources */,
 				991EB8241D3D361400E9FBE6 /* Venonat.jpg in Resources */,
 				991EB8001D3D361400E9FBE6 /* Pidgey.jpg in Resources */,
@@ -906,6 +935,7 @@
 				991EB7C11D3D361400E9FBE6 /* Gastly.jpg in Resources */,
 				991EB7B81D3D361400E9FBE6 /* Eevee.jpg in Resources */,
 				E8394A951D3D16920094F4FC /* text.txt in Resources */,
+				848E68461D5DDC2F00BBE298 /* generation5.json in Resources */,
 				991EB7AD1D3D361400E9FBE6 /* Cubone.jpg in Resources */,
 				991EB8141D3D361400E9FBE6 /* Seaking.jpg in Resources */,
 				991EB7C01D3D361400E9FBE6 /* Flareon.jpg in Resources */,
@@ -926,6 +956,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0327FF47F1A93D9F7B614868 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1BF29A45DB07FD1647B2148B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -939,6 +984,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43E815F18788FA8FF1974219 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B02AC8C49395995EAE4B6E54 /* [CP] Check Pods Manifest.lock */ = {
@@ -971,6 +1031,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EDE3C79F7B6219A0D386F592 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -991,6 +1066,7 @@
 				E8394A9A1D3D16920094F4FC /* PackCard.swift in Sources */,
 				E8394AAD1D3D2DA90094F4FC /* PlayViewController.swift in Sources */,
 				E8394AA51D3D16920094F4FC /* ButtonCell.swift in Sources */,
+				848E683C1D5DD05F00BBE298 /* JSONToDBLoader.swift in Sources */,
 				E8394A981D3D16920094F4FC /* SettingsViewController.swift in Sources */,
 				E805D0031D3E500D00F5C69B /* HighScore.swift in Sources */,
 				E8394AA31D3D16920094F4FC /* Card.swift in Sources */,
@@ -1121,7 +1197,7 @@
 				INFOPLIST_FILE = PokemonQuizEmAll/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vuu.PokemonQuizzEmAll;
+				PRODUCT_BUNDLE_IDENTIFIER = techkids.PokemonQuizzEmAll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1137,7 +1213,7 @@
 				INFOPLIST_FILE = PokemonQuizEmAll/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vuu.PokemonQuizzEmAll;
+				PRODUCT_BUNDLE_IDENTIFIER = techkids.PokemonQuizzEmAll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

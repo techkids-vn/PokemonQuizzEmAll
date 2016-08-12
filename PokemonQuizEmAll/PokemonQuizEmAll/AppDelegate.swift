@@ -12,16 +12,22 @@ import AVFoundation
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
-
+    let DB_TEST = true
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        JSONToDBLoader.loadPokemonFromJSONToDBIfNedeed()
+        
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
-
+        
         return true
+    }
+    
+    func dbTest() -> Void {
+        JSONToDBLoader
+            	.loadPokemonFromJSONToDBIfNedeed()
     }
     
     func applicationWillResignActive(application: UIApplication) {

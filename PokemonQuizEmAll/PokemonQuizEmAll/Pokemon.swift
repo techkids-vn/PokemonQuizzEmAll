@@ -21,7 +21,7 @@ class Pokemon: Object {
         pokemon.gen = gen
         pokemon.img = img
         pokemon.color = color
-        DB.createPokemon(pokemon)
+        DB.addPokemon(pokemon)
         return pokemon
     }
 }

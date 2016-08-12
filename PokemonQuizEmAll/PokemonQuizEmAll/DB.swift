@@ -8,16 +8,17 @@
 
 import RealmSwift
 
-class DB: Object{
+class DB: Object {
     
     static let realm = try! Realm()
     
     //MARK: Pokemon
-    static func createPokemon(pokemon : Pokemon) {
+    static func addPokemon(pokemon : Pokemon) {
         try! realm.write {
             realm.add(pokemon)
         }
     }
+    
     static func getPokemonByName(name : String) -> Pokemon! {
         let predicate = NSPredicate(format: "name = %@", name)
         return realm.objects(Pokemon).filter(predicate).first
@@ -28,9 +29,13 @@ class DB: Object{
         return realm.objects(Pokemon).filter(predicate).first
     }
     
+    static func noPokemonInDb() -> Bool {
+        return realm.objects(Pokemon).count == 0
+    }
+    
     //MARK: PACKCARD
-    static func createPack(pack : PackCard){
-        try! realm.write{
+    static func createPack(pack : PackCard) {
+        try! realm.write {
             realm.add(pack)
         }
     }
@@ -215,6 +220,7 @@ class DB: Object{
         }
         return pickedGen
     }
+    
     static func checkSettingsStatus(){
         print("sound: \(DB.getSoundOn()) - music: \(DB.getMusicOn()) - genCount : \(DB.getPickedGen().count)")
     }

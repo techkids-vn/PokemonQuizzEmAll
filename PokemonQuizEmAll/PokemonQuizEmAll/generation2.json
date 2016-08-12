@@ -1,0 +1,702 @@
+[
+    {
+        "color": "#A7DB8D",
+        "name": "Chikorita",
+        "id": "#152",
+        "img": "Chikorita.png",
+        "gen": 2
+    },
+    {
+        "color": "#A7DB8D",
+        "name": "Bayleef",
+        "id": "#153",
+        "img": "Bayleef.png",
+        "gen": 2
+    },
+    {
+        "color": "#A7DB8D",
+        "name": "Meganium",
+        "id": "#154",
+        "img": "Meganium.png",
+        "gen": 2
+    },
+    {
+        "color": "#F5AC78",
+        "name": "Cyndaquil",
+        "id": "#155",
+        "img": "Cyndaquil.png",
+        "gen": 2
+    },
+    {
+        "color": "#F5AC78",
+        "name": "Quilava",
+        "id": "#156",
+        "img": "Quilava.png",
+        "gen": 2
+    },
+    {
+        "color": "#F5AC78",
+        "name": "Typhlosion",
+        "id": "#157",
+        "img": "Typhlosion.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Totodile",
+        "id": "#158",
+        "img": "Totodile.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Croconaw",
+        "id": "#159",
+        "img": "Croconaw.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Feraligatr",
+        "id": "#160",
+        "img": "Feraligatr.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Sentret",
+        "id": "#161",
+        "img": "Sentret.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Furret",
+        "id": "#162",
+        "img": "Furret.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Hoothoot",
+        "id": "#163",
+        "img": "Hoothoot.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Noctowl",
+        "id": "#164",
+        "img": "Noctowl.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Ledyba",
+        "id": "#165",
+        "img": "Ledyba.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Ledian",
+        "id": "#166",
+        "img": "Ledian.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Spinarak",
+        "id": "#167",
+        "img": "Spinarak.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Ariados",
+        "id": "#168",
+        "img": "Ariados.png",
+        "gen": 2
+    },
+    {
+        "color": "#C183C1",
+        "name": "Crobat",
+        "id": "#169",
+        "img": "Crobat.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Chinchou",
+        "id": "#170",
+        "img": "Chinchou.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Lanturn",
+        "id": "#171",
+        "img": "Lanturn.png",
+        "gen": 2
+    },
+    {
+        "color": "#FAE078",
+        "name": "Pichu",
+        "id": "#172",
+        "img": "Pichu.png",
+        "gen": 2
+    },
+    {
+        "color": "#F4BDC9",
+        "name": "Cleffa",
+        "id": "#173",
+        "img": "Cleffa.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Igglybuff",
+        "id": "#174",
+        "img": "Igglybuff.png",
+        "gen": 2
+    },
+    {
+        "color": "#F4BDC9",
+        "name": "Togepi",
+        "id": "#175",
+        "img": "Togepi.png",
+        "gen": 2
+    },
+    {
+        "color": "#F4BDC9",
+        "name": "Togetic",
+        "id": "#176",
+        "img": "Togetic.png",
+        "gen": 2
+    },
+    {
+        "color": "#FA92B2",
+        "name": "Natu",
+        "id": "#177",
+        "img": "Natu.png",
+        "gen": 2
+    },
+    {
+        "color": "#FA92B2",
+        "name": "Xatu",
+        "id": "#178",
+        "img": "Xatu.png",
+        "gen": 2
+    },
+    {
+        "color": "#FAE078",
+        "name": "Mareep",
+        "id": "#179",
+        "img": "Mareep.png",
+        "gen": 2
+    },
+    {
+        "color": "#FAE078",
+        "name": "Flaaffy",
+        "id": "#180",
+        "img": "Flaaffy.png",
+        "gen": 2
+    },
+    {
+        "color": "#FAE078",
+        "name": "Ampharos",
+        "id": "#181",
+        "img": "Ampharos.png",
+        "gen": 2
+    },
+    {
+        "color": "#A7DB8D",
+        "name": "Bellossom",
+        "id": "#182",
+        "img": "Bellossom.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Marill",
+        "id": "#183",
+        "img": "Marill.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Azumarill",
+        "id": "#184",
+        "img": "Azumarill.png",
+        "gen": 2
+    },
+    {
+        "color": "#D1C17D",
+        "name": "Sudowoodo",
+        "id": "#185",
+        "img": "Sudowoodo.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Politoed",
+        "id": "#186",
+        "img": "Politoed.png",
+        "gen": 2
+    },
+    {
+        "color": "#A7DB8D",
+        "name": "Hoppip",
+        "id": "#187",
+        "img": "Hoppip.png",
+        "gen": 2
+    },
+    {
+        "color": "#A7DB8D",
+        "name": "Skiploom",
+        "id": "#188",
+        "img": "Skiploom.png",
+        "gen": 2
+    },
+    {
+        "color": "#A7DB8D",
+        "name": "Jumpluff",
+        "id": "#189",
+        "img": "Jumpluff.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Aipom",
+        "id": "#190",
+        "img": "Aipom.png",
+        "gen": 2
+    },
+    {
+        "color": "#A7DB8D",
+        "name": "Sunkern",
+        "id": "#191",
+        "img": "Sunkern.png",
+        "gen": 2
+    },
+    {
+        "color": "#A7DB8D",
+        "name": "Sunflora",
+        "id": "#192",
+        "img": "Sunflora.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Yanma",
+        "id": "#193",
+        "img": "Yanma.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Wooper",
+        "id": "#194",
+        "img": "Wooper.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Quagsire",
+        "id": "#195",
+        "img": "Quagsire.png",
+        "gen": 2
+    },
+    {
+        "color": "#FA92B2",
+        "name": "Espeon",
+        "id": "#196",
+        "img": "Espeon.png",
+        "gen": 2
+    },
+    {
+        "color": "#A29288",
+        "name": "Umbreon",
+        "id": "#197",
+        "img": "Umbreon.png",
+        "gen": 2
+    },
+    {
+        "color": "#A29288",
+        "name": "Murkrow",
+        "id": "#198",
+        "img": "Murkrow.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Slowking",
+        "id": "#199",
+        "img": "Slowking.png",
+        "gen": 2
+    },
+    {
+        "color": "#A292BC",
+        "name": "Misdreavus",
+        "id": "#200",
+        "img": "Misdreavus.png",
+        "gen": 2
+    },
+    {
+        "color": "#FA92B2",
+        "name": "Unown",
+        "id": "#201",
+        "img": "Unown.png",
+        "gen": 2
+    },
+    {
+        "color": "#FA92B2",
+        "name": "Wobbuffet",
+        "id": "#202",
+        "img": "Wobbuffet.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Girafarig",
+        "id": "#203",
+        "img": "Girafarig.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Pineco",
+        "id": "#204",
+        "img": "Pineco.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Forretress",
+        "id": "#205",
+        "img": "Forretress.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Dunsparce",
+        "id": "#206",
+        "img": "Dunsparce.png",
+        "gen": 2
+    },
+    {
+        "color": "#EBD69D",
+        "name": "Gligar",
+        "id": "#207",
+        "img": "Gligar.png",
+        "gen": 2
+    },
+    {
+        "color": "#D1D1E0",
+        "name": "Steelix",
+        "id": "#208",
+        "img": "Steelix.png",
+        "gen": 2
+    },
+    {
+        "color": "#F4BDC9",
+        "name": "Snubbull",
+        "id": "#209",
+        "img": "Snubbull.png",
+        "gen": 2
+    },
+    {
+        "color": "#F4BDC9",
+        "name": "Granbull",
+        "id": "#210",
+        "img": "Granbull.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Qwilfish",
+        "id": "#211",
+        "img": "Qwilfish.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Scizor",
+        "id": "#212",
+        "img": "Scizor.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Shuckle",
+        "id": "#213",
+        "img": "Shuckle.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6D16E",
+        "name": "Heracross",
+        "id": "#214",
+        "img": "Heracross.png",
+        "gen": 2
+    },
+    {
+        "color": "#A29288",
+        "name": "Sneasel",
+        "id": "#215",
+        "img": "Sneasel.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Teddiursa",
+        "id": "#216",
+        "img": "Teddiursa.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Ursaring",
+        "id": "#217",
+        "img": "Ursaring.png",
+        "gen": 2
+    },
+    {
+        "color": "#F5AC78",
+        "name": "Slugma",
+        "id": "#218",
+        "img": "Slugma.png",
+        "gen": 2
+    },
+    {
+        "color": "#F5AC78",
+        "name": "Magcargo",
+        "id": "#219",
+        "img": "Magcargo.png",
+        "gen": 2
+    },
+    {
+        "color": "#BCE6E6",
+        "name": "Swinub",
+        "id": "#220",
+        "img": "Swinub.png",
+        "gen": 2
+    },
+    {
+        "color": "#BCE6E6",
+        "name": "Piloswine",
+        "id": "#221",
+        "img": "Piloswine.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Corsola",
+        "id": "#222",
+        "img": "Corsola.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Remoraid",
+        "id": "#223",
+        "img": "Remoraid.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Octillery",
+        "id": "#224",
+        "img": "Octillery.png",
+        "gen": 2
+    },
+    {
+        "color": "#BCE6E6",
+        "name": "Delibird",
+        "id": "#225",
+        "img": "Delibird.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Mantine",
+        "id": "#226",
+        "img": "Mantine.png",
+        "gen": 2
+    },
+    {
+        "color": "#D1D1E0",
+        "name": "Skarmory",
+        "id": "#227",
+        "img": "Skarmory.png",
+        "gen": 2
+    },
+    {
+        "color": "#A29288",
+        "name": "Houndour",
+        "id": "#228",
+        "img": "Houndour.png",
+        "gen": 2
+    },
+    {
+        "color": "#A29288",
+        "name": "Houndoom",
+        "id": "#229",
+        "img": "Houndoom.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Kingdra",
+        "id": "#230",
+        "img": "Kingdra.png",
+        "gen": 2
+    },
+    {
+        "color": "#EBD69D",
+        "name": "Phanpy",
+        "id": "#231",
+        "img": "Phanpy.png",
+        "gen": 2
+    },
+    {
+        "color": "#EBD69D",
+        "name": "Donphan",
+        "id": "#232",
+        "img": "Donphan.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Porygon2",
+        "id": "#233",
+        "img": "Porygon2.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Stantler",
+        "id": "#234",
+        "img": "Stantler.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Smeargle",
+        "id": "#235",
+        "img": "Smeargle.png",
+        "gen": 2
+    },
+    {
+        "color": "#D67873",
+        "name": "Tyrogue",
+        "id": "#236",
+        "img": "Tyrogue.png",
+        "gen": 2
+    },
+    {
+        "color": "#D67873",
+        "name": "Hitmontop",
+        "id": "#237",
+        "img": "Hitmontop.png",
+        "gen": 2
+    },
+    {
+        "color": "#BCE6E6",
+        "name": "Smoochum",
+        "id": "#238",
+        "img": "Smoochum.png",
+        "gen": 2
+    },
+    {
+        "color": "#FAE078",
+        "name": "Elekid",
+        "id": "#239",
+        "img": "Elekid.png",
+        "gen": 2
+    },
+    {
+        "color": "#F5AC78",
+        "name": "Magby",
+        "id": "#240",
+        "img": "Magby.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Miltank",
+        "id": "#241",
+        "img": "Miltank.png",
+        "gen": 2
+    },
+    {
+        "color": "#C6C6A7",
+        "name": "Blissey",
+        "id": "#242",
+        "img": "Blissey.png",
+        "gen": 2
+    },
+    {
+        "color": "#FAE078",
+        "name": "Raikou",
+        "id": "#243",
+        "img": "Raikou.png",
+        "gen": 2
+    },
+    {
+        "color": "#F5AC78",
+        "name": "Entei",
+        "id": "#244",
+        "img": "Entei.png",
+        "gen": 2
+    },
+    {
+        "color": "#9DB7F5",
+        "name": "Suicune",
+        "id": "#245",
+        "img": "Suicune.png",
+        "gen": 2
+    },
+    {
+        "color": "#D1C17D",
+        "name": "Larvitar",
+        "id": "#246",
+        "img": "Larvitar.png",
+        "gen": 2
+    },
+    {
+        "color": "#D1C17D",
+        "name": "Pupitar",
+        "id": "#247",
+        "img": "Pupitar.png",
+        "gen": 2
+    },
+    {
+        "color": "#D1C17D",
+        "name": "Tyranitar",
+        "id": "#248",
+        "img": "Tyranitar.png",
+        "gen": 2
+    },
+    {
+        "color": "#FA92B2",
+        "name": "Lugia",
+        "id": "#249",
+        "img": "Lugia.png",
+        "gen": 2
+    },
+    {
+        "color": "#F5AC78",
+        "name": "Ho-Oh",
+        "id": "#250",
+        "img": "Ho-Oh.png",
+        "gen": 2
+    },
+    {
+        "color": "#FA92B2",
+        "name": "Celebi",
+        "id": "#251",
+        "img": "Celebi.png",
+        "gen": 2
+    }
+]
