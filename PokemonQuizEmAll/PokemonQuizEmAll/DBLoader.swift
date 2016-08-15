@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-public class JSONToDBLoader: NSObject {
+public class DBLoader: NSObject {
     
     static let jsonFileNames = ["generation1",
                                 "generation2",
@@ -31,6 +31,12 @@ public class JSONToDBLoader: NSObject {
             print("All Done")
         } else {
             print("Pokemon already loaded")
+        }
+    }
+    
+    public func createSettingIfNeeded() {
+        if DB.noSettingInDB() {
+            Setting.create()
         }
     }
     

@@ -10,13 +10,14 @@
 		1943A2161D5526080085D624 /* FlashCardViewRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */; };
 		1981B8531D586F1700DE6686 /* CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1981B8521D586F1700DE6686 /* CircleMask.swift */; };
 		26E226CDF4979808A44DEBE2 /* Pods_PokemonQuizEmAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */; };
-		848E683C1D5DD05F00BBE298 /* JSONToDBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E683B1D5DD05F00BBE298 /* JSONToDBLoader.swift */; };
+		848E683C1D5DD05F00BBE298 /* DBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E683B1D5DD05F00BBE298 /* DBLoader.swift */; };
 		848E68431D5DDC2F00BBE298 /* generation2.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683D1D5DDC2E00BBE298 /* generation2.json */; };
 		848E68441D5DDC2F00BBE298 /* generation3.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683E1D5DDC2E00BBE298 /* generation3.json */; };
 		848E68451D5DDC2F00BBE298 /* generation4.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683F1D5DDC2E00BBE298 /* generation4.json */; };
 		848E68461D5DDC2F00BBE298 /* generation5.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E68401D5DDC2E00BBE298 /* generation5.json */; };
 		848E68471D5DDC2F00BBE298 /* generation6.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E68411D5DDC2E00BBE298 /* generation6.json */; };
 		848E68481D5DDC2F00BBE298 /* generation7.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E68421D5DDC2E00BBE298 /* generation7.json */; };
+		848E684A1D61A52E00BBE298 /* IntObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E68491D61A52E00BBE298 /* IntObject.swift */; };
 		991EB79A1D3D361400E9FBE6 /* Abra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7031D3D361400E9FBE6 /* Abra.jpg */; };
 		991EB79B1D3D361400E9FBE6 /* Aerodactyl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7041D3D361400E9FBE6 /* Aerodactyl.jpg */; };
 		991EB79C1D3D361400E9FBE6 /* Alakazam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 991EB7051D3D361400E9FBE6 /* Alakazam.jpg */; };
@@ -207,13 +208,14 @@
 		1981B8521D586F1700DE6686 /* CircleMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleMask.swift; path = PokemonQuizEmAll/CircleMask.swift; sourceTree = "<group>"; };
 		4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonQuizEmAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3054CE1283D06739E14123 /* Pods-PokemonQuizEmAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.release.xcconfig"; sourceTree = "<group>"; };
-		848E683B1D5DD05F00BBE298 /* JSONToDBLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONToDBLoader.swift; sourceTree = "<group>"; };
+		848E683B1D5DD05F00BBE298 /* DBLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLoader.swift; sourceTree = "<group>"; };
 		848E683D1D5DDC2E00BBE298 /* generation2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation2.json; sourceTree = "<group>"; };
 		848E683E1D5DDC2E00BBE298 /* generation3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation3.json; sourceTree = "<group>"; };
 		848E683F1D5DDC2E00BBE298 /* generation4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation4.json; sourceTree = "<group>"; };
 		848E68401D5DDC2E00BBE298 /* generation5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation5.json; sourceTree = "<group>"; };
 		848E68411D5DDC2E00BBE298 /* generation6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation6.json; sourceTree = "<group>"; };
 		848E68421D5DDC2E00BBE298 /* generation7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation7.json; sourceTree = "<group>"; };
+		848E68491D61A52E00BBE298 /* IntObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntObject.swift; sourceTree = "<group>"; };
 		991EB7031D3D361400E9FBE6 /* Abra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Abra.jpg; sourceTree = "<group>"; };
 		991EB7041D3D361400E9FBE6 /* Aerodactyl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerodactyl.jpg; sourceTree = "<group>"; };
 		991EB7051D3D361400E9FBE6 /* Alakazam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alakazam.jpg; sourceTree = "<group>"; };
@@ -676,7 +678,8 @@
 				995976CD1D3CC6FE00E98204 /* Pokemon.swift */,
 				E805D0021D3E500D00F5C69B /* HighScore.swift */,
 				E8394A8D1D3D16920094F4FC /* DB.swift */,
-				848E683B1D5DD05F00BBE298 /* JSONToDBLoader.swift */,
+				848E683B1D5DD05F00BBE298 /* DBLoader.swift */,
+				848E68491D61A52E00BBE298 /* IntObject.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1053,6 +1056,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848E684A1D61A52E00BBE298 /* IntObject.swift in Sources */,
 				E8394AA71D3D19810094F4FC /* ColorGenarator.swift in Sources */,
 				E8394A9F1D3D16920094F4FC /* DB.swift in Sources */,
 				E8394A9B1D3D16920094F4FC /* ListPackViewController.swift in Sources */,
@@ -1066,7 +1070,7 @@
 				E8394A9A1D3D16920094F4FC /* PackCard.swift in Sources */,
 				E8394AAD1D3D2DA90094F4FC /* PlayViewController.swift in Sources */,
 				E8394AA51D3D16920094F4FC /* ButtonCell.swift in Sources */,
-				848E683C1D5DD05F00BBE298 /* JSONToDBLoader.swift in Sources */,
+				848E683C1D5DD05F00BBE298 /* DBLoader.swift in Sources */,
 				E8394A981D3D16920094F4FC /* SettingsViewController.swift in Sources */,
 				E805D0031D3E500D00F5C69B /* HighScore.swift in Sources */,
 				E8394AA31D3D16920094F4FC /* Card.swift in Sources */,

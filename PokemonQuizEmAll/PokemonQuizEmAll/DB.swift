@@ -33,6 +33,27 @@ class DB: Object {
         return realm.objects(Pokemon).count == 0
     }
     
+    static func getRandomPokemon(generations : [Int]) -> Pokemon? {
+        
+        var predicate: NSPredicate? = nil
+        for i in 0..<generations.count {
+            let childPredicate = NSPredicate(format: "gen = %d", generations[i])
+            if predicate != nil {
+                predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [predicate!, childPredicate])
+            } else {
+                predicate = childPredicate
+            }
+        }
+        
+        if let unwrappedPredicate = predicate {
+            let pokemons = realm.objects(Pokemon).filter(unwrappedPredicate)
+            return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
+        } else {
+            let pokemons = realm.objects(Pokemon)
+            return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
+        }
+    }
+    
     //MARK: PACKCARD
     static func createPack(pack : PackCard) {
         try! realm.write {
@@ -137,8 +158,8 @@ class DB: Object {
     }
     
     //MARK: Setting
-    static func createSetting(setting : Setting){
-        try! realm.write{
+    static func addSetting(setting : Setting){
+        try! realm.write {
             realm.add(setting)
         }
     }
@@ -154,7 +175,7 @@ class DB: Object {
                     setting?.turnOffMusic = turnOffMusic
                 }
             }
-        }else{
+        }else {
             Setting.create()
             DB.updateSetting(turnOffSound, turnOffMusic: turnOffMusic)
         }
@@ -162,7 +183,7 @@ class DB: Object {
     
     static func updateSettings(turnOffSound: Int, turnOffMusic: Int, listGens: [Int]){
         let setting = realm.objects(Setting).first
-        if(setting != nil){
+        if(setting != nil) {
             try! realm.write {
                 if(turnOffSound==0 || turnOffSound == 1){
                     setting?.turnOffSound = turnOffSound
@@ -206,6 +227,7 @@ class DB: Object {
         }
         return true
     }
+    
     static func getPickedGen()->[Int]{
         let setting = realm.objects(Setting).first
         var pickedGen = [Int]()
@@ -214,7 +236,7 @@ class DB: Object {
                 pickedGen.append(genIndex.value)
             }
         }
-        else{
+        else {
             pickedGen.append(0)
             DB.updateSettings(-1, turnOffMusic: -1, listGens: pickedGen)
         }
@@ -223,6 +245,14 @@ class DB: Object {
     
     static func checkSettingsStatus(){
         print("sound: \(DB.getSoundOn()) - music: \(DB.getMusicOn()) - genCount : \(DB.getPickedGen().count)")
+    }
+    
+    static func noSettingInDB() -> Bool {
+        return realm.objects(Setting).count == 0
+    }
+    
+    static func getSetting() -> Setting? {
+        return realm.objects(Setting).first
     }
     
 }

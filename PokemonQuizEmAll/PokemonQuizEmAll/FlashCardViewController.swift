@@ -28,9 +28,11 @@ class FlashCardViewController: UIViewController {
     var backFlashCard  : BackFlashCardViewModel!
     var trueAnswerIndex: Int!
     var isFlip = false
-    var currentPokemon = 0
-    var totalPokemon = 0
-    var pokemonCollection = [Pokemon]()
+    //var currentPokemon = 0
+    //var totalPokemon = 0
+    //var pokemonCollection = [Pokemon]()
+    var currentPokemon : Pokemon?
+    var setting : Setting?
     let minusTime = 0.2
     var currentTime = TOTAL_TIME
     var maskLayer: CALayer = CALayer()
@@ -40,12 +42,12 @@ class FlashCardViewController: UIViewController {
     
     @IBOutlet weak var maskImage: UIImageView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configLayout()
-        self.dumpData()
+        self.initData()
+        self.bindingData()
+//        self.dumpData()
         self.clickOnButton()
         self.caculateScore()
         self.changeBackgroundColor()
@@ -87,6 +89,20 @@ class FlashCardViewController: UIViewController {
         })
     }
     
+    
+    
+    func initData() {
+        print("Getting Setting...")
+        self.setting = DB.getSetting()
+        
+        print("Getting first pokemon")
+        self.getNextPokemon()
+    }
+    
+    func initLayout() {
+        
+    }
+    
     func nextCard(){
         self.btnAnswer1.alpha = 0
         self.btnAnswer2.alpha = 0
@@ -96,7 +112,8 @@ class FlashCardViewController: UIViewController {
             self.backFlashCard.center.x -= self.view.bounds.width
             }, completion: { _ in
                 
-                self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
+//                self.currentPokemon = 
+                self.getNextPokemon()
                 UIView.transitionFromView(self.backFlashCard, toView: self.frontFlashCard, duration: 0, options: UIViewAnimationOptions.TransitionNone, completion: nil)
                 self.isFlip = false
                 self.bindingData()
@@ -150,7 +167,7 @@ class FlashCardViewController: UIViewController {
                 })
             }
             else {
-                let col = self.pokemonCollection[0].color
+                let col = self.currentPokemon!.color
                 
                 UIView.animateWithDuration(0.3, animations: {
                     self.view.backgroundColor = UIColor.init(hex: col)
@@ -195,7 +212,10 @@ class FlashCardViewController: UIViewController {
         _ = self.btnAnswer1.rx_tap.subscribeNext {
             self.buttonUserInteration(false)
             self.showAnswer()
-            if self.checkAnswer(self.pokemonCollection[self.currentPokemon].name, btnAnswer: self.btnAnswer1) {
+            if self.checkAnswer(
+                self.currentPokemon!.name,
+                btnAnswer: self.btnAnswer1) {
+                
                 self.trueAnsert(self.btnAnswer1)
             }
             else {
@@ -206,7 +226,7 @@ class FlashCardViewController: UIViewController {
         _ = self.btnAnswer2.rx_tap.subscribeNext {
             self.buttonUserInteration(false)
             self.showAnswer()
-            if self.checkAnswer(self.pokemonCollection[self.currentPokemon].name, btnAnswer: self.btnAnswer2) {
+            if self.checkAnswer(self.currentPokemon!.name, btnAnswer: self.btnAnswer2) {
                 self.trueAnsert(self.btnAnswer2)
             }
             else {
@@ -217,7 +237,7 @@ class FlashCardViewController: UIViewController {
         _ = self.btnAnswer3.rx_tap.subscribeNext {
             self.buttonUserInteration(false)
             self.showAnswer()
-            if self.checkAnswer(self.pokemonCollection[self.currentPokemon].name, btnAnswer: self.btnAnswer3) {
+            if self.checkAnswer(self.currentPokemon!.name, btnAnswer: self.btnAnswer3) {
                 self.trueAnsert(self.btnAnswer3)
             }
             else {
@@ -228,7 +248,7 @@ class FlashCardViewController: UIViewController {
         _ = self.btnAnswer4.rx_tap.subscribeNext {
             self.buttonUserInteration(false)
             self.showAnswer()
-            if self.checkAnswer(self.pokemonCollection[self.currentPokemon].name, btnAnswer: self.btnAnswer4) {
+            if self.checkAnswer(self.currentPokemon!.name, btnAnswer: self.btnAnswer4) {
                 self.trueAnsert(self.btnAnswer4)
             }
             else {
@@ -318,38 +338,38 @@ class FlashCardViewController: UIViewController {
     }
     
     //MARK: Load data
-    func dumpData() {
-        
-        if let file = NSBundle(forClass:AppDelegate.self).pathForResource("gen1", ofType: "json") {
-            let data = NSData(contentsOfFile: file)!
-            let json = JSON(data:data)
-            self.totalPokemon = json.count
-            for index in 0..<json.count{
-                let name  = json[index]["name"].string!
-                let id    = json[index]["id"].string!
-                let img   = json[index]["img"].string!
-                let gen   = json[index]["gen"].int!
-                let color = json[index]["color"].string!
-                if DB.getPokemonByName(name) == nil {
-                    let pokemon = Pokemon.create(name, id: id, gen: gen, img: img, color: color)
-                    self.pokemonCollection.append(pokemon)
-                }
-                else {
-                    let pokemon = DB.getPokemonByName(name)
-                    self.pokemonCollection.append(pokemon)
-                }
-            }
-            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
-            self.bindingData()
-        } else {
-            print("file not exists")
-        }
-    }
+//    func dumpData() {
+//        
+//        if let file = NSBundle(forClass:AppDelegate.self).pathForResource("gen1", ofType: "json") {
+//            let data = NSData(contentsOfFile: file)!
+//            let json = JSON(data:data)
+//            self.totalPokemon = json.count
+//            for index in 0..<json.count{
+//                let name  = json[index]["name"].string!
+//                let id    = json[index]["id"].string!
+//                let img   = json[index]["img"].string!
+//                let gen   = json[index]["gen"].int!
+//                let color = json[index]["color"].string!
+//                if DB.getPokemonByName(name) == nil {
+//                    let pokemon = Pokemon.create(name, id: id, gen: gen, img: img, color: color)
+//                    self.pokemonCollection.append(pokemon)
+//                }
+//                else {
+//                    let pokemon = DB.getPokemonByName(name)
+//                    self.pokemonCollection.append(pokemon)
+//                }
+//            }
+//            self.currentPokemon = self.unsafeRandomIntFrom(0, to: self.totalPokemon - 1)
+//            self.bindingData()
+//        } else {
+//            print("file not exists")
+//        }
+//    }
     
     func matchingData() {
-        self.frontFlashCard.pokemon = self.pokemonCollection[self.currentPokemon]
-        self.backFlashCard.pokemon = self.pokemonCollection[self.currentPokemon]
-        self.colorVariable.value = self.pokemonCollection[self.currentPokemon].color
+        self.frontFlashCard.pokemon = self.currentPokemon // self.pokemonCollection[self.currentPokemon]
+        self.backFlashCard.pokemon = self.currentPokemon //self.pokemonCollection[self.currentPokemon]
+        self.colorVariable.value = self.currentPokemon!.color
     }
     
     func bindingData() {
@@ -371,29 +391,40 @@ class FlashCardViewController: UIViewController {
     }
     
     func setTitleForButton(trueBtn : UIButton, failBtn1 : UIButton, failBtn2 : UIButton, failBtn3 : UIButton) {
-        let pokemon = self.pokemonCollection[self.currentPokemon]
-        let pokemon1 = self.pokemonCollection[self.randomFailAnswer(self.currentPokemon)]
-        let pokemon2 = self.pokemonCollection[self.randomFailAnswer(self.currentPokemon)]
-        let pokemon3 = self.pokemonCollection[self.randomFailAnswer(self.currentPokemon)]
+        let pokemon = self.currentPokemon!
+        let pokemon1 = self.getRandomPokemon()
+        //self.pokemonCollection[self.randomFailAnswer(self.currentPokemon)]
+        let pokemon2 = self.getRandomPokemon()
+        //self.pokemonCollection[self.randomFailAnswer(self.currentPokemon)]
+        let pokemon3 = self.getRandomPokemon()
+            //self.pokemonCollection[self.randomFailAnswer(self.currentPokemon)]
         
         trueBtn.setTitle(pokemon.name, forState: .Normal)
-        failBtn1.setTitle(pokemon1.name, forState: .Normal)
-        failBtn2.setTitle(pokemon2.name, forState: .Normal)
-        failBtn3.setTitle(pokemon3.name, forState: .Normal)
+        failBtn1.setTitle(pokemon1!.name, forState: .Normal)
+        failBtn2.setTitle(pokemon2!.name, forState: .Normal)
+        failBtn3.setTitle(pokemon3!.name, forState: .Normal)
         self.changeBackgroundColor()
     }
     
-    func randomFailAnswer(currentIndex : Int) -> Int {
-        var rand = unsafeRandomIntFrom(0, to: self.totalPokemon - 2)
-        
-        if(rand >= currentIndex) {
-            rand += 1
-        }
-        
-        return rand
-    }
-    
+//    func randomFailAnswer(currentIndex : Int) -> Int {
+//        var rand = unsafeRandomIntFrom(0, to: self.totalPokemon - 2)
+//        
+//        if(rand >= currentIndex) {
+//            rand += 1
+//        }
+//        
+//        return rand
+//    }
+//    
     func unsafeRandomIntFrom(start: Int, to end: Int) -> Int {
         return Int(arc4random_uniform(UInt32(end - start + 1))) + start
+    }
+    
+    func getNextPokemon() {
+        self.currentPokemon = self.getRandomPokemon()
+    }
+    
+    func getRandomPokemon() -> Pokemon? {
+        return DB.getRandomPokemon(self.setting!.pickedGensAsArray)
     }
 }
