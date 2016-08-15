@@ -3,7 +3,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#001",
-        "img": "Bulbasaur.jpg",
+        "img": "Bulbasaur.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png",
         "name": "Bulbasaur"
     },
@@ -11,7 +11,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#002",
-        "img": "Ivysaur.jpg",
+        "img": "Ivysaur.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/73/002Ivysaur.png/250px-002Ivysaur.png",
         "name": "Ivysaur"
     },
@@ -19,7 +19,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#003",
-        "img": "Venusaur.jpg",
+        "img": "Venusaur.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/ae/003Venusaur.png/250px-003Venusaur.png",
         "name": "Venusaur"
     },
@@ -27,7 +27,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#004",
-        "img": "Charmander.jpg",
+        "img": "Charmander.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/73/004Charmander.png/250px-004Charmander.png",
         "name": "Charmander"
     },
@@ -35,7 +35,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#005",
-        "img": "Charmeleon.jpg",
+        "img": "Charmeleon.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/4a/005Charmeleon.png/250px-005Charmeleon.png",
         "name": "Charmeleon"
     },
@@ -43,7 +43,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#006",
-        "img": "Charizard.jpg",
+        "img": "Charizard.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/7e/006Charizard.png/250px-006Charizard.png",
         "name": "Charizard"
     },
@@ -51,7 +51,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#007",
-        "img": "Squirtle.jpg",
+        "img": "Squirtle.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png",
         "name": "Squirtle"
     },
@@ -59,7 +59,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#008",
-        "img": "Wartortle.jpg",
+        "img": "Wartortle.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/0/0c/008Wartortle.png/250px-008Wartortle.png",
         "name": "Wartortle"
     },
@@ -67,7 +67,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#009",
-        "img": "Blastoise.jpg",
+        "img": "Blastoise.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/0/02/009Blastoise.png/250px-009Blastoise.png",
         "name": "Blastoise"
     },
@@ -75,7 +75,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#010",
-        "img": "Caterpie.jpg",
+        "img": "Caterpie.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/5/5d/010Caterpie.png/250px-010Caterpie.png",
         "name": "Caterpie"
     },
@@ -83,7 +83,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#011",
-        "img": "Metapod.jpg",
+        "img": "Metapod.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/cd/011Metapod.png/250px-011Metapod.png",
         "name": "Metapod"
     },
@@ -91,7 +91,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#012",
-        "img": "Butterfree.jpg",
+        "img": "Butterfree.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/d/d1/012Butterfree.png/250px-012Butterfree.png",
         "name": "Butterfree"
     },
@@ -99,7 +99,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#013",
-        "img": "Weedle.jpg",
+        "img": "Weedle.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/d/df/013Weedle.png/250px-013Weedle.png",
         "name": "Weedle"
     },
@@ -107,7 +107,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#014",
-        "img": "Kakuna.jpg",
+        "img": "Kakuna.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/f0/014Kakuna.png/250px-014Kakuna.png",
         "name": "Kakuna"
     },
@@ -115,7 +115,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#015",
-        "img": "Beedrill.jpg",
+        "img": "Beedrill.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/6/61/015Beedrill.png/250px-015Beedrill.png",
         "name": "Beedrill"
     },
@@ -123,7 +123,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#016",
-        "img": "Pidgey.jpg",
+        "img": "Pidgey.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/5/55/016Pidgey.png/250px-016Pidgey.png",
         "name": "Pidgey"
     },
@@ -131,7 +131,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#017",
-        "img": "Pidgeotto.jpg",
+        "img": "Pidgeotto.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/7a/017Pidgeotto.png/250px-017Pidgeotto.png",
         "name": "Pidgeotto"
     },
@@ -139,7 +139,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#018",
-        "img": "Pidgeot.jpg",
+        "img": "Pidgeot.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/5/57/018Pidgeot.png/250px-018Pidgeot.png",
         "name": "Pidgeot"
     },
@@ -147,7 +147,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#019",
-        "img": "Rattata.jpg",
+        "img": "Rattata.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/46/019Rattata.png/250px-019Rattata.png",
         "name": "Rattata"
     },
@@ -155,7 +155,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#020",
-        "img": "Raticate.jpg",
+        "img": "Raticate.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/f4/020Raticate.png/250px-020Raticate.png",
         "name": "Raticate"
     },
@@ -163,7 +163,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#021",
-        "img": "Spearow.jpg",
+        "img": "Spearow.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/8b/021Spearow.png/250px-021Spearow.png",
         "name": "Spearow"
     },
@@ -171,7 +171,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#022",
-        "img": "Fearow.jpg",
+        "img": "Fearow.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/a0/022Fearow.png/250px-022Fearow.png",
         "name": "Fearow"
     },
@@ -179,7 +179,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#023",
-        "img": "Ekans.jpg",
+        "img": "Ekans.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/fa/023Ekans.png/250px-023Ekans.png",
         "name": "Ekans"
     },
@@ -187,7 +187,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#024",
-        "img": "Arbok.jpg",
+        "img": "Arbok.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/cd/024Arbok.png/250px-024Arbok.png",
         "name": "Arbok"
     },
@@ -195,7 +195,7 @@
         "color": "#FAE078",
         "gen": 1,
         "id": "#025",
-        "img": "Pikachu.jpg",
+        "img": "Pikachu.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png",
         "name": "Pikachu"
     },
@@ -203,7 +203,7 @@
         "color": "#FAE078",
         "gen": 1,
         "id": "#026",
-        "img": "Raichu.jpg",
+        "img": "Raichu.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/88/026Raichu.png/250px-026Raichu.png",
         "name": "Raichu"
     },
@@ -211,7 +211,7 @@
         "color": "#EBD69D",
         "gen": 1,
         "id": "#027",
-        "img": "Sandshrew.jpg",
+        "img": "Sandshrew.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/9e/027Sandshrew.png/250px-027Sandshrew.png",
         "name": "Sandshrew"
     },
@@ -219,7 +219,7 @@
         "color": "#EBD69D",
         "gen": 1,
         "id": "#028",
-        "img": "Sandslash.jpg",
+        "img": "Sandslash.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/0/0b/028Sandslash.png/250px-028Sandslash.png",
         "name": "Sandslash"
     },
@@ -227,7 +227,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#029",
-        "img": "Nidoran\u2640.jpg",
+        "img": "Nidoran\u2640.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/81/029Nidoran.png/250px-029Nidoran.png",
         "name": "Nidoran\u2640"
     },
@@ -235,7 +235,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#030",
-        "img": "Nidorina.jpg",
+        "img": "Nidorina.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/cd/030Nidorina.png/250px-030Nidorina.png",
         "name": "Nidorina"
     },
@@ -243,7 +243,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#031",
-        "img": "Nidoqueen.jpg",
+        "img": "Nidoqueen.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/b/bf/031Nidoqueen.png/250px-031Nidoqueen.png",
         "name": "Nidoqueen"
     },
@@ -251,7 +251,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#032",
-        "img": "Nidoran\u2642.jpg",
+        "img": "Nidoran\u2642.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/4a/032Nidoran.png/250px-032Nidoran.png",
         "name": "Nidoran\u2642"
     },
@@ -259,7 +259,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#033",
-        "img": "Nidorino.jpg",
+        "img": "Nidorino.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/9f/033Nidorino.png/250px-033Nidorino.png",
         "name": "Nidorino"
     },
@@ -267,7 +267,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#034",
-        "img": "Nidoking.jpg",
+        "img": "Nidoking.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/c6/034Nidoking.png/250px-034Nidoking.png",
         "name": "Nidoking"
     },
@@ -275,7 +275,7 @@
         "color": "#F4BDC9",
         "gen": 1,
         "id": "#035",
-        "img": "Clefairy.jpg",
+        "img": "Clefairy.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/f4/035Clefairy.png/250px-035Clefairy.png",
         "name": "Clefairy"
     },
@@ -283,7 +283,7 @@
         "color": "#F4BDC9",
         "gen": 1,
         "id": "#036",
-        "img": "Clefable.jpg",
+        "img": "Clefable.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/a9/036Clefable.png/250px-036Clefable.png",
         "name": "Clefable"
     },
@@ -291,7 +291,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#037",
-        "img": "Vulpix.jpg",
+        "img": "Vulpix.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/6/60/037Vulpix.png/250px-037Vulpix.png",
         "name": "Vulpix"
     },
@@ -299,7 +299,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#038",
-        "img": "Ninetales.jpg",
+        "img": "Ninetales.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/0/05/038Ninetales.png/250px-038Ninetales.png",
         "name": "Ninetales"
     },
@@ -307,7 +307,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#039",
-        "img": "Jigglypuff.jpg",
+        "img": "Jigglypuff.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/3e/039Jigglypuff.png/250px-039Jigglypuff.png",
         "name": "Jigglypuff"
     },
@@ -315,7 +315,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#040",
-        "img": "Wigglytuff.jpg",
+        "img": "Wigglytuff.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/92/040Wigglytuff.png/250px-040Wigglytuff.png",
         "name": "Wigglytuff"
     },
@@ -323,7 +323,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#041",
-        "img": "Zubat.jpg",
+        "img": "Zubat.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/d/da/041Zubat.png/250px-041Zubat.png",
         "name": "Zubat"
     },
@@ -331,7 +331,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#042",
-        "img": "Golbat.jpg",
+        "img": "Golbat.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/0/0c/042Golbat.png/250px-042Golbat.png",
         "name": "Golbat"
     },
@@ -339,7 +339,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#043",
-        "img": "Oddish.jpg",
+        "img": "Oddish.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/43/043Oddish.png/250px-043Oddish.png",
         "name": "Oddish"
     },
@@ -347,7 +347,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#044",
-        "img": "Gloom.jpg",
+        "img": "Gloom.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/2/2a/044Gloom.png/250px-044Gloom.png",
         "name": "Gloom"
     },
@@ -355,7 +355,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#045",
-        "img": "Vileplume.jpg",
+        "img": "Vileplume.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/6/6a/045Vileplume.png/250px-045Vileplume.png",
         "name": "Vileplume"
     },
@@ -363,7 +363,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#046",
-        "img": "Paras.jpg",
+        "img": "Paras.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/d/d4/046Paras.png/250px-046Paras.png",
         "name": "Paras"
     },
@@ -371,7 +371,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#047",
-        "img": "Parasect.jpg",
+        "img": "Parasect.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/80/047Parasect.png/250px-047Parasect.png",
         "name": "Parasect"
     },
@@ -379,7 +379,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#048",
-        "img": "Venonat.jpg",
+        "img": "Venonat.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/ad/048Venonat.png/250px-048Venonat.png",
         "name": "Venonat"
     },
@@ -387,7 +387,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#049",
-        "img": "Venomoth.jpg",
+        "img": "Venomoth.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/d/d3/049Venomoth.png/250px-049Venomoth.png",
         "name": "Venomoth"
     },
@@ -395,7 +395,7 @@
         "color": "#EBD69D",
         "gen": 1,
         "id": "#050",
-        "img": "Diglett.jpg",
+        "img": "Diglett.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/31/050Diglett.png/250px-050Diglett.png",
         "name": "Diglett"
     },
@@ -403,7 +403,7 @@
         "color": "#EBD69D",
         "gen": 1,
         "id": "#051",
-        "img": "Dugtrio.jpg",
+        "img": "Dugtrio.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/e/e5/051Dugtrio.png/250px-051Dugtrio.png",
         "name": "Dugtrio"
     },
@@ -411,7 +411,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#052",
-        "img": "Meowth.jpg",
+        "img": "Meowth.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/d/d6/052Meowth.png/250px-052Meowth.png",
         "name": "Meowth"
     },
@@ -419,7 +419,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#053",
-        "img": "Persian.jpg",
+        "img": "Persian.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/1/13/053Persian.png/250px-053Persian.png",
         "name": "Persian"
     },
@@ -427,7 +427,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#054",
-        "img": "Psyduck.jpg",
+        "img": "Psyduck.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/5/53/054Psyduck.png/250px-054Psyduck.png",
         "name": "Psyduck"
     },
@@ -435,7 +435,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#055",
-        "img": "Golduck.jpg",
+        "img": "Golduck.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/fe/055Golduck.png/250px-055Golduck.png",
         "name": "Golduck"
     },
@@ -443,7 +443,7 @@
         "color": "#D67873",
         "gen": 1,
         "id": "#056",
-        "img": "Mankey.jpg",
+        "img": "Mankey.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/41/056Mankey.png/250px-056Mankey.png",
         "name": "Mankey"
     },
@@ -451,7 +451,7 @@
         "color": "#D67873",
         "gen": 1,
         "id": "#057",
-        "img": "Primeape.jpg",
+        "img": "Primeape.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/9a/057Primeape.png/250px-057Primeape.png",
         "name": "Primeape"
     },
@@ -459,7 +459,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#058",
-        "img": "Growlithe.jpg",
+        "img": "Growlithe.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/3d/058Growlithe.png/250px-058Growlithe.png",
         "name": "Growlithe"
     },
@@ -467,7 +467,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#059",
-        "img": "Arcanine.jpg",
+        "img": "Arcanine.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/b/b8/059Arcanine.png/250px-059Arcanine.png",
         "name": "Arcanine"
     },
@@ -475,7 +475,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#060",
-        "img": "Poliwag.jpg",
+        "img": "Poliwag.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/49/060Poliwag.png/250px-060Poliwag.png",
         "name": "Poliwag"
     },
@@ -483,7 +483,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#061",
-        "img": "Poliwhirl.jpg",
+        "img": "Poliwhirl.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/a9/061Poliwhirl.png/250px-061Poliwhirl.png",
         "name": "Poliwhirl"
     },
@@ -491,7 +491,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#062",
-        "img": "Poliwrath.jpg",
+        "img": "Poliwrath.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/2/2d/062Poliwrath.png/250px-062Poliwrath.png",
         "name": "Poliwrath"
     },
@@ -499,7 +499,7 @@
         "color": "#FA92B2",
         "gen": 1,
         "id": "#063",
-        "img": "Abra.jpg",
+        "img": "Abra.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/6/62/063Abra.png/250px-063Abra.png",
         "name": "Abra"
     },
@@ -507,7 +507,7 @@
         "color": "#FA92B2",
         "gen": 1,
         "id": "#064",
-        "img": "Kadabra.jpg",
+        "img": "Kadabra.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/97/064Kadabra.png/250px-064Kadabra.png",
         "name": "Kadabra"
     },
@@ -515,7 +515,7 @@
         "color": "#FA92B2",
         "gen": 1,
         "id": "#065",
-        "img": "Alakazam.jpg",
+        "img": "Alakazam.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/cc/065Alakazam.png/250px-065Alakazam.png",
         "name": "Alakazam"
     },
@@ -523,7 +523,7 @@
         "color": "#D67873",
         "gen": 1,
         "id": "#066",
-        "img": "Machop.jpg",
+        "img": "Machop.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/85/066Machop.png/250px-066Machop.png",
         "name": "Machop"
     },
@@ -531,7 +531,7 @@
         "color": "#D67873",
         "gen": 1,
         "id": "#067",
-        "img": "Machoke.jpg",
+        "img": "Machoke.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/8e/067Machoke.png/250px-067Machoke.png",
         "name": "Machoke"
     },
@@ -539,7 +539,7 @@
         "color": "#D67873",
         "gen": 1,
         "id": "#068",
-        "img": "Machamp.jpg",
+        "img": "Machamp.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/8f/068Machamp.png/250px-068Machamp.png",
         "name": "Machamp"
     },
@@ -547,7 +547,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#069",
-        "img": "Bellsprout.jpg",
+        "img": "Bellsprout.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/a2/069Bellsprout.png/250px-069Bellsprout.png",
         "name": "Bellsprout"
     },
@@ -555,7 +555,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#070",
-        "img": "Weepinbell.jpg",
+        "img": "Weepinbell.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/9f/070Weepinbell.png/250px-070Weepinbell.png",
         "name": "Weepinbell"
     },
@@ -563,7 +563,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#071",
-        "img": "Victreebel.jpg",
+        "img": "Victreebel.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/b/be/071Victreebel.png/250px-071Victreebel.png",
         "name": "Victreebel"
     },
@@ -571,7 +571,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#072",
-        "img": "Tentacool.jpg",
+        "img": "Tentacool.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/4e/072Tentacool.png/250px-072Tentacool.png",
         "name": "Tentacool"
     },
@@ -579,7 +579,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#073",
-        "img": "Tentacruel.jpg",
+        "img": "Tentacruel.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/f6/073Tentacruel.png/250px-073Tentacruel.png",
         "name": "Tentacruel"
     },
@@ -587,7 +587,7 @@
         "color": "#D1C17D",
         "gen": 1,
         "id": "#074",
-        "img": "Geodude.jpg",
+        "img": "Geodude.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/98/074Geodude.png/250px-074Geodude.png",
         "name": "Geodude"
     },
@@ -595,7 +595,7 @@
         "color": "#D1C17D",
         "gen": 1,
         "id": "#075",
-        "img": "Graveler.jpg",
+        "img": "Graveler.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/75/075Graveler.png/250px-075Graveler.png",
         "name": "Graveler"
     },
@@ -603,7 +603,7 @@
         "color": "#D1C17D",
         "gen": 1,
         "id": "#076",
-        "img": "Golem.jpg",
+        "img": "Golem.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/f2/076Golem.png/250px-076Golem.png",
         "name": "Golem"
     },
@@ -611,7 +611,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#077",
-        "img": "Ponyta.jpg",
+        "img": "Ponyta.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/3b/077Ponyta.png/250px-077Ponyta.png",
         "name": "Ponyta"
     },
@@ -619,7 +619,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#078",
-        "img": "Rapidash.jpg",
+        "img": "Rapidash.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/3f/078Rapidash.png/250px-078Rapidash.png",
         "name": "Rapidash"
     },
@@ -627,7 +627,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#079",
-        "img": "Slowpoke.jpg",
+        "img": "Slowpoke.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/70/079Slowpoke.png/250px-079Slowpoke.png",
         "name": "Slowpoke"
     },
@@ -635,7 +635,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#080",
-        "img": "Slowbro.jpg",
+        "img": "Slowbro.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/80/080Slowbro.png/250px-080Slowbro.png",
         "name": "Slowbro"
     },
@@ -643,7 +643,7 @@
         "color": "#FAE078",
         "gen": 1,
         "id": "#081",
-        "img": "Magnemite.jpg",
+        "img": "Magnemite.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/6/6c/081Magnemite.png/250px-081Magnemite.png",
         "name": "Magnemite"
     },
@@ -651,7 +651,7 @@
         "color": "#FAE078",
         "gen": 1,
         "id": "#082",
-        "img": "Magneton.jpg",
+        "img": "Magneton.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/72/082Magneton.png/250px-082Magneton.png",
         "name": "Magneton"
     },
@@ -659,7 +659,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#083",
-        "img": "Farfetch'd.jpg",
+        "img": "Farfetch'd.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/f8/083Farfetch%27d.png/250px-083Farfetch%27d.png",
         "name": "Farfetch'd"
     },
@@ -667,7 +667,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#084",
-        "img": "Doduo.jpg",
+        "img": "Doduo.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/5/54/084Doduo.png/250px-084Doduo.png",
         "name": "Doduo"
     },
@@ -675,7 +675,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#085",
-        "img": "Dodrio.jpg",
+        "img": "Dodrio.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/93/085Dodrio.png/250px-085Dodrio.png",
         "name": "Dodrio"
     },
@@ -683,7 +683,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#086",
-        "img": "Seel.jpg",
+        "img": "Seel.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/1/1f/086Seel.png/250px-086Seel.png",
         "name": "Seel"
     },
@@ -691,7 +691,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#087",
-        "img": "Dewgong.jpg",
+        "img": "Dewgong.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/c7/087Dewgong.png/250px-087Dewgong.png",
         "name": "Dewgong"
     },
@@ -699,7 +699,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#088",
-        "img": "Grimer.jpg",
+        "img": "Grimer.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/a0/088Grimer.png/250px-088Grimer.png",
         "name": "Grimer"
     },
@@ -707,7 +707,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#089",
-        "img": "Muk.jpg",
+        "img": "Muk.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/7c/089Muk.png/250px-089Muk.png",
         "name": "Muk"
     },
@@ -715,7 +715,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#090",
-        "img": "Shellder.jpg",
+        "img": "Shellder.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/40/090Shellder.png/250px-090Shellder.png",
         "name": "Shellder"
     },
@@ -723,7 +723,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#091",
-        "img": "Cloyster.jpg",
+        "img": "Cloyster.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/1/1d/091Cloyster.png/250px-091Cloyster.png",
         "name": "Cloyster"
     },
@@ -731,7 +731,7 @@
         "color": "#A292BC",
         "gen": 1,
         "id": "#092",
-        "img": "Gastly.jpg",
+        "img": "Gastly.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/ca/092Gastly.png/250px-092Gastly.png",
         "name": "Gastly"
     },
@@ -739,7 +739,7 @@
         "color": "#A292BC",
         "gen": 1,
         "id": "#093",
-        "img": "Haunter.jpg",
+        "img": "Haunter.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/6/62/093Haunter.png/250px-093Haunter.png",
         "name": "Haunter"
     },
@@ -747,7 +747,7 @@
         "color": "#A292BC",
         "gen": 1,
         "id": "#094",
-        "img": "Gengar.jpg",
+        "img": "Gengar.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/c6/094Gengar.png/250px-094Gengar.png",
         "name": "Gengar"
     },
@@ -755,7 +755,7 @@
         "color": "#D1C17D",
         "gen": 1,
         "id": "#095",
-        "img": "Onix.jpg",
+        "img": "Onix.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/9a/095Onix.png/250px-095Onix.png",
         "name": "Onix"
     },
@@ -763,7 +763,7 @@
         "color": "#FA92B2",
         "gen": 1,
         "id": "#096",
-        "img": "Drowzee.jpg",
+        "img": "Drowzee.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/3e/096Drowzee.png/250px-096Drowzee.png",
         "name": "Drowzee"
     },
@@ -771,7 +771,7 @@
         "color": "#FA92B2",
         "gen": 1,
         "id": "#097",
-        "img": "Hypno.jpg",
+        "img": "Hypno.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/0/0a/097Hypno.png/250px-097Hypno.png",
         "name": "Hypno"
     },
@@ -779,7 +779,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#098",
-        "img": "Krabby.jpg",
+        "img": "Krabby.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/a7/098Krabby.png/250px-098Krabby.png",
         "name": "Krabby"
     },
@@ -787,7 +787,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#099",
-        "img": "Kingler.jpg",
+        "img": "Kingler.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/71/099Kingler.png/250px-099Kingler.png",
         "name": "Kingler"
     },
@@ -795,7 +795,7 @@
         "color": "#FAE078",
         "gen": 1,
         "id": "#100",
-        "img": "Voltorb.jpg",
+        "img": "Voltorb.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/d/da/100Voltorb.png/250px-100Voltorb.png",
         "name": "Voltorb"
     },
@@ -803,7 +803,7 @@
         "color": "#FAE078",
         "gen": 1,
         "id": "#101",
-        "img": "Electrode.jpg",
+        "img": "Electrode.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/84/101Electrode.png/250px-101Electrode.png",
         "name": "Electrode"
     },
@@ -811,7 +811,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#102",
-        "img": "Exeggcute.jpg",
+        "img": "Exeggcute.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/af/102Exeggcute.png/250px-102Exeggcute.png",
         "name": "Exeggcute"
     },
@@ -819,7 +819,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#103",
-        "img": "Exeggutor.jpg",
+        "img": "Exeggutor.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/2/24/103Exeggutor.png/250px-103Exeggutor.png",
         "name": "Exeggutor"
     },
@@ -827,7 +827,7 @@
         "color": "#EBD69D",
         "gen": 1,
         "id": "#104",
-        "img": "Cubone.jpg",
+        "img": "Cubone.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/2/2a/104Cubone.png/250px-104Cubone.png",
         "name": "Cubone"
     },
@@ -835,7 +835,7 @@
         "color": "#EBD69D",
         "gen": 1,
         "id": "#105",
-        "img": "Marowak.jpg",
+        "img": "Marowak.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/98/105Marowak.png/250px-105Marowak.png",
         "name": "Marowak"
     },
@@ -843,7 +843,7 @@
         "color": "#D67873",
         "gen": 1,
         "id": "#106",
-        "img": "Hitmonlee.jpg",
+        "img": "Hitmonlee.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/32/106Hitmonlee.png/250px-106Hitmonlee.png",
         "name": "Hitmonlee"
     },
@@ -851,7 +851,7 @@
         "color": "#D67873",
         "gen": 1,
         "id": "#107",
-        "img": "Hitmonchan.jpg",
+        "img": "Hitmonchan.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/a3/107Hitmonchan.png/250px-107Hitmonchan.png",
         "name": "Hitmonchan"
     },
@@ -859,7 +859,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#108",
-        "img": "Lickitung.jpg",
+        "img": "Lickitung.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/0/00/108Lickitung.png/250px-108Lickitung.png",
         "name": "Lickitung"
     },
@@ -867,7 +867,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#109",
-        "img": "Koffing.jpg",
+        "img": "Koffing.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/1/17/109Koffing.png/250px-109Koffing.png",
         "name": "Koffing"
     },
@@ -875,7 +875,7 @@
         "color": "#C183C1",
         "gen": 1,
         "id": "#110",
-        "img": "Weezing.jpg",
+        "img": "Weezing.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/42/110Weezing.png/250px-110Weezing.png",
         "name": "Weezing"
     },
@@ -883,7 +883,7 @@
         "color": "#EBD69D",
         "gen": 1,
         "id": "#111",
-        "img": "Rhyhorn.jpg",
+        "img": "Rhyhorn.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/9b/111Rhyhorn.png/250px-111Rhyhorn.png",
         "name": "Rhyhorn"
     },
@@ -891,7 +891,7 @@
         "color": "#EBD69D",
         "gen": 1,
         "id": "#112",
-        "img": "Rhydon.jpg",
+        "img": "Rhydon.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/47/112Rhydon.png/250px-112Rhydon.png",
         "name": "Rhydon"
     },
@@ -899,7 +899,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#113",
-        "img": "Chansey.jpg",
+        "img": "Chansey.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/cd/113Chansey.png/250px-113Chansey.png",
         "name": "Chansey"
     },
@@ -907,7 +907,7 @@
         "color": "#A7DB8D",
         "gen": 1,
         "id": "#114",
-        "img": "Tangela.jpg",
+        "img": "Tangela.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/3e/114Tangela.png/250px-114Tangela.png",
         "name": "Tangela"
     },
@@ -915,7 +915,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#115",
-        "img": "Kangaskhan.jpg",
+        "img": "Kangaskhan.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/4e/115Kangaskhan.png/250px-115Kangaskhan.png",
         "name": "Kangaskhan"
     },
@@ -923,7 +923,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#116",
-        "img": "Horsea.jpg",
+        "img": "Horsea.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/5/5a/116Horsea.png/250px-116Horsea.png",
         "name": "Horsea"
     },
@@ -931,7 +931,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#117",
-        "img": "Seadra.jpg",
+        "img": "Seadra.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/2/26/117Seadra.png/250px-117Seadra.png",
         "name": "Seadra"
     },
@@ -939,7 +939,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#118",
-        "img": "Goldeen.jpg",
+        "img": "Goldeen.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/7b/118Goldeen.png/250px-118Goldeen.png",
         "name": "Goldeen"
     },
@@ -947,7 +947,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#119",
-        "img": "Seaking.jpg",
+        "img": "Seaking.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/6/6a/119Seaking.png/250px-119Seaking.png",
         "name": "Seaking"
     },
@@ -955,7 +955,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#120",
-        "img": "Staryu.jpg",
+        "img": "Staryu.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/4f/120Staryu.png/250px-120Staryu.png",
         "name": "Staryu"
     },
@@ -963,7 +963,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#121",
-        "img": "Starmie.jpg",
+        "img": "Starmie.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/cd/121Starmie.png/250px-121Starmie.png",
         "name": "Starmie"
     },
@@ -971,7 +971,7 @@
         "color": "#FA92B2",
         "gen": 1,
         "id": "#122",
-        "img": "Mr. Mime.jpg",
+        "img": "Mr. Mime.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/e/ec/122Mr._Mime.png/250px-122Mr._Mime.png",
         "name": "Mr. Mime"
     },
@@ -979,7 +979,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#123",
-        "img": "Scyther.jpg",
+        "img": "Scyther.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/b/ba/123Scyther.png/250px-123Scyther.png",
         "name": "Scyther"
     },
@@ -987,7 +987,7 @@
         "color": "#BCE6E6",
         "gen": 1,
         "id": "#124",
-        "img": "Jynx.jpg",
+        "img": "Jynx.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/7c/124Jynx.png/250px-124Jynx.png",
         "name": "Jynx"
     },
@@ -995,7 +995,7 @@
         "color": "#FAE078",
         "gen": 1,
         "id": "#125",
-        "img": "Electabuzz.jpg",
+        "img": "Electabuzz.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/d/de/125Electabuzz.png/250px-125Electabuzz.png",
         "name": "Electabuzz"
     },
@@ -1003,7 +1003,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#126",
-        "img": "Magmar.jpg",
+        "img": "Magmar.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/8c/126Magmar.png/250px-126Magmar.png",
         "name": "Magmar"
     },
@@ -1011,7 +1011,7 @@
         "color": "#C6D16E",
         "gen": 1,
         "id": "#127",
-        "img": "Pinsir.jpg",
+        "img": "Pinsir.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/71/127Pinsir.png/250px-127Pinsir.png",
         "name": "Pinsir"
     },
@@ -1019,7 +1019,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#128",
-        "img": "Tauros.jpg",
+        "img": "Tauros.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/b/b8/128Tauros.png/250px-128Tauros.png",
         "name": "Tauros"
     },
@@ -1027,7 +1027,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#129",
-        "img": "Magikarp.jpg",
+        "img": "Magikarp.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/0/02/129Magikarp.png/250px-129Magikarp.png",
         "name": "Magikarp"
     },
@@ -1035,7 +1035,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#130",
-        "img": "Gyarados.jpg",
+        "img": "Gyarados.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/41/130Gyarados.png/250px-130Gyarados.png",
         "name": "Gyarados"
     },
@@ -1043,7 +1043,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#131",
-        "img": "Lapras.jpg",
+        "img": "Lapras.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/a/ab/131Lapras.png/250px-131Lapras.png",
         "name": "Lapras"
     },
@@ -1051,7 +1051,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#132",
-        "img": "Ditto.jpg",
+        "img": "Ditto.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/3/36/132Ditto.png/250px-132Ditto.png",
         "name": "Ditto"
     },
@@ -1059,7 +1059,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#133",
-        "img": "Eevee.jpg",
+        "img": "Eevee.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/250px-133Eevee.png",
         "name": "Eevee"
     },
@@ -1067,7 +1067,7 @@
         "color": "#9DB7F5",
         "gen": 1,
         "id": "#134",
-        "img": "Vaporeon.jpg",
+        "img": "Vaporeon.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/fd/134Vaporeon.png/250px-134Vaporeon.png",
         "name": "Vaporeon"
     },
@@ -1075,7 +1075,7 @@
         "color": "#FAE078",
         "gen": 1,
         "id": "#135",
-        "img": "Jolteon.jpg",
+        "img": "Jolteon.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/b/bb/135Jolteon.png/250px-135Jolteon.png",
         "name": "Jolteon"
     },
@@ -1083,7 +1083,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#136",
-        "img": "Flareon.jpg",
+        "img": "Flareon.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/d/dd/136Flareon.png/250px-136Flareon.png",
         "name": "Flareon"
     },
@@ -1091,7 +1091,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#137",
-        "img": "Porygon.jpg",
+        "img": "Porygon.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/6/6b/137Porygon.png/250px-137Porygon.png",
         "name": "Porygon"
     },
@@ -1099,7 +1099,7 @@
         "color": "#D1C17D",
         "gen": 1,
         "id": "#138",
-        "img": "Omanyte.jpg",
+        "img": "Omanyte.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/79/138Omanyte.png/250px-138Omanyte.png",
         "name": "Omanyte"
     },
@@ -1107,7 +1107,7 @@
         "color": "#D1C17D",
         "gen": 1,
         "id": "#139",
-        "img": "Omastar.jpg",
+        "img": "Omastar.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/43/139Omastar.png/250px-139Omastar.png",
         "name": "Omastar"
     },
@@ -1115,7 +1115,7 @@
         "color": "#D1C17D",
         "gen": 1,
         "id": "#140",
-        "img": "Kabuto.jpg",
+        "img": "Kabuto.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/f9/140Kabuto.png/250px-140Kabuto.png",
         "name": "Kabuto"
     },
@@ -1123,7 +1123,7 @@
         "color": "#D1C17D",
         "gen": 1,
         "id": "#141",
-        "img": "Kabutops.jpg",
+        "img": "Kabutops.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/2/29/141Kabutops.png/250px-141Kabutops.png",
         "name": "Kabutops"
     },
@@ -1131,7 +1131,7 @@
         "color": "#D1C17D",
         "gen": 1,
         "id": "#142",
-        "img": "Aerodactyl.jpg",
+        "img": "Aerodactyl.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/e/e8/142Aerodactyl.png/250px-142Aerodactyl.png",
         "name": "Aerodactyl"
     },
@@ -1139,7 +1139,7 @@
         "color": "#C6C6A7",
         "gen": 1,
         "id": "#143",
-        "img": "Snorlax.jpg",
+        "img": "Snorlax.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/f/fb/143Snorlax.png/250px-143Snorlax.png",
         "name": "Snorlax"
     },
@@ -1147,7 +1147,7 @@
         "color": "#BCE6E6",
         "gen": 1,
         "id": "#144",
-        "img": "Articuno.jpg",
+        "img": "Articuno.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/4/4e/144Articuno.png/250px-144Articuno.png",
         "name": "Articuno"
     },
@@ -1155,7 +1155,7 @@
         "color": "#FAE078",
         "gen": 1,
         "id": "#145",
-        "img": "Zapdos.jpg",
+        "img": "Zapdos.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/e/e3/145Zapdos.png/250px-145Zapdos.png",
         "name": "Zapdos"
     },
@@ -1163,7 +1163,7 @@
         "color": "#F5AC78",
         "gen": 1,
         "id": "#146",
-        "img": "Moltres.jpg",
+        "img": "Moltres.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/1/1b/146Moltres.png/250px-146Moltres.png",
         "name": "Moltres"
     },
@@ -1171,7 +1171,7 @@
         "color": "#A27DFA",
         "gen": 1,
         "id": "#147",
-        "img": "Dratini.jpg",
+        "img": "Dratini.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/c/cc/147Dratini.png/250px-147Dratini.png",
         "name": "Dratini"
     },
@@ -1179,7 +1179,7 @@
         "color": "#A27DFA",
         "gen": 1,
         "id": "#148",
-        "img": "Dragonair.jpg",
+        "img": "Dragonair.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/9/93/148Dragonair.png/250px-148Dragonair.png",
         "name": "Dragonair"
     },
@@ -1187,7 +1187,7 @@
         "color": "#A27DFA",
         "gen": 1,
         "id": "#149",
-        "img": "Dragonite.jpg",
+        "img": "Dragonite.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/8/8b/149Dragonite.png/250px-149Dragonite.png",
         "name": "Dragonite"
     },
@@ -1195,7 +1195,7 @@
         "color": "#FA92B2",
         "gen": 1,
         "id": "#150",
-        "img": "Mewtwo.jpg",
+        "img": "Mewtwo.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png",
         "name": "Mewtwo"
     },
@@ -1203,7 +1203,7 @@
         "color": "#FA92B2",
         "gen": 1,
         "id": "#151",
-        "img": "Mew.jpg",
+        "img": "Mew.png",
         "imgurl": "http://cdn.bulbagarden.net/upload/thumb/b/b1/151Mew.png/250px-151Mew.png",
         "name": "Mew"
     }
