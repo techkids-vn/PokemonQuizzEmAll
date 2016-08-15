@@ -16,7 +16,6 @@ class Setting : Object{
     
     static func create() -> Setting {
         let setting = Setting()
-        setting.pickedGens.append(IntObject.create(0))
         DB.addSetting(setting)
         return setting
     }
@@ -28,6 +27,41 @@ extension Setting {
             return self.pickedGens
                 .filter { inObj in return inObj.value != 0 }
                 .map { inObj in return inObj.value }
+        }
+    }
+    
+    func findPickedGen(gen : Int) -> IntObject? {
+        let foundGens = self.pickedGens.filter {
+            pickedGen in
+            return pickedGen.value == gen
+        }
+        if foundGens.count > 0 {
+            return foundGens[0]
+        } else {
+            return nil
+        }
+    }
+    
+    func genIsPicked(gen : Int) -> Bool {
+        return findPickedGen(gen) != nil
+    }
+    
+    func flipGen(gen : Int) -> Bool {
+        let pickedGen = findPickedGen(gen)
+        if let uwrPickedGen = pickedGen {
+            if self.pickedGens.count > 1 {
+                self.pickedGens.removeAtIndex(self.pickedGens.indexOf(uwrPickedGen)!)
+            }
+            return false
+        } else {
+            self.pickedGens.append(IntObject.create(gen))
+            return true
+        }
+    }
+    
+    func printPickedGens() {
+        for gen in self.pickedGens {
+            print("Gen: \(gen)")
         }
     }
 }

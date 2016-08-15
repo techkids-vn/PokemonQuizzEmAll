@@ -16,8 +16,7 @@ public class DBLoader: NSObject {
                                 "generation3",
                                 "generation4",
                                 "generation5",
-                                "generation6",
-                                "generation7"]
+                                "generation6"]
     
     public static func loadPokemonFromJSONToDBIfNedeed() {
         print("Checking pokemon in database...")
@@ -34,7 +33,7 @@ public class DBLoader: NSObject {
         }
     }
     
-    public func createSettingIfNeeded() {
+    public static func createSettingIfNeeded() {
         if DB.noSettingInDB() {
             Setting.create()
         }

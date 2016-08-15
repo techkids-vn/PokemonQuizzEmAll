@@ -16,7 +16,6 @@
 		848E68451D5DDC2F00BBE298 /* generation4.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683F1D5DDC2E00BBE298 /* generation4.json */; };
 		848E68461D5DDC2F00BBE298 /* generation5.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E68401D5DDC2E00BBE298 /* generation5.json */; };
 		848E68471D5DDC2F00BBE298 /* generation6.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E68411D5DDC2E00BBE298 /* generation6.json */; };
-		848E68481D5DDC2F00BBE298 /* generation7.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E68421D5DDC2E00BBE298 /* generation7.json */; };
 		848E684A1D61A52E00BBE298 /* IntObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E68491D61A52E00BBE298 /* IntObject.swift */; };
 		848E6B341D61CE0D00BBE298 /* Abomasnow.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E684E1D61CE0400BBE298 /* Abomasnow.png */; };
 		848E6B351D61CE0D00BBE298 /* Abra.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E684F1D61CE0400BBE298 /* Abra.png */; };
@@ -805,7 +804,6 @@
 		848E683F1D5DDC2E00BBE298 /* generation4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation4.json; sourceTree = "<group>"; };
 		848E68401D5DDC2E00BBE298 /* generation5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation5.json; sourceTree = "<group>"; };
 		848E68411D5DDC2E00BBE298 /* generation6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation6.json; sourceTree = "<group>"; };
-		848E68421D5DDC2E00BBE298 /* generation7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation7.json; sourceTree = "<group>"; };
 		848E68491D61A52E00BBE298 /* IntObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntObject.swift; sourceTree = "<group>"; };
 		848E684E1D61CE0400BBE298 /* Abomasnow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Abomasnow.png; sourceTree = "<group>"; };
 		848E684F1D61CE0400BBE298 /* Abra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Abra.png; sourceTree = "<group>"; };
@@ -2405,7 +2403,6 @@
 				848E683F1D5DDC2E00BBE298 /* generation4.json */,
 				848E68401D5DDC2E00BBE298 /* generation5.json */,
 				848E68411D5DDC2E00BBE298 /* generation6.json */,
-				848E68421D5DDC2E00BBE298 /* generation7.json */,
 				995976C11D3CA16800E98204 /* Info.plist */,
 			);
 			path = PokemonQuizEmAll;
@@ -3115,7 +3112,6 @@
 				848E6BF81D61CE0D00BBE298 /* Fennekin.png in Resources */,
 				848E6CA51D61CE0D00BBE298 /* Machoke.png in Resources */,
 				848E6D4D1D61CE0D00BBE298 /* Sandshrew.png in Resources */,
-				848E68481D5DDC2F00BBE298 /* generation7.json in Resources */,
 				848E6DA21D61CE0E00BBE298 /* Sudowoodo.png in Resources */,
 				848E6CA41D61CE0D00BBE298 /* Machamp.png in Resources */,
 				848E6BD61D61CE0D00BBE298 /* Ducklett.png in Resources */,

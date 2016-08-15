@@ -17,6 +17,7 @@ class clvPackCell: UICollectionViewCell {
     @IBOutlet weak var imgDone: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblTotal: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -52,6 +53,15 @@ class clvPackCell: UICollectionViewCell {
             break
         default:
             break
+        }
+    }
+    
+    func setPicked(picked : Bool) {
+        if(!picked){
+            self.alpha = 0.5
+        }
+        else {
+            self.alpha = 1
         }
     }
 //    func cellWith(pack : PackCard){

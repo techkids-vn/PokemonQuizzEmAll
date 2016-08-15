@@ -33,16 +33,42 @@ class DB: Object {
         return realm.objects(Pokemon).count == 0
     }
     
-    static func getRandomPokemon(generations : [Int]) -> Pokemon? {
+//    static func getRandomPokemon(generations : [Int]) -> Pokemon? {
+//        
+//        var predicate: NSPredicate? = nil
+//        for i in 0..<generations.count {
+//            let childPredicate = NSPredicate(format: "gen = %d", generations[i])
+//            if predicate != nil {
+//                predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [predicate!, childPredicate])
+//            } else {
+//                predicate = childPredicate
+//            }
+//        }
+//        
+//        if let unwrappedPredicate = predicate {
+//            let pokemons = realm.objects(Pokemon).filter(unwrappedPredicate)
+//            return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
+//        } else {
+//            let pokemons = realm.objects(Pokemon)
+//            return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
+//        }
+//    }
+    
+    static func getRandomPokemon(generations : [Int], exceptNames : [String]) -> Pokemon? {
+        let orGeneration = predicateIncludeAllGeneration(generations)
+        let andExceptName = predicateExceptNames(exceptNames)
         
-        var predicate: NSPredicate? = nil
-        for i in 0..<generations.count {
-            let childPredicate = NSPredicate(format: "gen = %d", generations[i])
-            if predicate != nil {
-                predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [predicate!, childPredicate])
+        var predicate : NSPredicate? = nil
+        
+        /* Try to combine 2 NSPredicates, ignore one that is nil */
+        if let unwrapOrGeneration = orGeneration {
+            if let unwrappedAndExceptName = andExceptName {
+                predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [unwrapOrGeneration, unwrappedAndExceptName])
             } else {
-                predicate = childPredicate
+                predicate = unwrapOrGeneration
             }
+        } else if let unwrappedAndExceptName = andExceptName {
+            predicate = unwrappedAndExceptName
         }
         
         if let unwrappedPredicate = predicate {
@@ -52,6 +78,32 @@ class DB: Object {
             let pokemons = realm.objects(Pokemon)
             return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
         }
+    }
+    
+    private static func predicateIncludeAllGeneration(generations : [Int]) -> NSPredicate? {
+        var predicate: NSPredicate? = nil
+        for i in 0..<generations.count {
+            let childPredicate = NSPredicate(format: "gen = %d", generations[i])
+            if predicate != nil {
+                predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [predicate!, childPredicate])
+            } else {
+                predicate = childPredicate
+            }
+        }
+        return predicate
+    }
+    
+    private static func predicateExceptNames(exceptNames : [String]) -> NSPredicate? {
+        var predicate: NSPredicate? = nil
+        for i in 0..<exceptNames.count {
+            let childPredicate = NSPredicate(format: "name != %d", exceptNames[i])
+            if predicate != nil {
+                predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [])
+            } else {
+                predicate = childPredicate
+            }
+        }
+        return predicate
     }
     
     //MARK: PACKCARD
@@ -142,7 +194,7 @@ class DB: Object {
     static func updateHighScore(score : Int){
         let highScore = realm.objects(HighScore).first
         if(highScore != nil){
-            try! realm.write{
+            try! realm.write {
                 if(highScore?.score < score){
                     highScore?.score = score
                 }
@@ -202,7 +254,7 @@ class DB: Object {
                     }
                 }
             }
-        }else{
+        }else {
             Setting.create()
             DB.updateSettings(turnOffSound, turnOffMusic: turnOffMusic,listGens: listGens)
         }
@@ -226,6 +278,12 @@ class DB: Object {
             }
         }
         return true
+    }
+    
+    static func flipGen(setting: Setting, gen: Int) {
+        try! realm.write {
+            setting.flipGen(gen)
+        }
     }
     
     static func getPickedGen()->[Int]{

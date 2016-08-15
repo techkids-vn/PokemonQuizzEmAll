@@ -17,6 +17,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     let ad = AppDelegate()
     
     var pickGens = [Int]()
+    var setting : Setting?
     
     override func viewWillAppear(animated: Bool) {
         UIView.animateWithDuration(0.2) {
@@ -25,6 +26,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         }
         pickGens = DB.getPickedGen()
     }
+    
     override func viewWillDisappear(animated: Bool) {
         DB.checkSettingsStatus()
     }
@@ -33,7 +35,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         tbvButton.tableFooterView = UIView()
         clvGeneration.registerNib(UINib.init(nibName: "clvPackCell", bundle: nil), forCellWithReuseIdentifier: "clvPackCell")
-        
+        setting = DB.getSetting()
     }
     
     //MARK : TableView
@@ -96,13 +98,16 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             collectionView.registerNib(UINib(nibName: identifier, bundle: nil), forCellWithReuseIdentifier: identifier)
             cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as? clvPackCell
         }
-        cell.cellWithGen(indexPath.row + 1)
-        if(!pickGens.contains(indexPath.row)){
-            cell.alpha = 0.5
-        }
-        else{
-            cell.alpha = 1
-        }
+        let gen = indexPath.row + 1
+        cell.cellWithGen(gen)
+        cell.setPicked(setting!.genIsPicked(gen))
+        
+//        if(!pickGens.contains(indexPath.row)){
+//            cell.alpha = 0.5
+//        }
+//        else{
+//            cell.alpha = 1
+//        }
         return cell
     }
     
@@ -121,20 +126,22 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let genIndex = indexPath.row
-        if (pickGens.contains(genIndex)){
-            let removeIndex:Int = pickGens.indexOf(genIndex)!
-            if(pickGens.count == 1){
-                print("You must choose at least 1 gen")
-                return
-            }
-            pickGens.removeAtIndex(removeIndex)
-        }
-        else{
-            pickGens.append(genIndex)
-        }
-        print("pick count: \(pickGens.count)")
-        DB.updateSettings(-1, turnOffMusic: -1, listGens: pickGens)
+        let gen = indexPath.row + 1
+        DB.flipGen(setting!, gen: gen)
+        
+//        if (pickGens.contains(genIndex)){
+//            let removeIndex:Int = pickGens.indexOf(genIndex)!
+//            if(pickGens.count == 1){
+//                print("You must choose at least 1 gen")
+//                return
+//            }
+//            pickGens.removeAtIndex(removeIndex)
+//        }
+//        else{
+//            pickGens.append(genIndex)
+//        }
+//        print("pick count: \(pickGens.count)")
+//        DB.updateSettings(-1, turnOffMusic: -1, listGens: pickGens)
         collectionView .reloadData()
     }
 }

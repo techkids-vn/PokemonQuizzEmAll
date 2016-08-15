@@ -425,6 +425,7 @@ class FlashCardViewController: UIViewController {
     }
     
     func getRandomPokemon() -> Pokemon? {
-        return DB.getRandomPokemon(self.setting!.pickedGensAsArray)
+        self.setting!.printPickedGens()
+        return DB.getRandomPokemon(self.setting!.pickedGensAsArray, exceptNames: [])
     }
 }
