@@ -9,5 +9,11 @@
 import UIKit
 
 class DataConfig: NSObject {
-
+    static let allGens = [1, 2, 3, 4, 5, 6]
+    static func getJsonFileNames() -> [String] {
+        return allGens.map {
+            gen in
+            return "generation\(gen)"
+        }
+    }
 }

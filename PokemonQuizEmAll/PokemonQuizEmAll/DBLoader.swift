@@ -11,17 +11,10 @@ import SwiftyJSON
 import RealmSwift
 
 public class DBLoader: NSObject {
-    
-    static let jsonFileNames = ["generation1",
-                                "generation2",
-                                "generation3",
-                                "generation4",
-                                "generation5",
-                                "generation6"]
-    
     public static func loadPokemonFromJSONToDBIfNedeed() {
         print("Checking pokemon in database...")
         print("Loading pokemon from JSON to db for the first time...")
+        let jsonFileNames = DataConfig.getJsonFileNames()
         for (_, fileName) in jsonFileNames.enumerate() {
             print("Loading file \(fileName)...", terminator : "")
             let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT

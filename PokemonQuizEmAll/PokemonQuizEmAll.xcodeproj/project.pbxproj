@@ -759,6 +759,8 @@
 		848E6E171D61CE0E00BBE298 /* Zubat.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E6B311D61CE0D00BBE298 /* Zubat.png */; };
 		848E6E181D61CE0E00BBE298 /* Zweilous.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E6B321D61CE0D00BBE298 /* Zweilous.png */; };
 		848E6E191D61CE0E00BBE298 /* Zygarde.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E6B331D61CE0D00BBE298 /* Zygarde.png */; };
+		84CFFDF81D631B0900AA6112 /* DBLoaderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFFDF71D631B0900AA6112 /* DBLoaderStatus.swift */; };
+		84CFFDFA1D631D0E00AA6112 /* DataConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFFDF91D631D0E00AA6112 /* DataConfig.swift */; };
 		991EB8321D3D363600E9FBE6 /* generation1.json in Resources */ = {isa = PBXBuildFile; fileRef = 991EB8311D3D363600E9FBE6 /* generation1.json */; };
 		995976B61D3CA16800E98204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995976B51D3CA16800E98204 /* AppDelegate.swift */; };
 		995976BB1D3CA16800E98204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995976B91D3CA16800E98204 /* Main.storyboard */; };
@@ -1547,6 +1549,8 @@
 		848E6B311D61CE0D00BBE298 /* Zubat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zubat.png; sourceTree = "<group>"; };
 		848E6B321D61CE0D00BBE298 /* Zweilous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zweilous.png; sourceTree = "<group>"; };
 		848E6B331D61CE0D00BBE298 /* Zygarde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zygarde.png; sourceTree = "<group>"; };
+		84CFFDF71D631B0900AA6112 /* DBLoaderStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLoaderStatus.swift; sourceTree = "<group>"; };
+		84CFFDF91D631D0E00AA6112 /* DataConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConfig.swift; sourceTree = "<group>"; };
 		991EB8311D3D363600E9FBE6 /* generation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation1.json; sourceTree = "<group>"; };
 		995976B21D3CA16800E98204 /* PokemonQuizEmAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonQuizEmAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995976B51D3CA16800E98204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -2450,6 +2454,8 @@
 				E8394A8D1D3D16920094F4FC /* DB.swift */,
 				848E683B1D5DD05F00BBE298 /* DBLoader.swift */,
 				848E68491D61A52E00BBE298 /* IntObject.swift */,
+				84CFFDF71D631B0900AA6112 /* DBLoaderStatus.swift */,
+				84CFFDF91D631D0E00AA6112 /* DataConfig.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -3424,6 +3430,7 @@
 				E8394AAB1D3D19F00094F4FC /* BackFlashCardViewModel.swift in Sources */,
 				E8394A971D3D16920094F4FC /* SwitchCell.swift in Sources */,
 				E8394A991D3D16920094F4FC /* Setting.swift in Sources */,
+				84CFFDF81D631B0900AA6112 /* DBLoaderStatus.swift in Sources */,
 				995976B61D3CA16800E98204 /* AppDelegate.swift in Sources */,
 				995976CE1D3CC6FE00E98204 /* Pokemon.swift in Sources */,
 				E8394AA21D3D16920094F4FC /* clvPackCell.swift in Sources */,
@@ -3435,6 +3442,7 @@
 				E805D0031D3E500D00F5C69B /* HighScore.swift in Sources */,
 				E8394AA31D3D16920094F4FC /* Card.swift in Sources */,
 				E8394A941D3D16920094F4FC /* UIColorExtension.swift in Sources */,
+				84CFFDFA1D631D0E00AA6112 /* DataConfig.swift in Sources */,
 				E8394A9C1D3D16920094F4FC /* FrontFlashCardViewModel.swift in Sources */,
 				E8394A9E1D3D16920094F4FC /* FlashCardViewController.swift in Sources */,
 				E8394AA01D3D16920094F4FC /* Constant.swift in Sources */,

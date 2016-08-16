@@ -16,6 +16,7 @@ class Setting : Object{
     
     static func create() -> Setting {
         let setting = Setting()
+        setting.setPickedGens(DataConfig.allGens)
         DB.addSetting(setting)
         return setting
     }
@@ -30,6 +31,14 @@ extension Setting {
         }
     }
     
+    func setPickedGens(gens: [Int]) {
+        self.pickedGens.removeAll()
+        self.pickedGens.appendContentsOf(gens.map {
+                gen in
+                return IntObject.create(gen)
+            })
+    }
+    
     func findPickedGen(gen : Int) -> IntObject? {
         let foundGens = self.pickedGens.filter {
             pickedGen in
@@ -41,7 +50,7 @@ extension Setting {
             return nil
         }
     }
-    
+
     func genIsPicked(gen : Int) -> Bool {
         return findPickedGen(gen) != nil
     }
