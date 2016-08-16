@@ -14,14 +14,14 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    let DB_TEST = true
+    let DB_TEST = false
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        DBLoader.loadPokemonFromJSONToDBIfNedeed()
         DBLoader.createSettingIfNeeded()
+        DBLoader.loadPokemonFromJSONToDBIfNedeed()
+        dbTest()
         
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
@@ -29,9 +29,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-//    func dbTest() -> Void {
-//        DBLoader.loadPokemonFromJSONToDBIfNedeed()
-//    }
+    func dbTest() -> Void {
+        if DB_TEST {
+            var exceptNames : [String] = []
+            let generations = DB.getSetting()!.pickedGensAsArray
+            for i in 0..<(DB.getPokemonCount()/4-1) {
+                print("Testing batch \(i)")
+                let pokemons = DB.getRandomPokemons(4, generations: generations, exceptNames: exceptNames)
+                assert(pokemons.count == 4)
+                for pokemon in pokemons {
+                    print("Testing \(pokemon.name)")
+                    assert(!exceptNames.contains(pokemon.name))
+                    exceptNames.append(pokemon.name)
+                }
+            }
+        }
+    }
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

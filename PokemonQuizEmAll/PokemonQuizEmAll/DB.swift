@@ -53,6 +53,10 @@ class DB: Object {
         return realm.objects(Pokemon).count == 0
     }
     
+    static func getPokemonCount() -> Int {
+        return realm.objects(Pokemon).count
+    }
+    
 //    static func getRandomPokemon(generations : [Int]) -> Pokemon? {
 //        
 //        var predicate: NSPredicate? = nil
@@ -73,6 +77,21 @@ class DB: Object {
 //            return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
 //        }
 //    }
+    
+    static func getRandomPokemons(amount : Int, generations: [Int], exceptNames : [String]) -> [Pokemon] {
+        var pokemons : [Pokemon] = []
+        var localExceptNames = exceptNames
+        
+        while pokemons.count < amount {
+            let pokemon = getRandomPokemon(generations, exceptNames: [])!
+            if !localExceptNames.contains(pokemon.name) {
+                pokemons.append(pokemon)
+                localExceptNames.append(pokemon.name)
+            }
+        }
+
+        return pokemons
+    }
     
     static func getRandomPokemon(generations : [Int], exceptNames : [String]) -> Pokemon? {
         let orGeneration = predicateIncludeAllGeneration(generations)
@@ -116,7 +135,7 @@ class DB: Object {
     private static func predicateExceptNames(exceptNames : [String]) -> NSPredicate? {
         var predicate: NSPredicate? = nil
         for i in 0..<exceptNames.count {
-            let childPredicate = NSPredicate(format: "name != %d", exceptNames[i])
+            let childPredicate = NSPredicate(format: "name != %@", exceptNames[i])
             if predicate != nil {
                 predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [])
             } else {
