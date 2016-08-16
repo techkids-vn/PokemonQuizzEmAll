@@ -21,27 +21,29 @@ public class DBLoader: NSObject {
     
     public static func loadPokemonFromJSONToDBIfNedeed() {
         print("Checking pokemon in database...")
-        if DB.noPokemonInDb() {
-            print("Loading pokemon from JSON to db for the first time...")
-            for (_, fileName) in jsonFileNames.enumerate() {
-                print("Loading file \(fileName)...", terminator : "")
-                let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-                dispatch_async(dispatch_get_global_queue(priority, 0)) {
-                    autoreleasepool {
-                        let realm = try! Realm()
-                        let pokemons = loadPokemonFromSingleJSONToDb(fileName)
-                        for pokemon in pokemons {
+        print("Loading pokemon from JSON to db for the first time...")
+        for (_, fileName) in jsonFileNames.enumerate() {
+            print("Loading file \(fileName)...", terminator : "")
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                autoreleasepool {
+                    print("Loading \(fileName)")
+                    let realm = try! Realm()
+                    let pokemons = loadPokemonFromSingleJSONToDb(fileName)
+                    for pokemon in pokemons {
+                        // Check if  the pokemon is already added, if not, add it
+                        if realm
+                            .objects(Pokemon)
+                            .filter(NSPredicate(format: "name = %s", pokemon.name))
+                            .count == 0 {
                             try! realm.write {
                                 realm.add(pokemon)
                             }
                         }
-                        print("Done")
                     }
-                    
+                    print("Done")
                 }
             }
-        } else {
-            print("Pokemon already loaded")
         }
     }
     

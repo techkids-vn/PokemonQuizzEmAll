@@ -23,11 +23,20 @@ class DB: Object {
         }
     }
     
+
+    
     
     static func addPokemon(pokemon : Pokemon, realm: Realm) {
         try! realm.write {
             realm.add(pokemon)
         }
+    }
+    
+    static func pokemonExists(name: String) -> Bool {
+        return realm
+            .objects(Pokemon)
+            .filter(NSPredicate(format: "name = %s", name))
+            .count > 0
     }
     
     static func getPokemonByName(name : String) -> Pokemon! {
@@ -323,5 +332,4 @@ class DB: Object {
     static func getSetting() -> Setting? {
         return realm.objects(Setting).first
     }
-    
 }
