@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1943A2161D5526080085D624 /* FlashCardViewRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */; };
 		1981B8531D586F1700DE6686 /* CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1981B8521D586F1700DE6686 /* CircleMask.swift */; };
+		19ED11B01D632EC4002AD71F /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 19ED11AE1D632EC4002AD71F /* Correct.wav */; };
+		19ED11B11D632EC4002AD71F /* Incorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 19ED11AF1D632EC4002AD71F /* Incorrect.wav */; };
 		26E226CDF4979808A44DEBE2 /* Pods_PokemonQuizEmAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */; };
 		848E683C1D5DD05F00BBE298 /* DBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E683B1D5DD05F00BBE298 /* DBLoader.swift */; };
 		848E68431D5DDC2F00BBE298 /* generation2.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683D1D5DDC2E00BBE298 /* generation2.json */; };
@@ -767,7 +769,6 @@
 		995976BD1D3CA16800E98204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995976BC1D3CA16800E98204 /* Assets.xcassets */; };
 		995976C01D3CA16800E98204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995976BE1D3CA16800E98204 /* LaunchScreen.storyboard */; };
 		995976CE1D3CC6FE00E98204 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995976CD1D3CC6FE00E98204 /* Pokemon.swift */; };
-		E801A8891D3E9F1B0060A684 /* Pokemon theme song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E801A8881D3E9E610060A684 /* Pokemon theme song.mp3 */; };
 		E805D0031D3E500D00F5C69B /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805D0021D3E500D00F5C69B /* HighScore.swift */; };
 		E8394A941D3D16920094F4FC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8394A821D3D16920094F4FC /* UIColorExtension.swift */; };
 		E8394A951D3D16920094F4FC /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = E8394A831D3D16920094F4FC /* text.txt */; };
@@ -798,6 +799,8 @@
 /* Begin PBXFileReference section */
 		1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardViewRevealAnimator.swift; sourceTree = "<group>"; };
 		1981B8521D586F1700DE6686 /* CircleMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleMask.swift; path = PokemonQuizEmAll/CircleMask.swift; sourceTree = "<group>"; };
+		19ED11AE1D632EC4002AD71F /* Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Correct.wav; path = Audio/Correct.wav; sourceTree = "<group>"; };
+		19ED11AF1D632EC4002AD71F /* Incorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Incorrect.wav; path = Audio/Incorrect.wav; sourceTree = "<group>"; };
 		4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonQuizEmAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3054CE1283D06739E14123 /* Pods-PokemonQuizEmAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.release.xcconfig"; sourceTree = "<group>"; };
 		848E683B1D5DD05F00BBE298 /* DBLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLoader.swift; sourceTree = "<group>"; };
@@ -1552,7 +1555,7 @@
 		84CFFDF71D631B0900AA6112 /* DBLoaderStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLoaderStatus.swift; sourceTree = "<group>"; };
 		84CFFDF91D631D0E00AA6112 /* DataConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConfig.swift; sourceTree = "<group>"; };
 		991EB8311D3D363600E9FBE6 /* generation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation1.json; sourceTree = "<group>"; };
-		995976B21D3CA16800E98204 /* PokemonQuizEmAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonQuizEmAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		995976B21D3CA16800E98204 /* Quiz 'Em All.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quiz 'Em All.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		995976B51D3CA16800E98204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		995976BA1D3CA16800E98204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		995976BC1D3CA16800E98204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1560,7 +1563,6 @@
 		995976C11D3CA16800E98204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		995976CD1D3CC6FE00E98204 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		E801A8861D3E9C370060A684 /* CircleProgressView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CircleProgressView.framework; path = "../../Library/Developer/Xcode/DerivedData/PokemonQuizEmAll-cbxwlcjhqwpwoqbwfbtbbxagfpwx/Build/Products/Debug-iphonesimulator/CircleProgressView/CircleProgressView.framework"; sourceTree = "<group>"; };
-		E801A8881D3E9E610060A684 /* Pokemon theme song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Pokemon theme song.mp3"; path = "PokemonQuizEmAll/Pokemon theme song.mp3"; sourceTree = "<group>"; };
 		E805D0021D3E500D00F5C69B /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
 		E8394A821D3D16920094F4FC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E8394A831D3D16920094F4FC /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
@@ -1607,6 +1609,15 @@
 				1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */,
 			);
 			name = Animator;
+			sourceTree = "<group>";
+		};
+		19ED11AD1D632EB5002AD71F /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				19ED11AE1D632EC4002AD71F /* Correct.wav */,
+				19ED11AF1D632EC4002AD71F /* Incorrect.wav */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 		82E17EF3852C7A920A56690F /* Pods */ = {
@@ -2370,7 +2381,6 @@
 		995976A91D3CA16800E98204 = {
 			isa = PBXGroup;
 			children = (
-				E801A8881D3E9E610060A684 /* Pokemon theme song.mp3 */,
 				995976B41D3CA16800E98204 /* PokemonQuizEmAll */,
 				1981B8521D586F1700DE6686 /* CircleMask.swift */,
 				995976B31D3CA16800E98204 /* Products */,
@@ -2382,7 +2392,7 @@
 		995976B31D3CA16800E98204 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				995976B21D3CA16800E98204 /* PokemonQuizEmAll.app */,
+				995976B21D3CA16800E98204 /* Quiz 'Em All.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2390,6 +2400,7 @@
 		995976B41D3CA16800E98204 /* PokemonQuizEmAll */ = {
 			isa = PBXGroup;
 			children = (
+				19ED11AD1D632EB5002AD71F /* Audio */,
 				848E684D1D61CE0400BBE298 /* images */,
 				1981B8541D586F2300DE6686 /* Animator */,
 				995976B51D3CA16800E98204 /* AppDelegate.swift */,
@@ -2517,7 +2528,7 @@
 			);
 			name = PokemonQuizEmAll;
 			productName = PokemonQuizEmAll;
-			productReference = 995976B21D3CA16800E98204 /* PokemonQuizEmAll.app */;
+			productReference = 995976B21D3CA16800E98204 /* Quiz 'Em All.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2532,7 +2543,7 @@
 				TargetAttributes = {
 					995976B11D3CA16800E98204 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3CJF6M3857;
+						DevelopmentTeam = SSLZNUJ85E;
 					};
 				};
 			};
@@ -2572,7 +2583,6 @@
 				848E6D361D61CE0D00BBE298 /* Regigigas.png in Resources */,
 				848E6E021D61CE0E00BBE298 /* Wingull.png in Resources */,
 				848E6D611D61CE0E00BBE298 /* Seviper.png in Resources */,
-				E801A8891D3E9F1B0060A684 /* Pokemon theme song.mp3 in Resources */,
 				848E6CBC1D61CE0D00BBE298 /* Marowak.png in Resources */,
 				848E6DC31D61CE0E00BBE298 /* Togetic.png in Resources */,
 				848E6B9C1D61CE0D00BBE298 /* Claydol.png in Resources */,
@@ -2696,6 +2706,7 @@
 				848E6D7A1D61CE0E00BBE298 /* Skrelp.png in Resources */,
 				848E6DD41D61CE0E00BBE298 /* Tyranitar.png in Resources */,
 				848E6D7C1D61CE0E00BBE298 /* Slaking.png in Resources */,
+				19ED11B11D632EC4002AD71F /* Incorrect.wav in Resources */,
 				848E6DCF1D61CE0E00BBE298 /* Trubbish.png in Resources */,
 				848E6BC91D61CE0D00BBE298 /* Donphan.png in Resources */,
 				848E6B6E1D61CE0D00BBE298 /* Bonsly.png in Resources */,
@@ -2913,6 +2924,7 @@
 				848E6B9E1D61CE0D00BBE298 /* Clefairy.png in Resources */,
 				848E6DAA1D61CE0E00BBE298 /* Swampert.png in Resources */,
 				848E6D741D61CE0E00BBE298 /* Simisear.png in Resources */,
+				19ED11B01D632EC4002AD71F /* Correct.wav in Resources */,
 				848E6DBC1D61CE0E00BBE298 /* Throh.png in Resources */,
 				848E6D011D61CE0D00BBE298 /* Patrat.png in Resources */,
 				848E6C291D61CE0D00BBE298 /* Golett.png in Resources */,
@@ -3570,7 +3582,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = techkids.PokemonQuizzEmAll;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = PokemonQuizEmAll;
+				PRODUCT_NAME = "Quiz 'Em All";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -3586,7 +3599,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = techkids.PokemonQuizzEmAll;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = PokemonQuizEmAll;
+				PRODUCT_NAME = "Quiz 'Em All";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
