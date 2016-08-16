@@ -1,5 +1,5 @@
 PODS:
-  - CircleProgressView (1.0.10)
+  - CircleProgressView (1.0.11)
   - Realm (1.0.2):
     - Realm/Headers (= 1.0.2)
   - Realm/Headers (1.0.2)
@@ -30,7 +30,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
-  CircleProgressView: 5116fc2d3be792d755e6979d7f7309648de79d11
+  CircleProgressView: 3e7e26454ad9a93e310fe9cd612af6d779deb0c1
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
   RxCocoa: 89ab00d5753502520227940e3a0e0a0413683c6b
@@ -40,4 +40,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 50a31151725346fdcda5c21a7a68424be267dc30
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import AVFoundation
+import AVFoundation
 
 class PlayViewController: UIViewController {
     
@@ -29,7 +29,6 @@ class PlayViewController: UIViewController {
         
         lblHighScore.numberOfLines = 1;
         lblHighScore.adjustsFontSizeToFitWidth = true;
-        //playMusic()
     }
     
     override func viewDidLoad() {
@@ -37,6 +36,24 @@ class PlayViewController: UIViewController {
         setUpBtn()
         DB.checkSettingsStatus()
         navigationController?.delegate = self
+        
+//        playBackgroundMusic("PokemonThemeSong.mp3")
+    }
+    var backgroundMusicPlayer = AVAudioPlayer()
+    func playBackgroundMusic(filename: String) {
+        let url = NSBundle.mainBundle().URLForResource(filename, withExtension: nil)
+        guard let newURL = url else {
+            print("Could not find file: \(filename)")
+            return
+        }
+        do {
+            backgroundMusicPlayer = try AVAudioPlayer(contentsOfURL: newURL)
+            backgroundMusicPlayer.numberOfLoops = -1
+            backgroundMusicPlayer.prepareToPlay()
+            backgroundMusicPlayer.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
     }
     
     func setUpColor(){
