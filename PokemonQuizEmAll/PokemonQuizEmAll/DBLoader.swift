@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import RealmSwift
 
 public class DBLoader: NSObject {
     
@@ -24,10 +25,21 @@ public class DBLoader: NSObject {
             print("Loading pokemon from JSON to db for the first time...")
             for (_, fileName) in jsonFileNames.enumerate() {
                 print("Loading file \(fileName)...", terminator : "")
-                loadPokemonFromSingleJSONToDb(fileName)
-                print("Done")
+                let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                    autoreleasepool {
+                        let realm = try! Realm()
+                        let pokemons = loadPokemonFromSingleJSONToDb(fileName)
+                        for pokemon in pokemons {
+                            try! realm.write {
+                                realm.add(pokemon)
+                            }
+                        }
+                        print("Done")
+                    }
+                    
+                }
             }
-            print("All Done")
         } else {
             print("Pokemon already loaded")
         }
@@ -39,7 +51,8 @@ public class DBLoader: NSObject {
         }
     }
     
-    private static func loadPokemonFromSingleJSONToDb(fileName: String) {
+    private static func loadPokemonFromSingleJSONToDb(fileName: String) -> [Pokemon] {
+        var pokemons : [Pokemon] = []
         if let file = NSBundle(forClass:AppDelegate.self)
             .pathForResource(fileName, ofType: "json") {
             let data = NSData(contentsOfFile: file)!
@@ -50,8 +63,10 @@ public class DBLoader: NSObject {
                 let img   = json[index]["img"].string!
                 let gen   = json[index]["gen"].int!
                 let color = json[index]["color"].string!
-                Pokemon.create(name, id: id, gen: gen, img: img, color: color)
+                let pokemon = Pokemon.create(name, id: id, gen: gen, img: img, color: color)
+                pokemons.append(pokemon)
             }
         }
+        return pokemons
     }
 }

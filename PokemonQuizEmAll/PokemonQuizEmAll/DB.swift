@@ -10,10 +10,21 @@ import RealmSwift
 
 class DB: Object {
     
-    static let realm = try! Realm()
+    static var realm = try! Realm()
+    
+//    static func createRealm() {
+//        realm = Realm()
+//    }
     
     //MARK: Pokemon
     static func addPokemon(pokemon : Pokemon) {
+        try! realm.write {
+            realm.add(pokemon)
+        }
+    }
+    
+    
+    static func addPokemon(pokemon : Pokemon, realm: Realm) {
         try! realm.write {
             realm.add(pokemon)
         }
