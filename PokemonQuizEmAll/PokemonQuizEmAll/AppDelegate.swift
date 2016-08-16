@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     let DB_TEST = false
+    let DB_GET_RANDOM_POKEMON_TEST = false
+    let DB_GEN_LOADER_TEST = false
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -31,18 +33,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func dbTest() -> Void {
         if DB_TEST {
-            var exceptNames : [String] = []
-            let generations = DB.getSetting()!.pickedGensAsArray
-            for i in 0..<(DB.getPokemonCount()/4-1) {
-                print("Testing batch \(i)")
-                let pokemons = DB.getRandomPokemons(4, generations: generations, exceptNames: exceptNames)
-                assert(pokemons.count == 4)
-                for pokemon in pokemons {
-                    print("Testing \(pokemon.name)")
-                    assert(!exceptNames.contains(pokemon.name))
-                    exceptNames.append(pokemon.name)
+            if DB_GET_RANDOM_POKEMON_TEST {
+                var exceptNames : [String] = []
+                let generations = DB.getSetting()!.pickedGensAsArray
+                for i in 0..<(DB.getPokemonCount()/4-1) {
+                    print("Testing batch \(i)")
+                    let pokemons = DB.getRandomPokemons(4, generations: generations, exceptNames: exceptNames)
+                    assert(pokemons.count == 4)
+                    for pokemon in pokemons {
+                        print("Testing \(pokemon.name)")
+                        assert(!exceptNames.contains(pokemon.name))
+                        exceptNames.append(pokemon.name)
+                    }
                 }
             }
+            
+            if DB_GEN_LOADER_TEST {
+                let status = GenLoaderStatus.create(1)
+                assert(status.gen == 1)
+                
+                let statuses = GenLoaderStatus.createFromAllGensIfNeeded()
+                var gen = 1
+                for status in statuses {
+                    assert(status.gen == gen)
+                    gen += 1
+                }
+            }
+            
         }
     }
     

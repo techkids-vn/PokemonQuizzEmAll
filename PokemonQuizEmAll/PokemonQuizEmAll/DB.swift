@@ -351,4 +351,37 @@ class DB: Object {
     static func getSetting() -> Setting? {
         return realm.objects(Setting).first
     }
+    
+    // MARK: GenLoaderStatus
+    static func addGenStatus(genStatus : GenLoaderStatus) {
+        try! realm.write {
+            realm.add(genStatus)
+        }
+    }
+    
+    static func getAllDBGenLoaderStatus() -> [GenLoaderStatus] {
+        return realm
+            .objects(GenLoaderStatus)
+            .map {gen in return gen}
+    }
+    
+    static func getGenLoaderStatuses(loaded: Bool) -> [GenLoaderStatus] {
+        return realm.objects(GenLoaderStatus)
+            .filter { status in status.loaded == loaded }
+    }
+    
+    static func getGenLoaderStatus(gen: Int) -> GenLoaderStatus? {
+        return realm.objects(GenLoaderStatus)
+            .filter(NSPredicate(format: "gen = %d", gen))
+            .first
+    }
+    
+    static func updateGenLoaderStatus(status: GenLoaderStatus, gen: Int, loaded: Bool) {
+        let realm = try! Realm()
+        try! realm.write {
+            status.gen = gen
+            status.loaded = loaded
+        }
+    }
+    
 }

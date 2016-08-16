@@ -14,13 +14,15 @@ public class DBLoader: NSObject {
     public static func loadPokemonFromJSONToDBIfNedeed() {
         print("Checking pokemon in database...")
         print("Loading pokemon from JSON to db for the first time...")
-        let jsonFileNames = DataConfig.getJsonFileNames()
-        for (_, fileName) in jsonFileNames.enumerate() {
-            print("Loading file \(fileName)...", terminator : "")
-            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+        GenLoaderStatus.createFromAllGensIfNeeded()
+        for gen in GenLoaderStatus.getUnloadedGens() {
+                print("gen\(gen)")
+                let fileName = "generation\(gen)"
+                let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                dispatch_async(dispatch_get_global_queue(priority, 0)) {
                 autoreleasepool {
                     print("Loading \(fileName)")
+                    /*  Create realm in this thread to avoid cross accessing */
                     let realm = try! Realm()
                     let pokemons = loadPokemonFromSingleJSONToDb(fileName)
                     for pokemon in pokemons {
@@ -33,6 +35,13 @@ public class DBLoader: NSObject {
                                 realm.add(pokemon)
                             }
                         }
+                    }
+                    /* If All of Pokemon in a gen is loaded, mark that gen to avoid second loading */
+                    let status = realm.objects(GenLoaderStatus)
+                        .filter(NSPredicate(format: "gen = %d", gen))
+                        .first!
+                    try! realm.write {
+                        status.loaded = true
                     }
                     print("Done")
                 }
@@ -52,7 +61,7 @@ public class DBLoader: NSObject {
             .pathForResource(fileName, ofType: "json") {
             let data = NSData(contentsOfFile: file)!
             let json = JSON(data:data)
-            for index in 0..<json.count{
+            for index in 0..<json.count {
                 let name  = json[index]["name"].string!
                 let id    = json[index]["id"].string!
                 let img   = json[index]["img"].string!
