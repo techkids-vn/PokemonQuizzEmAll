@@ -286,13 +286,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="CircleProgress" destination="Cus-al-wia" id="2WD-ea-5Dq"/>
-                        <outlet property="btnAnswer1" destination="eP2-oH-QZd" id="b4s-Ez-UYM"/>
-                        <outlet property="btnAnswer2" destination="otU-Oc-hxw" id="qjF-Bp-xsI"/>
-                        <outlet property="btnAnswer3" destination="5vv-sV-yOW" id="RqC-LO-1dY"/>
-                        <outlet property="btnAnswer4" destination="kbA-ox-jkH" id="uPn-LW-7iU"/>
-                        <outlet property="lblScore" destination="9WR-Cg-gT0" id="Kdn-6f-OXT"/>
+                        <outlet property="buttonAnswer1" destination="eP2-oH-QZd" id="Fs3-sK-5hZ"/>
+                        <outlet property="buttonAnswer2" destination="otU-Oc-hxw" id="bSp-SC-ubC"/>
+                        <outlet property="buttonAnswer3" destination="5vv-sV-yOW" id="rUf-cl-tfn"/>
+                        <outlet property="buttonAnswer4" destination="kbA-ox-jkH" id="Tom-an-P35"/>
+                        <outlet property="labelScore" destination="9WR-Cg-gT0" id="TaJ-XL-4h0"/>
                         <outlet property="maskImage" destination="WEf-Kf-tc7" id="zLB-sW-dFs"/>
-                        <outlet property="vFlashCard" destination="exN-Qz-ZvK" id="jbC-vj-rF7"/>
+                        <outlet property="viewFlashCard" destination="exN-Qz-ZvK" id="tcH-cE-371"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gy3-M1-12c" userLabel="First Responder" sceneMemberID="firstResponder"/>
