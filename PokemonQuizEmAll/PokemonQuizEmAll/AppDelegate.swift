@@ -14,10 +14,10 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    let DB_TEST = true
+    let DB_TEST = false
     let DB_GET_RANDOM_POKEMON_TEST = false
     let DB_GEN_LOADER_TEST = false
-    let DB_TEST_FOR_INVALID_PICTURE_IN_POKEMON = true
+    let DB_TEST_FOR_INVALID_PICTURE_IN_POKEMON = false
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
