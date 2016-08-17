@@ -222,7 +222,7 @@
 		848E6BFB1D61CE0D00BBE298 /* Ferrothorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E69151D61CE0500BBE298 /* Ferrothorn.png */; };
 		848E6BFC1D61CE0D00BBE298 /* Finneon.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E69161D61CE0500BBE298 /* Finneon.png */; };
 		848E6BFD1D61CE0D00BBE298 /* Flaaffy.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E69171D61CE0500BBE298 /* Flaaffy.png */; };
-		848E6BFE1D61CE0D00BBE298 /* FlabÇbÇ.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E69181D61CE0500BBE298 /* FlabÇbÇ.png */; };
+		848E6BFE1D61CE0D00BBE298 /* Flabele.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E69181D61CE0500BBE298 /* Flabele.png */; };
 		848E6BFF1D61CE0D00BBE298 /* Flareon.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E69191D61CE0500BBE298 /* Flareon.png */; };
 		848E6C001D61CE0D00BBE298 /* Fletchinder.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E691A1D61CE0500BBE298 /* Fletchinder.png */; };
 		848E6C011D61CE0D00BBE298 /* Fletchling.png in Resources */ = {isa = PBXBuildFile; fileRef = 848E691B1D61CE0500BBE298 /* Fletchling.png */; };
@@ -1014,7 +1014,7 @@
 		848E69151D61CE0500BBE298 /* Ferrothorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ferrothorn.png; sourceTree = "<group>"; };
 		848E69161D61CE0500BBE298 /* Finneon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finneon.png; sourceTree = "<group>"; };
 		848E69171D61CE0500BBE298 /* Flaaffy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flaaffy.png; sourceTree = "<group>"; };
-		848E69181D61CE0500BBE298 /* FlabÇbÇ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlabÇbÇ.png"; sourceTree = "<group>"; };
+		848E69181D61CE0500BBE298 /* Flabele.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flabele.png; sourceTree = "<group>"; };
 		848E69191D61CE0500BBE298 /* Flareon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flareon.png; sourceTree = "<group>"; };
 		848E691A1D61CE0500BBE298 /* Fletchinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fletchinder.png; sourceTree = "<group>"; };
 		848E691B1D61CE0500BBE298 /* Fletchling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fletchling.png; sourceTree = "<group>"; };
@@ -1844,7 +1844,7 @@
 				848E69151D61CE0500BBE298 /* Ferrothorn.png */,
 				848E69161D61CE0500BBE298 /* Finneon.png */,
 				848E69171D61CE0500BBE298 /* Flaaffy.png */,
-				848E69181D61CE0500BBE298 /* FlabÇbÇ.png */,
+				848E69181D61CE0500BBE298 /* Flabele.png */,
 				848E69191D61CE0500BBE298 /* Flareon.png */,
 				848E691A1D61CE0500BBE298 /* Fletchinder.png */,
 				848E691B1D61CE0500BBE298 /* Fletchling.png */,
@@ -3288,7 +3288,7 @@
 				848E6D461D61CE0D00BBE298 /* Rowlet.png in Resources */,
 				848E6C9B1D61CE0D00BBE298 /* Lucario.png in Resources */,
 				848E6BDE1D61CE0D00BBE298 /* Dustox.png in Resources */,
-				848E6BFE1D61CE0D00BBE298 /* FlabÇbÇ.png in Resources */,
+				848E6BFE1D61CE0D00BBE298 /* Flabele.png in Resources */,
 				848E6B701D61CE0D00BBE298 /* Braixen.png in Resources */,
 				848E6DA01D61CE0E00BBE298 /* Stunfisk.png in Resources */,
 				848E6D051D61CE0D00BBE298 /* Petilil.png in Resources */,

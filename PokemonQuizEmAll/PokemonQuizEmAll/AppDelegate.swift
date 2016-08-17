@@ -14,9 +14,10 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    let DB_TEST = false
+    let DB_TEST = true
     let DB_GET_RANDOM_POKEMON_TEST = false
     let DB_GEN_LOADER_TEST = false
+    let DB_TEST_FOR_INVALID_PICTURE_IN_POKEMON = true
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -57,6 +58,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 for status in statuses {
                     assert(status.gen == gen)
                     gen += 1
+                }
+            }
+            
+            if DB_TEST_FOR_INVALID_PICTURE_IN_POKEMON {
+                for pokemon in DB.getAllPokemons() {
+                    let image = UIImage(named: pokemon.img)
+                    if image == nil {
+                        print("Pokemon has invalid image: gen : \(pokemon.gen); name : \(pokemon.name); img: \(pokemon.img)")
+                    }
+//                    let imagePath = NSBundle.mainBundle().pathForResource(pokemon.img, ofType: "")
+//                    if imagePath != nil {
+//                        print("Pokemon has invalid image: gen : \(pokemon.gen); name : \(pokemon.name); img: \(pokemon.img)")
+//                    }
+                    /*if !NSFileManager.defaultManager().fileExistsAtPath(imagePath!) {
+                        
+                    }*/
                 }
             }
             
