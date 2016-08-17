@@ -12,10 +12,6 @@ class DB: Object {
     
     static var realm = try! Realm()
     
-//    static func createRealm() {
-//        realm = Realm()
-//    }
-    
     //MARK: Pokemon
     static func addPokemon(pokemon : Pokemon) {
         try! realm.write {
@@ -23,13 +19,8 @@ class DB: Object {
         }
     }
     
-
-    
-    
-    static func addPokemon(pokemon : Pokemon, realm: Realm) {
-        try! realm.write {
-            realm.add(pokemon)
-        }
+    static func getAllPokemons() -> [Pokemon] {
+        return realm.objects(Pokemon).map { pokemon in return pokemon }
     }
     
     static func pokemonExists(name: String) -> Bool {
