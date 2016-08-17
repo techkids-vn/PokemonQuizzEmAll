@@ -101,7 +101,6 @@ class PlayViewController: UIViewController {
                 let settingsVC : SettingsViewController! = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsViewController") as? SettingsViewController
                 self.navigationController?.pushViewController(settingsVC, animated: true)
     }
-    
 }
 
 extension PlayViewController: UINavigationControllerDelegate {

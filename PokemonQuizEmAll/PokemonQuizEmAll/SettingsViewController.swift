@@ -101,13 +101,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         let gen = indexPath.row + 1
         cell.cellWithGen(gen)
         cell.setPicked(setting!.genIsPicked(gen))
-        
-//        if(!pickGens.contains(indexPath.row)){
-//            cell.alpha = 0.5
-//        }
-//        else{
-//            cell.alpha = 1
-//        }
         return cell
     }
     
@@ -128,20 +121,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let gen = indexPath.row + 1
         DB.flipGen(setting!, gen: gen)
-        
-//        if (pickGens.contains(genIndex)){
-//            let removeIndex:Int = pickGens.indexOf(genIndex)!
-//            if(pickGens.count == 1){
-//                print("You must choose at least 1 gen")
-//                return
-//            }
-//            pickGens.removeAtIndex(removeIndex)
-//        }
-//        else{
-//            pickGens.append(genIndex)
-//        }
-//        print("pick count: \(pickGens.count)")
-//        DB.updateSettings(-1, turnOffMusic: -1, listGens: pickGens)
         collectionView .reloadData()
     }
 }

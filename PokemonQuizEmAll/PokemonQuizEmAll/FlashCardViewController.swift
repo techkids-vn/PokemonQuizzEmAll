@@ -340,7 +340,7 @@ class FlashCardViewController: UIViewController {
     
     func bindingData() {
         self.matchingData()
-        let trueAnswerIndex = self.unsafeRandomIntFrom(0, to: 3)
+        let trueAnswerIndex = Utils.unsafeRandomIntFrom(0, to: 3)
         self.trueAnswerIndex = trueAnswerIndex
         switch trueAnswerIndex {
         case 0:
@@ -368,10 +368,6 @@ class FlashCardViewController: UIViewController {
         failBtn2.setTitle(pokemon2!.name, forState: .Normal)
         failBtn3.setTitle(pokemon3!.name, forState: .Normal)
         self.changeBackgroundColor()
-    }
-    
-    func unsafeRandomIntFrom(start: Int, to end: Int) -> Int {
-        return Int(arc4random_uniform(UInt32(end - start + 1))) + start
     }
     
     func getNextPokemon() {

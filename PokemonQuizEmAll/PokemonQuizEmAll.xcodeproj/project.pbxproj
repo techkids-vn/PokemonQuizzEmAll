@@ -12,6 +12,7 @@
 		19ED11B01D632EC4002AD71F /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 19ED11AE1D632EC4002AD71F /* Correct.wav */; };
 		19ED11B11D632EC4002AD71F /* Incorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 19ED11AF1D632EC4002AD71F /* Incorrect.wav */; };
 		26E226CDF4979808A44DEBE2 /* Pods_PokemonQuizEmAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */; };
+		845AA39F1D642A850038F3C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AA39E1D642A850038F3C8 /* Utils.swift */; };
 		848E683C1D5DD05F00BBE298 /* DBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E683B1D5DD05F00BBE298 /* DBLoader.swift */; };
 		848E68431D5DDC2F00BBE298 /* generation2.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683D1D5DDC2E00BBE298 /* generation2.json */; };
 		848E68441D5DDC2F00BBE298 /* generation3.json in Resources */ = {isa = PBXBuildFile; fileRef = 848E683E1D5DDC2E00BBE298 /* generation3.json */; };
@@ -803,6 +804,7 @@
 		19ED11AF1D632EC4002AD71F /* Incorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Incorrect.wav; path = Audio/Incorrect.wav; sourceTree = "<group>"; };
 		4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonQuizEmAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3054CE1283D06739E14123 /* Pods-PokemonQuizEmAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.release.xcconfig"; sourceTree = "<group>"; };
+		845AA39E1D642A850038F3C8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		848E683B1D5DD05F00BBE298 /* DBLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBLoader.swift; sourceTree = "<group>"; };
 		848E683D1D5DDC2E00BBE298 /* generation2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation2.json; sourceTree = "<group>"; };
 		848E683E1D5DDC2E00BBE298 /* generation3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generation3.json; sourceTree = "<group>"; };
@@ -1629,6 +1631,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		845AA39D1D642A540038F3C8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				845AA39E1D642A850038F3C8 /* Utils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		848E684D1D61CE0400BBE298 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -2400,6 +2410,7 @@
 		995976B41D3CA16800E98204 /* PokemonQuizEmAll */ = {
 			isa = PBXGroup;
 			children = (
+				845AA39D1D642A540038F3C8 /* Utils */,
 				19ED11AD1D632EB5002AD71F /* Audio */,
 				848E684D1D61CE0400BBE298 /* images */,
 				1981B8541D586F2300DE6686 /* Animator */,
@@ -3441,6 +3452,7 @@
 				1981B8531D586F1700DE6686 /* CircleMask.swift in Sources */,
 				E8394AAB1D3D19F00094F4FC /* BackFlashCardViewModel.swift in Sources */,
 				E8394A971D3D16920094F4FC /* SwitchCell.swift in Sources */,
+				845AA39F1D642A850038F3C8 /* Utils.swift in Sources */,
 				E8394A991D3D16920094F4FC /* Setting.swift in Sources */,
 				84CFFDF81D631B0900AA6112 /* GenLoaderStatus.swift in Sources */,
 				995976B61D3CA16800E98204 /* AppDelegate.swift in Sources */,
