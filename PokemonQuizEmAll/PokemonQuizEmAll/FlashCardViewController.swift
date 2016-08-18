@@ -326,7 +326,7 @@ class FlashCardViewController: UIViewController {
     }
     
     func setPokemonNameFor(trueBtn : UIButton, failBtn1 : UIButton, failBtn2 : UIButton, failBtn3 : UIButton) {
-        let pokemons = DB.getRandomPokemons(3, generations: (setting?.pickedGensAsArray)!, exceptNames: seenPokemons)
+        let pokemons = DB.randomPokemons(3, generations: (setting?.pickedGensAsArray)!, exceptNames: seenPokemons)
         let correctPokemon = self.currentPokemon!
         let incorrectPokemon1 = pokemons[0];
         let incorrectPokemon2 = pokemons[1];
@@ -341,7 +341,7 @@ class FlashCardViewController: UIViewController {
     
     
     func nextPokemon() {
-        self.currentPokemon = DB.getRandomPokemon(self.setting!.pickedGensAsArray, exceptNames: seenPokemons)
+        self.currentPokemon = DB.randomPokemon(self.setting!.pickedGensAsArray, exceptNames: seenPokemons)
         seenPokemons.append((self.currentPokemon?.name)!)
     }
     

@@ -69,72 +69,83 @@ class DB: Object {
 //        }
 //    }
     
-    static func getRandomPokemons(amount : Int, generations: [Int], exceptNames : [String]) -> [Pokemon] {
+    static func randomPokemons(amount : Int, generations: [Int], exceptNames : [String]) -> [Pokemon] {
         var pokemons : [Pokemon] = []
         var localExceptNames = exceptNames
         
         while pokemons.count < amount {
-            let pokemon = getRandomPokemon(generations, exceptNames: [])!
-            if !localExceptNames.contains(pokemon.name) {
-                pokemons.append(pokemon)
-                localExceptNames.append(pokemon.name)
-            }
+            let pokemon = randomPokemon(generations, exceptNames: localExceptNames)
+            pokemons.append(pokemon)
+            localExceptNames.append(pokemon.name)
         }
-
         return pokemons
     }
     
-    static func getRandomPokemon(generations : [Int], exceptNames : [String]) -> Pokemon? {
-        let orGeneration = predicateIncludeAllGeneration(generations)
-        let andExceptName = predicateExceptNames(exceptNames)
-        
-        var predicate : NSPredicate? = nil
-        
-        /* Try to combine 2 NSPredicates, ignore one that is nil */
-        if let unwrapOrGeneration = orGeneration {
-            if let unwrappedAndExceptName = andExceptName {
-                predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [unwrapOrGeneration, unwrappedAndExceptName])
-            } else {
-                predicate = unwrapOrGeneration
+//    static func getRandomPokemon(generations : [Int]) -> Pokemon? {
+//        let orGeneration = predicateIncludeAllGeneration(generations)
+//        //let andExceptName = predicateExceptNames(exceptNames)
+//        
+//        var predicate : NSPredicate? = nil
+//        
+//        /* Try to combine 2 NSPredicates, ignore one that is nil */
+//        if let unwrapOrGeneration = orGeneration {
+//            //if let unwrappedAndExceptName = andExceptName {
+//            //    predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [unwrapOrGeneration, //unwrappedAndExceptName])
+//            //} else {
+//            predicate = unwrapOrGeneration
+//            //}
+//        }// else if let unwrappedAndExceptName = andExceptName {
+//         //   predicate = unwrappedAndExceptName
+//        //}
+//        
+//        if let unwrappedPredicate = predicate {
+//            let pokemons = realm.objects(Pokemon).filter(unwrappedPredicate)
+//            return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
+//        } else {
+//            let pokemons = realm.objects(Pokemon)
+//            return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
+//        }
+//    }
+    
+    static func randomPokemon(generations: [Int], exceptNames: [String]) -> Pokemon {
+        let pokemons = realm
+            .objects(Pokemon)
+            .filter {
+                pokemon in
+                return generations.contains(pokemon.gen)
             }
-        } else if let unwrappedAndExceptName = andExceptName {
-            predicate = unwrappedAndExceptName
-        }
-        
-        if let unwrappedPredicate = predicate {
-            let pokemons = realm.objects(Pokemon).filter(unwrappedPredicate)
-            return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
-        } else {
-            let pokemons = realm.objects(Pokemon)
-            return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
-        }
+            .filter {
+                pokemon in
+                return !exceptNames.contains(pokemon.name)
+            }
+        return pokemons[Int(arc4random_uniform(UInt32(pokemons.count) - 1))]
     }
     
-    private static func predicateIncludeAllGeneration(generations : [Int]) -> NSPredicate? {
-        var predicate: NSPredicate? = nil
-        for i in 0..<generations.count {
-            let childPredicate = NSPredicate(format: "gen = %d", generations[i])
-            if predicate != nil {
-                predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [predicate!, childPredicate])
-            } else {
-                predicate = childPredicate
-            }
-        }
-        return predicate
-    }
+//    private static func predicateIncludeAllGeneration(generations : [Int]) -> NSPredicate? {
+//        var predicate: NSPredicate? = nil
+//        for i in 0..<generations.count {
+//            let childPredicate = NSPredicate(format: "gen = %d", generations[i])
+//            if predicate != nil {
+//                predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [predicate!, childPredicate])
+//            } else {
+//                predicate = childPredicate
+//            }
+//        }
+//        return predicate
+//    }
     
-    private static func predicateExceptNames(exceptNames : [String]) -> NSPredicate? {
-        var predicate: NSPredicate? = nil
-        for i in 0..<exceptNames.count {
-            let childPredicate = NSPredicate(format: "name != %@", exceptNames[i])
-            if predicate != nil {
-                predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [])
-            } else {
-                predicate = childPredicate
-            }
-        }
-        return predicate
-    }
+//    private static func predicateExceptNames(exceptNames : [String]) -> NSPredicate? {
+//        var predicate: NSPredicate? = nil
+//        for i in 0..<exceptNames.count {
+//            let childPredicate = NSPredicate(format: "name != %@", exceptNames[i])
+//            if predicate != nil {
+//                predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [])
+//            } else {
+//                predicate = childPredicate
+//            }
+//        }
+//        return predicate
+//    }
     
     //MARK: PACKCARD
     static func createPack(pack : PackCard) {

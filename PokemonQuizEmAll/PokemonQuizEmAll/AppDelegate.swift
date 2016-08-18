@@ -37,15 +37,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if DB_GET_RANDOM_POKEMON_TEST {
                 var exceptNames : [String] = []
                 let generations = DB.getSetting()!.pickedGensAsArray
-                for i in 0..<(DB.getPokemonCount()/4-1) {
-                    print("Testing batch \(i)")
-                    let pokemons = DB.getRandomPokemons(4, generations: generations, exceptNames: exceptNames)
-                    assert(pokemons.count == 4)
-                    for pokemon in pokemons {
-                        print("Testing \(pokemon.name)")
-                        assert(!exceptNames.contains(pokemon.name))
-                        exceptNames.append(pokemon.name)
+                for i in 0..<DB.getPokemonCount() {
+                    print("Testing pokemon \(i)")
+                    let correctPokemon = DB.randomPokemon(generations, exceptNames: exceptNames)
+                    assert(!exceptNames.contains(correctPokemon.name))
+                    exceptNames.append(correctPokemon.name)
+                    
+                    let incorrectPokemons = DB.randomPokemons(3, generations: generations, exceptNames: exceptNames)
+                    for i in 0..<incorrectPokemons.count-1 {
+                        for j in i+1..<incorrectPokemons.count {
+                            assert(incorrectPokemons[i].name != incorrectPokemons[j].name)
+                            assert(incorrectPokemons[i].name != correctPokemon.name)
+                            assert(incorrectPokemons[j].name != correctPokemon.name)
+                        }
                     }
+                    
                 }
             }
             
