@@ -50,7 +50,6 @@ class FlashCardViewController: UIViewController {
         self.caculateScore()
         self.changeBackgroundColor()
         self.countTime(minusTime)
-        self.prepareAllSfxForPlay()
         
         maskLayer = maskImage.layer
         view.layer.mask = maskLayer
@@ -64,10 +63,15 @@ class FlashCardViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .whiteColor()
         
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        
+        Utils.menuMusicPlayer.stop()
+        Utils.gameplayMusicPlayer.play()
     }
     
     override func viewWillDisappear(animated: Bool) {
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: true)
+        Utils.gameplayMusicPlayer.stop()
+        Utils.menuMusicPlayer.play()
     }
     
     // MARK: initializations
@@ -94,14 +98,12 @@ class FlashCardViewController: UIViewController {
             var correctButton: UIButton? = nil
             if self.checkAnswer( self.currentPokemon!.name, buttonAnswer: button ) {
                 self.scoreVariable.value += 1
-                self.soundEffectCorrectPlayer.play()
             }
             else {
-                self.soundEffectIncorrectPlayer.play()
                 correctButton = self.correctButtonAnswer()
             }
             
-            self.revealAnswerAfter(0.9, chosenButton: button, correctButton: correctButton)
+            self.revealAnswerAfter(0, chosenButton: button, correctButton: correctButton)
         }
     }
     
@@ -232,8 +234,10 @@ class FlashCardViewController: UIViewController {
             
             if let unwrappedButton: UIButton = correctButton {
                 self.visualizeIncorrectAnswer(chosenButton, correctButton: unwrappedButton)
+                Utils.soundEffectIncorrectPlayer.play()
             }
             else{
+                Utils.soundEffectCorrectPlayer.play()
                 self.visualizeCorrectAnswer(chosenButton)
             }
         }
@@ -297,6 +301,8 @@ class FlashCardViewController: UIViewController {
     }
     
     func caculateHightScore() {
+        PreviousScore.value = self.scoreVariable.value
+        
         if DB.getHighScore() == nil {
             HighScore.create(self.scoreVariable.value)
         }
@@ -343,33 +349,5 @@ class FlashCardViewController: UIViewController {
     func nextPokemon() {
         self.currentPokemon = DB.randomPokemon(self.setting!.pickedGensAsArray, exceptNames: seenPokemons)
         seenPokemons.append((self.currentPokemon?.name)!)
-    }
-    
-    // MARK: Sound Effects
-    var soundEffectCorrectPlayer = AVAudioPlayer()
-    var soundEffectIncorrectPlayer = AVAudioPlayer()
-    
-    func prepareAllSfxForPlay(){
-        soundEffectCorrectPlayer = sfxPlayerForFile("Correct.wav");
-        soundEffectIncorrectPlayer = sfxPlayerForFile("Incorrect.wav");
-    }
-    
-    func sfxPlayerForFile(filename: String) -> AVAudioPlayer{
-        let url = NSBundle.mainBundle().URLForResource(filename, withExtension: nil)
-        
-        guard let newURL = url else {
-            print("Could not find file: \(filename)")
-            return AVAudioPlayer()
-        }
-        do {
-            let player = try AVAudioPlayer(contentsOfURL: newURL)
-            player.numberOfLoops = 0
-            player.prepareToPlay()
-            return player
-        } catch let error as NSError {
-            print(error.description)
-        }
-        
-        return AVAudioPlayer()
     }
 }

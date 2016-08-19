@@ -321,10 +321,13 @@ class DB: Object {
         return true
     }
     
-    static func flipGen(setting: Setting, gen: Int) {
+    static func flipGen(setting: Setting, gen: Int) -> Bool {
+        var result = false;
         try! realm.write {
-            setting.flipGen(gen)
+            result = setting.flipGen(gen)
         }
+        
+        return result
     }
     
     static func getPickedGen()->[Int]{

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bY1-jX-pFz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bY1-jX-pFz">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -53,14 +53,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zo3-8s-rUF">
                                         <rect key="frame" x="0.0" y="126" width="600" height="126"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-Qc-iMy">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="84"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="0" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-Qc-iMy">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                                 <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="60"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGHSCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6i-w7-1gX">
-                                                <rect key="frame" x="0.0" y="84" width="600" height="42"/>
+                                                <rect key="frame" x="0.0" y="60" width="600" height="66"/>
                                                 <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -72,7 +72,6 @@
                                             <constraint firstItem="nFt-Qc-iMy" firstAttribute="centerX" secondItem="zo3-8s-rUF" secondAttribute="centerX" id="GhZ-Bg-usd"/>
                                             <constraint firstAttribute="bottom" secondItem="F6i-w7-1gX" secondAttribute="bottom" id="Ury-z1-lRW"/>
                                             <constraint firstItem="F6i-w7-1gX" firstAttribute="centerX" secondItem="zo3-8s-rUF" secondAttribute="centerX" id="dGZ-NQ-AbI"/>
-                                            <constraint firstItem="nFt-Qc-iMy" firstAttribute="height" secondItem="zo3-8s-rUF" secondAttribute="height" multiplier="2:3" id="oKt-v5-vhl"/>
                                             <constraint firstItem="F6i-w7-1gX" firstAttribute="top" secondItem="nFt-Qc-iMy" secondAttribute="bottom" id="rWD-rM-Gh2"/>
                                             <constraint firstItem="nFt-Qc-iMy" firstAttribute="top" secondItem="zo3-8s-rUF" secondAttribute="top" id="whR-JH-XYg"/>
                                             <constraint firstItem="nFt-Qc-iMy" firstAttribute="width" secondItem="zo3-8s-rUF" secondAttribute="width" id="zTZ-EZ-HxN"/>

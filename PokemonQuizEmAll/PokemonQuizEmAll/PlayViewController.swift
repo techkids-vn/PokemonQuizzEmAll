@@ -20,11 +20,35 @@ class PlayViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         setUpColor()
-        if DB.getHighScore() != nil {
-            lblHighScore.text = "\(DB.getHighScore().score)"
+        if(PreviousScore.value < 1){
+            if DB.getHighScore() != nil {
+                lblHighScore.text = "\(DB.getHighScore().score)"
+            }
+            else {
+                lblHighScore.text = "0"
+            }
+            lblHighScoreTitle.text = "HIGHSCORE"
         }
-        else {
-            lblHighScore.text = "0"
+        else if(PreviousScore.value == DB.getHighScore().score){
+            
+            if DB.getHighScore() != nil {
+                lblHighScore.text = "\(DB.getHighScore().score)"
+            }
+            else {
+                lblHighScore.text = "0"
+            }
+            
+            lblHighScoreTitle.text = "NEW HIGHSCORE!"
+        }
+        else{
+            lblHighScore.text = "\(PreviousScore.value)"
+            
+            if DB.getHighScore() != nil {
+                lblHighScoreTitle.text = "HIGHSCORE \(DB.getHighScore().score)"
+            }
+            else {
+                lblHighScore.text = "HIGHSCORE"
+            }
         }
         
         lblHighScore.numberOfLines = 1;
@@ -37,23 +61,7 @@ class PlayViewController: UIViewController {
         DB.checkSettingsStatus()
         navigationController?.delegate = self
         
-//        playBackgroundMusic("PokemonThemeSong.mp3")
-    }
-    var backgroundMusicPlayer = AVAudioPlayer()
-    func playBackgroundMusic(filename: String) {
-        let url = NSBundle.mainBundle().URLForResource(filename, withExtension: nil)
-        guard let newURL = url else {
-            print("Could not find file: \(filename)")
-            return
-        }
-        do {
-            backgroundMusicPlayer = try AVAudioPlayer(contentsOfURL: newURL)
-            backgroundMusicPlayer.numberOfLoops = -1
-            backgroundMusicPlayer.prepareToPlay()
-            backgroundMusicPlayer.play()
-        } catch let error as NSError {
-            print(error.description)
-        }
+        Utils.menuMusicPlayer.play()
     }
     
     func setUpColor(){

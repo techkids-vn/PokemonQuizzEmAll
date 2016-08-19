@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DBLoader.loadPokemonFromJSONToDBIfNedeed()
         dbTest()
         
+        Utils.prepareAudiosForPlay()
+        
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
         

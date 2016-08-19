@@ -60,10 +60,14 @@ extension Setting {
         if let uwrPickedGen = pickedGen {
             if self.pickedGens.count > 1 {
                 self.pickedGens.removeAtIndex(self.pickedGens.indexOf(uwrPickedGen)!)
+                return true
             }
-            return false
+            else{
+                return false
+            }
         } else {
             self.pickedGens.append(IntObject.create(gen))
+            Utils.soundEffectClickPlayer.play();
             return true
         }
     }

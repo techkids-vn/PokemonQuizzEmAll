@@ -82,18 +82,26 @@ class SwitchCell: UITableViewCell {
     }
     
     func turnOffSound(){
+        Utils.setSfxVolume(0)
         DB.updateSettings(1, turnOffMusic : -1, listGens: [Int]())
+        Utils.soundEffectTogglePlayer.play()
     }
     
     func turnOnSound() {
+        Utils.setSfxVolume(1)
         DB.updateSettings(0, turnOffMusic: -1, listGens: [Int]())
+        Utils.soundEffectTogglePlayer.play()
     }
     
     func turnOnMusic() {
+        Utils.setMusicVolume(1)
         DB.updateSettings(-1, turnOffMusic: 0, listGens: [Int]())
+        Utils.soundEffectTogglePlayer.play()
     }
     
     func turnOffMusic() {
+        Utils.setMusicVolume(0)
         DB.updateSettings(-1, turnOffMusic: 1, listGens: [Int]())
+        Utils.soundEffectTogglePlayer.play()
     }
 }

@@ -120,7 +120,12 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let gen = indexPath.row + 1
-        DB.flipGen(setting!, gen: gen)
+        if(DB.flipGen(setting!, gen: gen)){
+            Utils.soundEffectClickPlayer.play();
+        }
+        else{
+            Utils.soundEffectIncorrectPlayer.play();
+        }
         collectionView .reloadData()
     }
 }

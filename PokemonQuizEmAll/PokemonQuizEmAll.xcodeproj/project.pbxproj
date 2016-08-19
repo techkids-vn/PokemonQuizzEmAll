@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1943A2161D5526080085D624 /* FlashCardViewRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */; };
+		194645551D6702A9001C421A /* PreviousScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194645541D6702A9001C421A /* PreviousScore.swift */; };
+		194645591D670755001C421A /* UIToggle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 194645581D670755001C421A /* UIToggle.wav */; };
+		1946455B1D6707F7001C421A /* UIClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1946455A1D6707F7001C421A /* UIClick.wav */; };
+		196A9F4D1D646E2C003DC44B /* 8-Bit-Mayhem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 196A9F4A1D646E2C003DC44B /* 8-Bit-Mayhem.mp3 */; };
+		196A9F4F1D646E2C003DC44B /* Quirky-Puzzle-Game-Menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 196A9F4C1D646E2C003DC44B /* Quirky-Puzzle-Game-Menu.mp3 */; };
+		196A9F531D6471C0003DC44B /* firered_00FA.wav in Resources */ = {isa = PBXBuildFile; fileRef = 196A9F511D6471C0003DC44B /* firered_00FA.wav */; };
+		196A9F551D64825C003DC44B /* firered_00A3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 196A9F541D64825C003DC44B /* firered_00A3.wav */; };
 		1981B8531D586F1700DE6686 /* CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1981B8521D586F1700DE6686 /* CircleMask.swift */; };
-		19ED11B01D632EC4002AD71F /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 19ED11AE1D632EC4002AD71F /* Correct.wav */; };
-		19ED11B11D632EC4002AD71F /* Incorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 19ED11AF1D632EC4002AD71F /* Incorrect.wav */; };
 		26E226CDF4979808A44DEBE2 /* Pods_PokemonQuizEmAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */; };
 		845AA39F1D642A850038F3C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AA39E1D642A850038F3C8 /* Utils.swift */; };
 		848E683C1D5DD05F00BBE298 /* DBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E683B1D5DD05F00BBE298 /* DBLoader.swift */; };
@@ -799,9 +804,14 @@
 
 /* Begin PBXFileReference section */
 		1943A2151D5526080085D624 /* FlashCardViewRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardViewRevealAnimator.swift; sourceTree = "<group>"; };
+		194645541D6702A9001C421A /* PreviousScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousScore.swift; sourceTree = "<group>"; };
+		194645581D670755001C421A /* UIToggle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UIToggle.wav; sourceTree = "<group>"; };
+		1946455A1D6707F7001C421A /* UIClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UIClick.wav; sourceTree = "<group>"; };
+		196A9F4A1D646E2C003DC44B /* 8-Bit-Mayhem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "8-Bit-Mayhem.mp3"; sourceTree = "<group>"; };
+		196A9F4C1D646E2C003DC44B /* Quirky-Puzzle-Game-Menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quirky-Puzzle-Game-Menu.mp3"; sourceTree = "<group>"; };
+		196A9F511D6471C0003DC44B /* firered_00FA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = firered_00FA.wav; sourceTree = "<group>"; };
+		196A9F541D64825C003DC44B /* firered_00A3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = firered_00A3.wav; path = Audio/firered_00A3.wav; sourceTree = "<group>"; };
 		1981B8521D586F1700DE6686 /* CircleMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleMask.swift; path = PokemonQuizEmAll/CircleMask.swift; sourceTree = "<group>"; };
-		19ED11AE1D632EC4002AD71F /* Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Correct.wav; path = Audio/Correct.wav; sourceTree = "<group>"; };
-		19ED11AF1D632EC4002AD71F /* Incorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Incorrect.wav; path = Audio/Incorrect.wav; sourceTree = "<group>"; };
 		4E4472D8C61BDAD3811FA58D /* Pods_PokemonQuizEmAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonQuizEmAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3054CE1283D06739E14123 /* Pods-PokemonQuizEmAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonQuizEmAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonQuizEmAll/Pods-PokemonQuizEmAll.release.xcconfig"; sourceTree = "<group>"; };
 		845AA39E1D642A850038F3C8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -1616,8 +1626,12 @@
 		19ED11AD1D632EB5002AD71F /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				19ED11AE1D632EC4002AD71F /* Correct.wav */,
-				19ED11AF1D632EC4002AD71F /* Incorrect.wav */,
+				1946455A1D6707F7001C421A /* UIClick.wav */,
+				194645581D670755001C421A /* UIToggle.wav */,
+				196A9F541D64825C003DC44B /* firered_00A3.wav */,
+				196A9F511D6471C0003DC44B /* firered_00FA.wav */,
+				196A9F4A1D646E2C003DC44B /* 8-Bit-Mayhem.mp3 */,
+				196A9F4C1D646E2C003DC44B /* Quirky-Puzzle-Game-Menu.mp3 */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -2478,6 +2492,7 @@
 				848E68491D61A52E00BBE298 /* IntObject.swift */,
 				84CFFDF71D631B0900AA6112 /* GenLoaderStatus.swift */,
 				84CFFDF91D631D0E00AA6112 /* DataConfig.swift */,
+				194645541D6702A9001C421A /* PreviousScore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -2554,7 +2569,7 @@
 				TargetAttributes = {
 					995976B11D3CA16800E98204 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3CJF6M3857;
+						DevelopmentTeam = SSLZNUJ85E;
 					};
 				};
 			};
@@ -2717,7 +2732,6 @@
 				848E6D7A1D61CE0E00BBE298 /* Skrelp.png in Resources */,
 				848E6DD41D61CE0E00BBE298 /* Tyranitar.png in Resources */,
 				848E6D7C1D61CE0E00BBE298 /* Slaking.png in Resources */,
-				19ED11B11D632EC4002AD71F /* Incorrect.wav in Resources */,
 				848E6DCF1D61CE0E00BBE298 /* Trubbish.png in Resources */,
 				848E6BC91D61CE0D00BBE298 /* Donphan.png in Resources */,
 				848E6B6E1D61CE0D00BBE298 /* Bonsly.png in Resources */,
@@ -2768,6 +2782,7 @@
 				848E6C451D61CE0D00BBE298 /* Heatran.png in Resources */,
 				848E6C921D61CE0D00BBE298 /* Lillipup.png in Resources */,
 				848E6C221D61CE0D00BBE298 /* Gliscor.png in Resources */,
+				194645591D670755001C421A /* UIToggle.wav in Resources */,
 				848E6CB61D61CE0D00BBE298 /* Mankey.png in Resources */,
 				848E6CF91D61CE0D00BBE298 /* Palpitoad.png in Resources */,
 				848E6DC71D61CE0E00BBE298 /* Torterra.png in Resources */,
@@ -2789,6 +2804,7 @@
 				848E6BE71D61CE0D00BBE298 /* Electrode.png in Resources */,
 				848E6CCC1D61CE0D00BBE298 /* Mienfoo.png in Resources */,
 				848E6C5B1D61CE0D00BBE298 /* Igglybuff.png in Resources */,
+				1946455B1D6707F7001C421A /* UIClick.wav in Resources */,
 				848E6D9F1D61CE0E00BBE298 /* Stoutland.png in Resources */,
 				848E6D081D61CE0D00BBE298 /* Phione.png in Resources */,
 				848E6C771D61CE0D00BBE298 /* Koffing.png in Resources */,
@@ -2935,7 +2951,6 @@
 				848E6B9E1D61CE0D00BBE298 /* Clefairy.png in Resources */,
 				848E6DAA1D61CE0E00BBE298 /* Swampert.png in Resources */,
 				848E6D741D61CE0E00BBE298 /* Simisear.png in Resources */,
-				19ED11B01D632EC4002AD71F /* Correct.wav in Resources */,
 				848E6DBC1D61CE0E00BBE298 /* Throh.png in Resources */,
 				848E6D011D61CE0D00BBE298 /* Patrat.png in Resources */,
 				848E6C291D61CE0D00BBE298 /* Golett.png in Resources */,
@@ -2962,6 +2977,7 @@
 				848E6D0B1D61CE0D00BBE298 /* Pidgeotto.png in Resources */,
 				848E6D0E1D61CE0D00BBE298 /* Pignite.png in Resources */,
 				848E6DCE1D61CE0E00BBE298 /* Tropius.png in Resources */,
+				196A9F4F1D646E2C003DC44B /* Quirky-Puzzle-Game-Menu.mp3 in Resources */,
 				848E6BC71D61CE0D00BBE298 /* Dodrio.png in Resources */,
 				848E6D5F1D61CE0E00BBE298 /* Serperior.png in Resources */,
 				848E6CA31D61CE0D00BBE298 /* Luxray.png in Resources */,
@@ -3183,6 +3199,7 @@
 				848E6BB71D61CE0D00BBE298 /* Darmanitan.png in Resources */,
 				848E6B911D61CE0D00BBE298 /* Chesnaught.png in Resources */,
 				848E6C521D61CE0D00BBE298 /* Hoopa.png in Resources */,
+				196A9F4D1D646E2C003DC44B /* 8-Bit-Mayhem.mp3 in Resources */,
 				848E6D111D61CE0D00BBE298 /* Piloswine.png in Resources */,
 				848E6DCB1D61CE0E00BBE298 /* Trapinch.png in Resources */,
 				848E6B6B1D61CE0D00BBE298 /* Blissey.png in Resources */,
@@ -3220,6 +3237,7 @@
 				848E6BD11D61CE0D00BBE298 /* Drifblim.png in Resources */,
 				848E6B531D61CE0D00BBE298 /* Azumarill.png in Resources */,
 				848E6BFA1D61CE0D00BBE298 /* Ferroseed.png in Resources */,
+				196A9F551D64825C003DC44B /* firered_00A3.wav in Resources */,
 				848E6C061D61CE0D00BBE298 /* Foongus.png in Resources */,
 				848E6C7E1D61CE0D00BBE298 /* Kyogre.png in Resources */,
 				848E6D0A1D61CE0D00BBE298 /* Pidgeot.png in Resources */,
@@ -3264,6 +3282,7 @@
 				848E6BED1D61CE0D00BBE298 /* Entei.png in Resources */,
 				848E6D671D61CE0E00BBE298 /* Shellder.png in Resources */,
 				848E6D221D61CE0D00BBE298 /* Probopass.png in Resources */,
+				196A9F531D6471C0003DC44B /* firered_00FA.wav in Resources */,
 				848E6B751D61CE0D00BBE298 /* Bruxish.png in Resources */,
 				848E6D651D61CE0E00BBE298 /* Shedinja.png in Resources */,
 				848E6C5D1D61CE0D00BBE298 /* Infernape.png in Resources */,
@@ -3468,6 +3487,7 @@
 				E8394A941D3D16920094F4FC /* UIColorExtension.swift in Sources */,
 				84CFFDFA1D631D0E00AA6112 /* DataConfig.swift in Sources */,
 				E8394A9C1D3D16920094F4FC /* FrontFlashCardViewModel.swift in Sources */,
+				194645551D6702A9001C421A /* PreviousScore.swift in Sources */,
 				E8394A9E1D3D16920094F4FC /* FlashCardViewController.swift in Sources */,
 				E8394AA01D3D16920094F4FC /* Constant.swift in Sources */,
 				1943A2161D5526080085D624 /* FlashCardViewRevealAnimator.swift in Sources */,
